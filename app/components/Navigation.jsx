@@ -17,12 +17,36 @@ export default function Navigation() {
          <ul className="flex justify-center items-center text-white">
             <Image src="/images/logo.webp" alt="test" width={50} height={50} 
             className="mr-10"/>
-            <li className="pr-10">Home</li>
-            <li className="pr-10">About me</li>
-            <li className="pr-10">Shop</li>
-            <li className="pr-10">Contact</li>
-            <li className="pr-10">Dropdown</li>
+            <li className="pr-10 hover:cursor-pointer transition-all duration-200 ease-in-out group">
+               <span class="p-2 bg-left-bottom bg-gradient-to-r from-pink-500 to-pink-500 bg-[length:0%_2px] 
+               bg-no-repeat group-hover:bg-[length:100%_2px] transition-all duration-500 ease-out">
+                Home
+               </span>
+            </li>
+            <li className="pr-10 hover:cursor-pointer transition-all duration-200 ease-in-out group">
+               <span class="p-2 bg-left-bottom bg-gradient-to-r from-pink-500 to-pink-500 bg-[length:0%_2px] 
+               bg-no-repeat group-hover:bg-[length:100%_2px] transition-all duration-500 ease-out">
+                About me
+               </span>
+            </li>
+            <li className="pr-10 hover:cursor-pointer transition-all duration-200 ease-in-out group">
+               <span class="p-2 bg-left-bottom bg-gradient-to-r from-pink-500 to-pink-500 bg-[length:0%_2px] 
+               bg-no-repeat group-hover:bg-[length:100%_2px] transition-all duration-500 ease-out">
+                Shop
+               </span>
+            </li>
+            <li className="pr-10 hover:cursor-pointer transition-all duration-200 ease-in-out group">
+               <span class="p-2 bg-left-bottom bg-gradient-to-r from-pink-500 to-pink-500 bg-[length:0%_2px] 
+               bg-no-repeat group-hover:bg-[length:100%_2px] transition-all duration-500 ease-out">
+                Contact
+               </span>
+            </li>
+            <li className="pr-10 hover:cursor-pointer transition-all duration-200 ease-in-out group">
+               
+            <h1 className='mr-3'>Language:</h1>
+            </li>
          </ul>
+
         </div>
 
         
