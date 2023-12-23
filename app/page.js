@@ -6,7 +6,6 @@ export default function Home() {
    <div className="bg-[#000D2E] min-h-[100vh]">
     <Navigation />
     <Main />
-    <Main />
    </div>
   )
 }
