@@ -14,17 +14,20 @@ export default function Main(){
                     </div>
 
                     <div className="flex flex-row pt-8">
-                        <div className="w-[110px] h-[120px] rounded-lg bg-gradient-to-b from-blue-700 via-blue-900 to-gray-900">
+                        <a className="w-[110px] h-[120px] bg-green-400 rounded-lg 
+                        bg-gradient-to-r from-[#001B61] to-[#001B61BF]
+                        cursor-pointer"
+                        href="https://www.instagram.com">
                             <Image src="/images/insta.png" width={60} height={60} className="mx-auto m-3"/>
                             <h1 className="text-xl text-center">@lexyri9</h1>
-                        </div>
+                        </a>
 
                         <div className="w-[110px] h-[120px] bg-green-400 rounded-lg ml-8 bg-gradient-to-r from-[#001B61] to-[#001B61BF]">
                             <Image src="/images/tiktok.png" width={50} height={50} className="mx-auto m-3"/>
                             <h1 className="text-xl text-center">@lexyri9</h1>
                         </div>
 
-                        <div className="w-[110px] h-[120px] bg-green-400 rounded-lg ml-8 bg-gradient-to-r from-blue-700 via-blue-800 to-gray-900">
+                        <div className="w-[110px] h-[120px] bg-green-400 rounded-lg ml-8 bg-gradient-to-r from-[#001B61] to-[#001B61BF]">
                             <Image src="/images/youtube.png" width={60} height={60} className="mx-auto m-3"/>
                             <h1 className="text-xl text-center">@lexyri9</h1>
                         </div>

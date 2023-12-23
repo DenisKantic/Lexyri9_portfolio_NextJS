@@ -1,6 +1,8 @@
 import Navigation from "./components/Navigation"
 import Main from "./components/Main"
 import AboutMe from "./components/AboutMe"
+import Social from "./components/Social"
+import Content from "./components/Content"
 
 export default function Home() {
   return (
@@ -8,6 +10,8 @@ export default function Home() {
     <Navigation />
     <Main />
     <AboutMe />
+    <Social />
+    <Content />
    </div>
   )
 }
