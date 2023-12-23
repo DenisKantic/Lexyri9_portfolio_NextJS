@@ -22,15 +22,15 @@ export default function Main(){
                             <h1 className="text-xl text-center">@lexyri9</h1>
                         </a>
 
-                        <div className="w-[110px] h-[120px] bg-green-400 rounded-lg ml-8 bg-gradient-to-r from-[#001B61] to-[#001B61BF]">
+                        <a className="w-[110px] h-[120px] bg-green-400 rounded-lg ml-8 bg-gradient-to-r from-[#001B61] to-[#001B61BF]">
                             <Image src="/images/tiktok.png" width={50} height={50} className="mx-auto m-3"/>
                             <h1 className="text-xl text-center">@lexyri9</h1>
-                        </div>
+                        </a>
 
-                        <div className="w-[110px] h-[120px] bg-green-400 rounded-lg ml-8 bg-gradient-to-r from-[#001B61] to-[#001B61BF]">
+                        <a className="w-[110px] h-[120px] bg-green-400 rounded-lg ml-8 bg-gradient-to-r from-[#001B61] to-[#001B61BF]">
                             <Image src="/images/youtube.png" width={60} height={60} className="mx-auto m-3"/>
                             <h1 className="text-xl text-center">@lexyri9</h1>
-                        </div>
+                        </a>
                     </div>
                 </div>
 
