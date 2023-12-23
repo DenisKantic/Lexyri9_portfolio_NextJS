@@ -4,8 +4,8 @@ import Image from "next/image";
 
 export default function Navigation() {
     return (
-     <div className="w-[90%] mx-auto flex justify-between items-center flex-row-reverse h-[8vh] pt-5">
-
+     <div className="w-[90%] mx-auto">
+      <div className="flex justify-between items-center flex-row-reverse h-[8vh] pt-5 fixed w-[90%]"> 
         <div>
          <button className="bg-white rounded-xl px-5 py-3 flex items-center justify-center text-xl text-black">
             <TbCoffee className="mr-2" size={25}/>
@@ -42,14 +42,14 @@ export default function Navigation() {
                </span>
             </li>
             <li className="pr-10 hover:cursor-pointer transition-all duration-200 ease-in-out group">
-               
+
             <h1 className='mr-3'>Language:</h1>
             </li>
          </ul>
 
         </div>
 
-        
+      </div>        
      </div>
     )
   }
