@@ -18,24 +18,24 @@ export default function Main(){
                         bg-gradient-to-r from-[#001B61] to-[#001B61BF]
                         cursor-pointer"
                         href="https://www.instagram.com">
-                            <Image src="/images/insta.png" width={60} height={60} className="mx-auto m-3"/>
+                            <Image src="/images/insta.png" unoptimized width={60} height={60} className="mx-auto m-3"/>
                             <h1 className="text-xl text-center">@lexyri9</h1>
                         </a>
 
                         <a className="w-[110px] h-[120px] bg-green-400 rounded-lg ml-8 bg-gradient-to-r from-[#001B61] to-[#001B61BF]">
-                            <Image src="/images/tiktok.png" width={50} height={50} className="mx-auto m-3"/>
+                            <Image src="/images/tiktok.png" unoptimized width={50} height={50} className="mx-auto m-3"/>
                             <h1 className="text-xl text-center">@lexyri9</h1>
                         </a>
 
                         <a className="w-[110px] h-[120px] bg-green-400 rounded-lg ml-8 bg-gradient-to-r from-[#001B61] to-[#001B61BF]">
-                            <Image src="/images/youtube.png" width={60} height={60} className="mx-auto m-3"/>
+                            <Image src="/images/youtube.png" unoptimized width={60} height={60} className="mx-auto m-3"/>
                             <h1 className="text-xl text-center">@lexyri9</h1>
                         </a>
                     </div>
                 </div>
 
                 <div className="w-[50] h-screen flex justify-center items-center"> {/*right side of the photo*/}
-                    <Image src="/images/logo.webp" width={400} height={400} className="h-[80vh] w-full object-contain"/>
+                    <Image src="/images/logo.webp" width={400} unoptimized height={400}  className="h-[80vh] w-full object-contain"/>
                 </div>
             </div>
         </div>

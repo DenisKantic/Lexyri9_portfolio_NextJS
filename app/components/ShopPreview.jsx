@@ -3,17 +3,41 @@ import Image from "next/image";
 export default function ShopPreview(){
 
     return (
-        <div className="w-[80%] mx-auto h-[80vh]">
+        <div className="w-[80%] mx-auto h-[90vh]">
 
         <h1 className="text-white text-2xl">My shop</h1>
         <div className="mt-4 border-t-2  w-full"></div>
 
-        <div className="text-white pt-10 text-center text-2xl w-[70%] mx-auto">
-            <h1 className="text-white">Take a look at my shop where you can find different styled t-shirts and many more.</h1>
-            <p className="text-white">Buying one of my products, you support directly "RE-SET" non-profit organisation, which made all of this product</p>
+        <div className="text-white pt-10 text-xl w-[50%]">
+            <h1 className="text-white">Take a look at my shop where you can find different styled <br /> t-shirts and choose your favorite one.</h1>
+            <p className="text-white pt-5">Buying one of my products, you support directly "RE-SET" non-profit organisation, which made all of this product</p>
         </div>
-        
-        
+
+        <div className="pt-10 flex flex-row justify-between items-center">
+            <div className="h-[450px] w-[350px] border-2 rounded-3xl flex justify-center items-center"> {/* card item */}
+                <Image src="/images/MOCKUP/Hoodie/grey.png" unoptimized width={200} height={200}
+                className="object-center h-auto w-auto"
+                />
+            </div>
+
+            <div className="h-[450px] w-[350px] border-2 rounded-3xl flex justify-center items-center"> {/* card item */}
+                <Image src="/images/MOCKUP/T-shirt/NAVY.png" unoptimized width={200} height={200}
+                className="object-contain h-auto w-auto"
+                />
+            </div>
+
+            <div className="h-[450px] w-[350px] border-2 rounded-3xl flex justify-center items-center"> {/* card item */}
+                <Image src="/images/MOCKUP/Long_sleeve/green.png" unoptimized width={200} height={200}
+                className="object-contain h-auto w-auto"
+                />
+            </div>
+
+            
+        </div>
+
+            <div className="w-full flex justify-center items-center pt-10">
+                <button className="h-[50px] w-[200px] bg-white rounded-xl text-md">Let's shop</button>
+            </div>
         </div>
     )
 }
