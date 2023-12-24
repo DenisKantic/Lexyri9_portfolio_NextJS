@@ -3,7 +3,7 @@ import Image from "next/image";
 export default function ShopPreview(){
 
     return (
-        <div className="w-[80%] mx-auto h-[90vh]">
+        <div className="w-[80%] mx-auto h-[100vh]">
 
         <h1 className="text-white text-2xl">My shop</h1>
         <div className="mt-4 border-t-2  w-full"></div>
@@ -36,7 +36,7 @@ export default function ShopPreview(){
         </div>
 
             <div className="w-full flex justify-center items-center pt-10">
-                <button className="h-[50px] w-[200px] bg-white rounded-xl text-md">Let's shop</button>
+                <button className="h-[60px] w-[220px] bg-white rounded-xl text-md">Let's shop</button>
             </div>
         </div>
     )
