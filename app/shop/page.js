@@ -1,3 +1,4 @@
+'use client'
 import ShopSite from "../components/ShopSite"
 import Navigation from "../components/Navigation"
 
