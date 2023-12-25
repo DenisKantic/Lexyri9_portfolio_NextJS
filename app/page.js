@@ -3,6 +3,8 @@ import Main from "./components/Main"
 import AboutMe from "./components/AboutMe"
 import Social from "./components/Social"
 import Content from "./components/Content"
+import ShopPreview from "./components/ShopPreview"
+import Contact from "./components/Contact"
 
 export default function Home() {
   return (
@@ -12,6 +14,8 @@ export default function Home() {
     <AboutMe />
     <Social />
     <Content />
+    <ShopPreview />
+    <Contact />
    </div>
   )
 }
