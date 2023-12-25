@@ -1,5 +1,11 @@
+import ShopSite from "../components/ShopSite"
+import Navigation from "../components/Navigation"
+
 export default function Shop(){
     return (
-        <h1>This is shop site</h1>
+        <div className="bg-[#000D2E] min-h-[100vh]">
+            <Navigation />
+            <ShopSite />
+        </div>
     )
 }
