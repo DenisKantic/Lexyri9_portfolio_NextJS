@@ -15,19 +15,19 @@ export default function ShopPreview(){
 
         <div className="pt-10 flex flex-row justify-between items-center">
             <div className="h-[450px] w-[350px] border-2 rounded-3xl flex justify-center items-center"> {/* card item */}
-                <Image src="/images/MOCKUP/Hoodie/grey.png" unoptimized width={200} height={200}
+                <Image src="/images/MOCKUP/Hoodie/grey.png" alt="hoodie_grey" unoptimized width={200} height={200}
                 className="object-center h-auto w-auto"
                 />
             </div>
 
             <div className="h-[450px] w-[350px] border-2 rounded-3xl flex justify-center items-center"> {/* card item */}
-                <Image src="/images/MOCKUP/T-shirt/NAVY.png" unoptimized width={200} height={200}
+                <Image src="/images/MOCKUP/T-shirt/NAVY.png" alt="T-shirt blue" unoptimized width={200} height={200}
                 className="object-contain h-auto w-auto"
                 />
             </div>
 
             <div className="h-[450px] w-[350px] border-2 rounded-3xl flex justify-center items-center"> {/* card item */}
-                <Image src="/images/MOCKUP/Long_sleeve/green.png" unoptimized width={200} height={200}
+                <Image src="/images/MOCKUP/Long_sleeve/green.png" alt="long sleeve green" unoptimized width={200} height={200}
                 className="object-contain h-auto w-auto"
                 />
             </div>

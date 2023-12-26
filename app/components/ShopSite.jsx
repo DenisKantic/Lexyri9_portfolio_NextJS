@@ -104,7 +104,7 @@ import { useState } from "react";
             <div className="text-white w-[70%] h-[50vh] flex flex-row items-center"> {/* card item parent */}
 
                 <div className="w-[45%] flex justify-center items-center"> {/* left side image */}
-                <Image src="/images/MOCKUP/Long_sleeve/green.png" unoptimized
+                <Image src="/images/MOCKUP/Long_sleeve/green.png" alt="long sleeve" unoptimized
                 width={100} height={100} className="w-auto h-auto flex justify-center items-center"/>
                 </div>
 
@@ -153,7 +153,7 @@ import { useState } from "react";
             <div className="text-white w-[70%] h-[50vh] flex flex-row items-center"> {/* card item parent */}
 
                 <div className="w-[45%] flex justify-center items-center"> {/* left side image */}
-                <Image src={selectedT} unoptimized
+                <Image src={selectedT} unoptimized alt="t-shirt"
                 width={100} height={100} className="w-auto h-auto flex justify-center items-center"/>
                 </div>
 
@@ -208,7 +208,7 @@ import { useState } from "react";
             <div className="text-white w-[70%] h-[50vh] flex flex-row items-center"> {/* card item parent */}
 
                 <div className="w-[45%] flex justify-center items-center"> {/* left side image */}
-                <Image src={selectedCap} unoptimized
+                <Image src={selectedCap} unoptimized alt="cap"
                 width={100} height={100} className="w-auto h-auto flex justify-center items-center"/>
                 </div>
 

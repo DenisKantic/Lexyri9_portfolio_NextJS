@@ -9,9 +9,9 @@ export default function Content(){
             <div className="flex justify-center items-center">
 
             <div className="w-[50%] flex flex-row h-[60vh]"> {/* picture left side */}
-                   <Image src="/images/leo2.jpg" width={150} height={150} 
+                   <Image src="/images/leo2.jpg" alt="leo_picture" width={150} height={150} 
                    className='object-contain mx-auto h-[35vh] w-full mt-10' />
-                   <Image src="/images/leo2.jpg" width={150} height={150} 
+                   <Image src="/images/leo2.jpg" alt="leo_picture" width={150} height={150} 
                    className='object-contain mx-auto h-[35vh] w-full mt-[200px]' />
 
                 </div>
