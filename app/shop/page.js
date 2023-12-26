@@ -4,7 +4,7 @@ import Navigation from "../components/Navigation"
 
 export default function Shop(){
     return (
-        <div className="bg-[#000D2E] min-h-[100vh]">
+        <div className="bg-[#181e29] min-h-[100vh]">
             <Navigation />
             <ShopSite />
         </div>
