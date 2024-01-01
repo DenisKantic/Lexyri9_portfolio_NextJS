@@ -8,8 +8,8 @@ import Dropdown from 'react-bootstrap/Dropdown';
     
     export default function ShopSite(){
 
+
         const [color,setColor] = useState("Gray");
-        const [price,setPrice] = useState(20);
         const [size,setSize] = useState("S");
         const [quantity,setQuantity] = useState(1);
         const [position,setPosition] = useState("Front");
@@ -19,8 +19,8 @@ import Dropdown from 'react-bootstrap/Dropdown';
         const [capPrice, setCapPrice] = useState(0.01);
 
         const hodieDescription = "Boja dukserice: " + color + " / " + " Pozicija natpisa: " +position + " Velicina:" + size + " / " + " kolicina: " +quantity;
-        console.log("Opis:" +hodieDescription)
         const tShirtDescription = "Boja majice kratkih rukava: " + color + " / " + " Velicina:" + size + " / " + " Kolicina:" + quantity;
+        const longSleveDescription = "Boja majice dugih rukava: " + color + " / " + " Velicina:" + size + " / " + " Kolicina:" + quantity;
         const cap = "Kapa boje: " + color + " / " + "Kolicina: " + quantity;
 
         
@@ -256,7 +256,7 @@ import Dropdown from 'react-bootstrap/Dropdown';
 
                         <div>
                         <h1 className="text-lg pt-10">Price</h1>
-                        <p className="text-4xl font-bold">USD 20,00</p>
+                        <p className="text-4xl font-bold">USD 0.01</p>
                         <PaypalCheckoutButton 
                          product={{description: hodieDescription, price: (longShirtPrice*quantity)}} />
                         </div>
@@ -361,7 +361,7 @@ import Dropdown from 'react-bootstrap/Dropdown';
 
                         <div>
                         <h1 className="text-lg pt-10">Price</h1>
-                        <p className="text-4xl font-bold">USD 20,00</p>
+                        <p className="text-4xl font-bold">USD 0.01</p>
 
                         <PaypalCheckoutButton product={{description: tShirtDescription, price: (tshirtPrice*quantity)}} />
                         </div>
@@ -454,7 +454,7 @@ import Dropdown from 'react-bootstrap/Dropdown';
 
                         <div>
                         <h1 className="text-lg pt-10">Price</h1>
-                        <p className="text-4xl font-bold">USD 20,00</p>
+                        <p className="text-4xl font-bold">USD 0.01</p>
                         <PaypalCheckoutButton product={{description: cap, price:(capPrice*quantity)}}></PaypalCheckoutButton>
                         </div>
                     </div>

@@ -3,9 +3,11 @@ import ShopSite from "../components/ShopSite"
 import Navigation from "../components/Navigation"
 import { PayPalScriptProvider } from "@paypal/react-paypal-js"
 
+
 export default function Shop(){
 
-    const clientID= "AceliHG-lGyBnO_SbJ2RHLivdbAiaRvnxSsxQ_c3n08FGiGcbKwfPbLDqXdJTwSGA7EB-snx_A8esBy6"
+          const clientID= "Ad-vZvG5sIHqdqLXda_qjdubzISxbpsyhWbKq8xLtfhBEWNy2Jn75ds0OsXdjTU_yPrN7gCj290PePrh"
+        
 
     return (
         <PayPalScriptProvider options={{
