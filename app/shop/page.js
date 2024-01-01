@@ -2,10 +2,13 @@
 import ShopSite from "../components/ShopSite"
 import Navigation from "../components/Navigation"
 import { PayPalScriptProvider } from "@paypal/react-paypal-js"
+ 
+
 
 
 export default function Shop(){
-
+    
+    
           const clientID= "Ad-vZvG5sIHqdqLXda_qjdubzISxbpsyhWbKq8xLtfhBEWNy2Jn75ds0OsXdjTU_yPrN7gCj290PePrh"
         
 
@@ -13,8 +16,8 @@ export default function Shop(){
         <PayPalScriptProvider options={{
             "clientId": clientID
           }}>
-        <div className="bg-[#181e29] min-h-[100vh]">
-            <Navigation></Navigation>
+        <div className="bg-[#000D2E] min-h-[100vh]">
+        <Navigation className="z-40"></Navigation>
             <ShopSite />
         </div>
         </PayPalScriptProvider>

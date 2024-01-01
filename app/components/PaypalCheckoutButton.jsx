@@ -34,14 +34,15 @@ const PaypalCheckoutButton = ({product}) => {
     }
 
   return (
-    <PayPalButtons 
-    className='pt-3'
+    <PayPalButtons
+    className='pt-3 '
     style={{
+        locale: 'en-US',
         color: "black",
         size: "responsive",
         layout: "horizontal",
         tagline: "false",
-        shape: "pill"
+        shape: "pill",
     }}
     forceReRender={[description,price]}
         createOrder={(data,actions)=>{

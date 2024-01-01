@@ -2,8 +2,8 @@
 import Image from "next/image"
 import { useState } from "react";
 import PaypalCheckoutButton from "./PaypalCheckoutButton";
-import { NavItem, PageItem } from "react-bootstrap";
 import Dropdown from 'react-bootstrap/Dropdown';
+import Link from "next/link";
 
     
     export default function ShopSite(){
@@ -154,11 +154,13 @@ import Dropdown from 'react-bootstrap/Dropdown';
 
                         <div>
                         <h1 className="text-lg pt-10">Price</h1>
-                        <p className="text-4xl font-bold">USD 0,01</p>
+                        <p className="text-4xl font-bold">USD 0,01 </p>
                         </div>
                     </div>
-                    <PaypalCheckoutButton 
-                     product={{description: hodieDescription, price: (hodiePrice*quantity)}} />
+                    <div className="xxs:w-[50%] md:w-[50%]">
+                    <PaypalCheckoutButton product={{description: hodieDescription, price: (longShirtPrice*quantity)}}/>
+        
+                     </div>
                 </div>
             </div>
 
