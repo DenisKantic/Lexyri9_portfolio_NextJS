@@ -34,13 +34,13 @@ import Dropdown from 'react-bootstrap/Dropdown';
                 <h1 className="text-4xl text-white">Man's hoodie</h1>
             <div className="text-white w-[70%] h-[50vh] flex  items-center
                             xxs:flex-col xxs:w-full
-                            md:flex-row"> 
+                            md:flex-row h-auto"> 
                             {/* card item parent */}
 
                 <div className="flex justify-center items-center
                                 xxs:w-full md:w-[50%]"> {/* left side image */}
                 <Image src="/images/MOCKUP/Hoodie/grey.png" unoptimized alt="hoddie"
-                width={100} height={100} className="flex w-auto justify-center items-center h-[50vh]"/>
+                width={100} height={100} className="flex w-auto justify-center items-center max-h-[60vh]"/>
                 </div>
 
                 <div className="mx-auto
@@ -165,14 +165,19 @@ import Dropdown from 'react-bootstrap/Dropdown';
             {/* long sleeve t-shirt item */}
 
             <h1 className="text-4xl text-white mt-[100px]">Man's Long Sleeve Shirt</h1>
-            <div className="text-white w-[70%] h-[50vh] flex flex-row items-center"> {/* card item parent */}
+            <div className="text-white w-[70%] h-[50vh] flex h-auto items-center
+            xxs:flex-col xxs:w-full
+            md:flex-row"> {/* card item parent */}
 
-                <div className="w-[45%] flex justify-center items-center"> {/* left side image */}
+                <div className="flex justify-center items-center
+                xxs:w-full md:w-[50%]"> {/* left side image */}
                 <Image src="/images/MOCKUP/Long_sleeve/green.png" alt="long sleeve" unoptimized
-                width={100} height={100} className="w-auto h-auto flex justify-center items-center"/>
+                width={100} height={100} className="w-auto h-auto flex justify-center items-center max-h-[60vh]"/>
                 </div>
 
-                <div className="w-[40%] mx-auto"> {/* right side options */}
+                <div className="mx-auto
+                xxs:w-full 
+                md:w-[40%]"> {/* right side options */}
 
                     <div>
                         <p className="pt-6 pb-2">Color</p>
@@ -267,14 +272,20 @@ import Dropdown from 'react-bootstrap/Dropdown';
            {/* t-shirt item */}
 
            <h1 className="text-4xl text-white mt-[100px]">Man's T-Shirt</h1>
-            <div className="text-white w-[70%] h-[50vh] flex flex-row items-center"> {/* card item parent */}
+            <div className="text-white w-[70%] h-[50vh] flex h-auto items-center
+            xxs:flex-col xxs:w-full
+            md:flex-row"> {/* card item parent */}
 
-                <div className="w-[45%] flex justify-center items-center"> {/* left side image */}
+                <div className="flex justify-center items-center
+                xxs:w-full md:w-[50%]
+                "> {/* left side image */}
                 <Image src="./images/MOCKUP/T-shirt/WHITE.png" unoptimized alt="t-shirt"
-                width={100} height={100} className="w-auto h-auto flex justify-center items-center"/>
+                width={100} height={100} className="w-auto h-auto flex justify-center items-center max-h-[60vh]"/>
                 </div>
 
-                <div className="w-[40%] mx-auto"> {/* right side options */}
+                <div className="mx-auto
+                xxs:w-full 
+                md:w-[40%]"> {/* right side options */}
 
                     <div>
                         <p className="pt-6 pb-2">Color</p>
@@ -378,14 +389,19 @@ import Dropdown from 'react-bootstrap/Dropdown';
             {/* man cap item */}
 
            <h1 className="text-4xl text-white mt-[100px]">Man's Cap</h1>
-            <div className="text-white w-[70%] h-[50vh] flex flex-row items-center"> {/* card item parent */}
+            <div className="text-white w-[70%] h-[50vh] flex h-auto items-center
+            xxs:flex-col xxs:w-full
+            md:flex-row h-auto"> {/* card item parent */}
 
-                <div className="w-[45%] flex justify-center items-center"> {/* left side image */}
+                <div className="flex justify-center items-center
+                xxs:w-full md:w-[50%]"> {/* left side image */}
                 <Image src="/images/MOCKUP/Cap/CAPBLACK.png" unoptimized alt="cap"
-                width={100} height={100} className="w-auto h-auto flex justify-center items-center"/>
+                width={100} height={100} className="w-auto h-auto flex justify-center items-center max-h-[60vh]"/>
                 </div>
 
-                <div className="w-[40%] mx-auto"> {/* right side options */}
+                <div className="mx-auto
+                xxs:w-full 
+                md:w-[40%]"> {/* right side options */}
 
                     <div>
                         <p className="pt-6 pb-2">Color</p>
