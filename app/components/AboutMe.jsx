@@ -3,7 +3,7 @@ import '../globals.css';
 
 export default function AboutMe(){
     return (
-        <div className="mx-auto w-[80%] h-[60vh]">
+        <div className="mx-auto w-[80%] h-[60vh] overflow-hidden">
             <div className="flex justify-center items-center">
                 <div className="w-[40%] h-[50vh] flex justify-center flex-col"> {/*left side text */}
                     <h1 className="text-4xl text-white">Who am I?</h1>
