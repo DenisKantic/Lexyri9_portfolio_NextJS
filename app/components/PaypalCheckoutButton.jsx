@@ -35,6 +35,14 @@ const PaypalCheckoutButton = ({product}) => {
 
   return (
     <PayPalButtons 
+    className='pt-3'
+    style={{
+        color: "black",
+        size: "responsive",
+        layout: "horizontal",
+        tagline: "false",
+        shape: "pill"
+    }}
     forceReRender={[description,price]}
         createOrder={(data,actions)=>{
             return actions.order.create({
@@ -42,7 +50,8 @@ const PaypalCheckoutButton = ({product}) => {
                     { 
                         description,   // ovdje nastaje problem, on ne cita uopste nekada sta je za description
                         amount: {
-                            value: price // ovdje uredno cita cijenu 
+                            value: price,
+                            description: description // ovdje uredno cita cijenu 
                         }
                     }
                 ]
