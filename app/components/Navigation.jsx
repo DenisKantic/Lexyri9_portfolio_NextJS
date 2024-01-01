@@ -132,7 +132,7 @@ export default function Navigation() {
                   </li>
                   <li className='mr-2 flex items-center py-2'><AiOutlineHome size={22} className='mr-5'/><a href="#home" onClick={()=> setNav(!nav)}>HOME</a></li>
                   <li className='mr-2 flex items-center py-2'><AiOutlineInfoCircle size={22} className='mr-5' /><a href="#aboutUs" onClick={()=> setNav(!nav)}>ABOUT ME</a></li>
-                  <li className='mr-2 flex items-center py-2'><AiOutlineShoppingCart size={22} className='mr-5' /><a href="#products" onClick={()=> setNav(!nav)}>SHOP</a></li>
+                  <Link href="/shop"><li className='mr-2 flex items-center py-2'><AiOutlineShoppingCart size={22} className='mr-5' /><a onClick={()=> setNav(!nav)}>SHOP</a></li></Link>
                   <li className='mr-2 flex items-center py-2'><AiOutlinePhone  size={22} className='mr-5'/><a href="#contact" onClick={()=> setNav(!nav)}>CONTACT</a></li>
                  
                </ul>
