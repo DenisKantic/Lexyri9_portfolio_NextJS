@@ -36,7 +36,7 @@ const PaypalCheckoutButton = ({product}) => {
 
   return (
     <PayPalButtons
-    className='pt-3 '
+    className='pt-3 w-[50%]'
     style={{
         locale: 'en-US',
         color: "black",
