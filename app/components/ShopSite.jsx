@@ -3,7 +3,7 @@ import Image from "next/image"
 import { useState } from "react";
 import PaypalCheckoutButton from "./PaypalCheckoutButton";
 import Dropdown from 'react-bootstrap/Dropdown';
-import Link from "next/link";
+import Checkout from "./Checkout";
 
     
     export default function ShopSite(){
@@ -17,6 +17,7 @@ import Link from "next/link";
         const [tshirtPrice, setTshirtPrice] = useState(0.01);
         const [longShirtPrice, setLongShirtPrice] = useState(0.01);
         const [capPrice, setCapPrice] = useState(0.01);
+        const [open,setIsOpen] = useState(false);
 
         const hodieDescription = "Boja dukserice: " + color + " / " + " Pozicija natpisa: " +position + " Velicina:" + size + " / " + " kolicina: " +quantity;
         const tShirtDescription = "Boja majice kratkih rukava: " + color + " / " + " Velicina:" + size + " / " + " Kolicina:" + quantity;
@@ -43,9 +44,20 @@ import Link from "next/link";
                 width={100} height={100} className="flex w-auto justify-center items-center max-h-[60vh]"/>
                 </div>
 
-                <div className="mx-auto
-                                xxs:w-full 
-                                md:w-[40%]"> {/* right side options */}
+
+                <div className={open ? "flex flex-col w-[40%]" : "hidden"}>
+              
+                        <Checkout
+                    items={{ 
+                    price:(hodiePrice*quantity),
+                    position:position,
+                    color: color,
+                    quantity: quantity,
+                    size: size
+                }} /> 
+                  <button className="px-3 py-2 bg-white text-black" onClick={()=>setIsOpen(false)}>CLOSE</button>
+                    </div>
+                <div className={open ? "hidden" : "mx-auto xxs:w-full md:w-[40%]"}> {/* right side options */}
 
                     <div>
                         <p className="pb-4 text-white">Please select the image position</p>
@@ -133,16 +145,16 @@ import Link from "next/link";
                                 <Dropdown.Item onClick={()=>setQuantity(1)}>
                                     1
                                 </Dropdown.Item>
-                                <Dropdown.Item onClick={()=>setQuantity(quantity+1)}>
+                                <Dropdown.Item onClick={()=>setQuantity(2)}>
                                     2
                                 </Dropdown.Item>
-                                <Dropdown.Item onClick={()=>setQuantity(quantity+2)}>
+                                <Dropdown.Item onClick={()=>setQuantity(3)}>
                                     3
                                 </Dropdown.Item>
-                                <Dropdown.Item onClick={()=>setQuantity(quantity+3)}>
+                                <Dropdown.Item onClick={()=>setQuantity(4)}>
                                     4
                                 </Dropdown.Item>
-                                <Dropdown.Item onClick={()=>setQuantity(quantity+4)}>
+                                <Dropdown.Item onClick={()=>setQuantity(5)}>
                                     5
                                 </Dropdown.Item>
                             </Dropdown.Menu>
@@ -152,14 +164,14 @@ import Link from "next/link";
                             
                               </div>
 
-                        <div>
+                        <div className={open ? "hidden" : "block"}>
                         <h1 className="text-lg pt-10">Price</h1>
                         <p className="text-4xl font-bold">USD 0,01 </p>
                         </div>
                     </div>
                     <div className="xxs:w-[50%] md:w-[50%]">
-                    <PaypalCheckoutButton product={{description: hodieDescription, price: (longShirtPrice*quantity)}}/>
-        
+                        <button className={open ? "hidden" : "h-[40px] p-2 bg-red-400"} onClick={()=>setIsOpen(true)}>Order right now!</button>
+
                      </div>
                 </div>
             </div>
