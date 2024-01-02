@@ -6,10 +6,13 @@ import Content from "./components/Content"
 import ShopPreview from "./components/ShopPreview"
 import Contact from "./components/Contact"
 
+
 export default function Home() {
   return (
+    
    <div className="bg-[#000D2E] min-h-[100vh] overflow-hidden">
-    <Navigation />
+
+    <Navigation/>
     <Main />
     <AboutMe />
     <Social />

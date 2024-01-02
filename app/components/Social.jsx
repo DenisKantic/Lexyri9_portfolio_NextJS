@@ -21,7 +21,7 @@ export default function Social(){
                     </div>
 
                     <div className="flex flex-col items-center justify-center"> {/*card item */}
-                        <Image src="/images/mob3.png" alt="tiktok lexyri9" unoptimized width={200} height={400}
+                        <Image src="/images/mob2.png" alt="tiktok lexyri9" unoptimized width={200} height={400}
                         className="h-[50vh] w-full object-contain"/>
 
                         <div className="w-full h-[50px] bg-white rounded-xl flex 
@@ -33,7 +33,7 @@ export default function Social(){
                     </div>
 
                     <div className="flex flex-col items-center justify-center"> {/*card item */}
-                        <Image src="/images/mob2.png" alt="youtube lexyri9" unoptimized width={200} height={400}
+                        <Image src="/images/mob3.png" alt="youtube lexyri9" unoptimized width={200} height={400}
                         className="h-[50vh] w-full object-contain"/>
 
                         <div className="w-full h-[50px] bg-white rounded-xl flex 

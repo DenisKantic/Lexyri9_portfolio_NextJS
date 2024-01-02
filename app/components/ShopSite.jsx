@@ -2,8 +2,10 @@
 import Image from "next/image"
 import { useState } from "react";
 import PaypalCheckoutButton from "./PaypalCheckoutButton";
-import { NavItem, PageItem } from "react-bootstrap";
 import Dropdown from 'react-bootstrap/Dropdown';
+import Checkout from "./Checkout";
+import Button from 'react-bootstrap/Button';
+import Form from 'react-bootstrap/Form';
 
     
     export default function ShopSite(){
@@ -16,12 +18,12 @@ import Dropdown from 'react-bootstrap/Dropdown';
         const [hodiePrice, setHodiePrice] = useState(0.01);
         const [tshirtPrice, setTshirtPrice] = useState(0.01);
         const [longShirtPrice, setLongShirtPrice] = useState(0.01);
+        const [text, setText] = useState("");
         const [capPrice, setCapPrice] = useState(0.01);
-
-        const hodieDescription = "Boja dukserice: " + color + " / " + " Pozicija natpisa: " +position + " Velicina:" + size + " / " + " kolicina: " +quantity;
-        const tShirtDescription = "Boja majice kratkih rukava: " + color + " / " + " Velicina:" + size + " / " + " Kolicina:" + quantity;
-        const longSleveDescription = "Boja majice dugih rukava: " + color + " / " + " Velicina:" + size + " / " + " Kolicina:" + quantity;
-        const cap = "Kapa boje: " + color + " / " + "Kolicina: " + quantity;
+        const [open,setIsOpen] = useState(false);
+        const [longSleeveOpen, setIsLongSleeveOpen] = useState(false);
+        const [isCapOpen, setIsCapOpen] = useState(false);
+        const [isTshirtOpen, setIsTshirtOpen] = useState(false);
 
         
     return (
@@ -43,9 +45,22 @@ import Dropdown from 'react-bootstrap/Dropdown';
                 width={100} height={100} className="flex w-auto justify-center items-center max-h-[60vh]"/>
                 </div>
 
-                <div className="mx-auto
-                                xxs:w-full 
-                                md:w-[40%]"> {/* right side options */}
+
+                <div className={open ? "flex flex-col xss:w-full md:w-[40%]" : "hidden"}>
+              
+                        <Checkout
+                    items={{ 
+                    price:(hodiePrice*quantity),
+                    position:position,
+                    color: color,
+                    quantity: quantity,
+                    text: text,
+                    size: size,
+                    clothes: "dukserica"
+                }} /> 
+                  <button className="px-3 py-2 bg-white text-black" onClick={()=>setIsOpen(false)}>CLOSE</button>
+                    </div>
+                <div className={open ? "hidden" : "mx-auto xxs:w-full md:w-[40%]"}> {/* right side options */}
 
                     <div>
                         <p className="pb-4 text-white">Please select the image position</p>
@@ -65,9 +80,11 @@ import Dropdown from 'react-bootstrap/Dropdown';
                      </Dropdown.Item>
                   </Dropdown.Menu>
             </Dropdown>
+
+                        <p className="pt-6">Write your custom logo</p>
+                        <Form.Control size="md" type="text" placeholder="Type here" onChange={(e)=>setText(e.target.value)}/>
                         
-                        <br />
-                        <p className="pt-6">Color</p>
+                        <p className="pt-4">Color</p>
                         <div className="items-center justify-around">   
                         <Dropdown>
                   <Dropdown.Toggle variant="success" id="dropdown-basic"
@@ -133,16 +150,16 @@ import Dropdown from 'react-bootstrap/Dropdown';
                                 <Dropdown.Item onClick={()=>setQuantity(1)}>
                                     1
                                 </Dropdown.Item>
-                                <Dropdown.Item onClick={()=>setQuantity(quantity+1)}>
+                                <Dropdown.Item onClick={()=>setQuantity(2)}>
                                     2
                                 </Dropdown.Item>
-                                <Dropdown.Item onClick={()=>setQuantity(quantity+2)}>
+                                <Dropdown.Item onClick={()=>setQuantity(3)}>
                                     3
                                 </Dropdown.Item>
-                                <Dropdown.Item onClick={()=>setQuantity(quantity+3)}>
+                                <Dropdown.Item onClick={()=>setQuantity(4)}>
                                     4
                                 </Dropdown.Item>
-                                <Dropdown.Item onClick={()=>setQuantity(quantity+4)}>
+                                <Dropdown.Item onClick={()=>setQuantity(5)}>
                                     5
                                 </Dropdown.Item>
                             </Dropdown.Menu>
@@ -152,13 +169,14 @@ import Dropdown from 'react-bootstrap/Dropdown';
                             
                               </div>
 
-                        <div>
+                        <div className={open ? "hidden" : "block"}>
                         <h1 className="text-lg pt-10">Price</h1>
-                        <p className="text-4xl font-bold">USD 0,01</p>
+                        <p className="text-4xl font-bold">USD 0,01 </p>
                         </div>
                     </div>
-                    <PaypalCheckoutButton 
-                     product={{description: hodieDescription, price: (hodiePrice*quantity)}} />
+                    <div className="xxs:w-[50%] md:w-[50%] pt-3">
+                        <Button className={open ? "hidden" : "h-[40px] p-2"} onClick={()=>setIsOpen(true)}>Order right now!</Button>
+                     </div>
                 </div>
             </div>
 
@@ -175,10 +193,24 @@ import Dropdown from 'react-bootstrap/Dropdown';
                 width={100} height={100} className="w-auto h-auto flex justify-center items-center max-h-[60vh]"/>
                 </div>
 
-                <div className="mx-auto
-                xxs:w-full 
-                md:w-[40%]"> {/* right side options */}
+                <div className={longSleeveOpen ? "flex flex-col xss:w-full md:w-[40%]" : "hidden"}>
+              
+                        <Checkout
+                    items={{ 
+                    price:(longShirtPrice*quantity),
+                    color: color,
+                    clothes: "Dugi rukav",
+                    text: text,
+                    quantity: quantity,
+                    size: size
+                }} /> 
+                  <button className="px-3 py-2 bg-white text-black" onClick={()=>setIsLongSleeveOpen(false)}>CLOSE</button>
+                    </div>
+                <div className={longSleeveOpen ? "hidden" : "mx-auto xxs:w-full md:w-[40%]"}> {/* right side options */}
 
+
+                <p className="pt-6">Write your custom logo</p>
+                        <Form.Control size="md" type="text" placeholder="Type here" onChange={(e)=>setText(e.target.value)}/>
                     <div>
                         <p className="pt-6 pb-2">Color</p>
 
@@ -242,16 +274,16 @@ import Dropdown from 'react-bootstrap/Dropdown';
                                 <Dropdown.Item onClick={()=>setQuantity(1)}>
                                     1
                                 </Dropdown.Item>
-                                <Dropdown.Item onClick={()=>setQuantity(quantity+1)}>
+                                <Dropdown.Item onClick={()=>setQuantity(2)}>
                                     2
                                 </Dropdown.Item>
-                                <Dropdown.Item onClick={()=>setQuantity(quantity+2)}>
+                                <Dropdown.Item onClick={()=>setQuantity(3)}>
                                     3
                                 </Dropdown.Item>
-                                <Dropdown.Item onClick={()=>setQuantity(quantity+3)}>
+                                <Dropdown.Item onClick={()=>setQuantity(4)}>
                                     4
                                 </Dropdown.Item>
-                                <Dropdown.Item onClick={()=>setQuantity(quantity+4)}>
+                                <Dropdown.Item onClick={()=>setQuantity(5)}>
                                     5
                                 </Dropdown.Item>
                             </Dropdown.Menu>
@@ -262,9 +294,10 @@ import Dropdown from 'react-bootstrap/Dropdown';
                         <div>
                         <h1 className="text-lg pt-10">Price</h1>
                         <p className="text-4xl font-bold">USD 0.01</p>
-                        <PaypalCheckoutButton 
-                         product={{description: hodieDescription, price: (longShirtPrice*quantity)}} />
                         </div>
+                        <div className="xxs:w-[50%] md:w-[50%] pt-3">
+                        <Button className={longSleeveOpen ? "hidden" : "h-[40px] p-2"} onClick={()=>setIsLongSleeveOpen(true)}>Order right now!</Button>
+                     </div>
                     </div>
                 </div>
             </div>
@@ -283,11 +316,26 @@ import Dropdown from 'react-bootstrap/Dropdown';
                 width={100} height={100} className="w-auto h-auto flex justify-center items-center max-h-[60vh]"/>
                 </div>
 
-                <div className="mx-auto
-                xxs:w-full 
-                md:w-[40%]"> {/* right side options */}
-
+                <div className={isTshirtOpen ? "flex flex-col xss:w-full md:w-[40%]" : "hidden"}>
+              
+              <Checkout
+          items={{ 
+          price:(tshirtPrice*quantity),
+          color: color,
+          text: text,
+          clothes: "t-shirt",
+          quantity: quantity,
+          size: size
+      }} /> 
+        <button className="px-3 py-2 bg-white text-black" onClick={()=>setIsTshirtOpen(false)}>CLOSE</button>
+          </div>
+      <div className={isTshirtOpen ? "hidden" : "mx-auto xxs:w-full md:w-[40%]"}> {/* right side options */}
                     <div>
+
+                    <p className="pt-6">Write your custom logo</p>
+                        <Form.Control size="md" type="text" placeholder="Type here" onChange={(e)=>setText(e.target.value)}/>
+
+
                         <p className="pt-6 pb-2">Color</p>
                         <div className="items-center justify-around">   
                         <Dropdown>
@@ -352,16 +400,16 @@ import Dropdown from 'react-bootstrap/Dropdown';
                                 <Dropdown.Item onClick={()=>setQuantity(1)}>
                                     1
                                 </Dropdown.Item>
-                                <Dropdown.Item onClick={()=>setQuantity(quantity+1)}>
+                                <Dropdown.Item onClick={()=>setQuantity(2)}>
                                     2
                                 </Dropdown.Item>
-                                <Dropdown.Item onClick={()=>setQuantity(quantity+2)}>
+                                <Dropdown.Item onClick={()=>setQuantity(3)}>
                                     3
                                 </Dropdown.Item>
-                                <Dropdown.Item onClick={()=>setQuantity(quantity+3)}>
+                                <Dropdown.Item onClick={()=>setQuantity(4)}>
                                     4
                                 </Dropdown.Item>
-                                <Dropdown.Item onClick={()=>setQuantity(quantity+4)}>
+                                <Dropdown.Item onClick={()=>setQuantity(5)}>
                                     5
                                 </Dropdown.Item>
                             </Dropdown.Menu>
@@ -373,9 +421,10 @@ import Dropdown from 'react-bootstrap/Dropdown';
                         <div>
                         <h1 className="text-lg pt-10">Price</h1>
                         <p className="text-4xl font-bold">USD 0.01</p>
-
-                        <PaypalCheckoutButton product={{description: tShirtDescription, price: (tshirtPrice*quantity)}} />
                         </div>
+                        <div className="xxs:w-[50%] md:w-[50%] pt-3">
+                        <Button className={isTshirtOpen ? "hidden" : "h-[40px] p-2"} onClick={()=>setIsTshirtOpen(true)}>Order right now!</Button>
+                     </div>
                     </div>
 
 
@@ -389,7 +438,7 @@ import Dropdown from 'react-bootstrap/Dropdown';
             {/* man cap item */}
 
            <h1 className="text-4xl text-white mt-[100px]">Man's Cap</h1>
-            <div className="text-white w-[70%] h-[50vh] flex h-auto items-center
+            <div className="text-white w-[70%] h-[50vh] flex h-auto items-center pb-5
             xxs:flex-col xxs:w-full
             md:flex-row h-auto"> {/* card item parent */}
 
@@ -399,9 +448,18 @@ import Dropdown from 'react-bootstrap/Dropdown';
                 width={100} height={100} className="w-auto h-auto flex justify-center items-center max-h-[60vh]"/>
                 </div>
 
-                <div className="mx-auto
-                xxs:w-full 
-                md:w-[40%]"> {/* right side options */}
+                <div className={isCapOpen ? "flex flex-col xss:w-full md:w-[40%]" : "hidden"}>
+              
+              <Checkout
+          items={{ 
+          price:(capPrice*quantity),
+          color: color,
+          clothes: "Kapa",
+          quantity: quantity
+      }} /> 
+        <button className="px-3 py-2 bg-white text-black" onClick={()=>setIsCapOpen(false)}>CLOSE</button>
+          </div>
+      <div className={isCapOpen ? "hidden" : "mx-auto xxs:w-full md:w-[40%]"}> {/* right side options */}
 
                     <div>
                         <p className="pt-6 pb-2">Color</p>
@@ -451,16 +509,16 @@ import Dropdown from 'react-bootstrap/Dropdown';
                                 <Dropdown.Item onClick={()=>setQuantity(1)}>
                                     1
                                 </Dropdown.Item>
-                                <Dropdown.Item onClick={()=>setQuantity(quantity+1)}>
+                                <Dropdown.Item onClick={()=>setQuantity(2)}>
                                     2
                                 </Dropdown.Item>
-                                <Dropdown.Item onClick={()=>setQuantity(quantity+2)}>
+                                <Dropdown.Item onClick={()=>setQuantity(3)}>
                                     3
                                 </Dropdown.Item>
-                                <Dropdown.Item onClick={()=>setQuantity(quantity+3)}>
+                                <Dropdown.Item onClick={()=>setQuantity(4)}>
                                     4
                                 </Dropdown.Item>
-                                <Dropdown.Item onClick={()=>setQuantity(quantity+4)}>
+                                <Dropdown.Item onClick={()=>setQuantity(5)}>
                                     5
                                 </Dropdown.Item>
                             </Dropdown.Menu>
@@ -471,8 +529,11 @@ import Dropdown from 'react-bootstrap/Dropdown';
                         <div>
                         <h1 className="text-lg pt-10">Price</h1>
                         <p className="text-4xl font-bold">USD 0.01</p>
-                        <PaypalCheckoutButton product={{description: cap, price:(capPrice*quantity)}}></PaypalCheckoutButton>
                         </div>
+                        <div className="xxs:w-[50%] md:w-[50%] pt-3">
+                        <Button className={isCapOpen ? "hidden" : "h-[40px] p-2"} onClick={()=>setIsCapOpen(true)}>Order right now!</Button>
+
+                     </div>
                     </div>
 
 

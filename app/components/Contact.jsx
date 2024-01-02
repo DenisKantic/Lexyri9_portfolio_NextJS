@@ -1,7 +1,7 @@
 export default function Contact(){
 
     return (
-    <div className="w-[80%] mx-auto h-[90vh]">
+    <div className="w-[80%] mx-auto h-[90vh]" id="contact">
 
             <h1 className="text-white text-2xl">Contact me</h1>
             <div className="mt-4 border-t-2  w-full"></div>

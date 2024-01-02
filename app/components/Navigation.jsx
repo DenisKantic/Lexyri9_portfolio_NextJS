@@ -11,22 +11,27 @@ import Link from "next/link";
 
 
 
+
 export default function Navigation() {
+
+   const [color,setColor] = useState(false);
+
+   
 
    const [nav,setNav] = useState(false);
    const [lang,setLang] = useState('EN');
 
     return (
-     <div className="w-[90%] mx-auto">
-      <div className="flex h-[8vh] fixed w-[90%]  
-                     xxs:items-start xxs:justify-start xxs:pt-3
-                     md:flex-row-reverse md:justify-between md:items-center md:pt-5">
+     <div className="w-[90%] mx-auto z-10">
+      <div className="flex h-[8vh] fixed w-[90%]
+      xxs:items-start xxs:justify-start  xxs:pt-3 
+      md:flex-row-reverse md:justify-between md:items-center md:pt-5 z-40 overflow-hidden bg-[#000D2E]">                    
 
 
         <div>
             <Button variant="primary" href="https://www.paypal.com/paypalme/lexyri"
             target="_blank" rel="noopener noreferrer"
-            className="bg-white rounded-xl flex items-center justify-center text-black
+            className="bg-white rounded-xl flex items-center justify-center text-black z-40
                            xxs:hidden 
                            md:flex md:w-[180px] md:h-[50px] md:text-sm md:text-md
                            lg:text-lg lg:w-[220px]">
@@ -38,13 +43,17 @@ export default function Navigation() {
         <ul className='xxs:hidden md:flex justify-start items-center text-white'>
             <Image src="/images/logo.webp" alt="lexiry_logo" width={50} height={50} 
             className="mr-10"/>
+            <Link href="/">
             <li className="hover:cursor-pointer transition-all duration-200 ease-in-out group
                            md:pr-2 lg:pr-10">
                <span className="p-2 bg-left-bottom bg-gradient-to-r from-pink-500 to-pink-500 bg-[length:0%_2px] 
                bg-no-repeat group-hover:bg-[length:100%_2px] transition-all duration-500 ease-out">
-                <Link href="/">Home</Link>
+                Home
                </span>
             </li>
+            </Link>
+
+            <Link href="/#aboutMe">
             <li className="hover:cursor-pointer transition-all duration-200 ease-in-out group
                            md:pr-2 lg:pr-10">
                <span className="p-2 bg-left-bottom bg-gradient-to-r from-pink-500 to-pink-500 bg-[length:0%_2px] 
@@ -52,6 +61,10 @@ export default function Navigation() {
                About me
                </span>
             </li>
+            </Link>
+
+
+            <Link href="/shop">
             <li className="hover:cursor-pointer transition-all duration-200 ease-in-out group
                            md:pr-2 lg:pr-10">
                <span className="p-2 bg-left-bottom bg-gradient-to-r from-pink-500 to-pink-500 bg-[length:0%_2px] 
@@ -59,6 +72,9 @@ export default function Navigation() {
                 Shop
                </span>
             </li>
+            </Link>
+
+            <Link href="/#contact">
             <li className="hover:cursor-pointer transition-all duration-200 ease-in-out group
                            md:pr-2 lg:pr-10">
                <span className="p-2 bg-left-bottom bg-gradient-to-r from-pink-500 to-pink-500 bg-[length:0%_2px] 
@@ -66,6 +82,7 @@ export default function Navigation() {
                 Contact
                </span>
             </li>
+            </Link>
                <Dropdown>
                   <Dropdown.Toggle variant="success" id="dropdown-basic"
                   className="flex flex-row justify-center items-center">
@@ -97,7 +114,7 @@ export default function Navigation() {
              href="https://www.paypal.com/paypalme/lexyri"
              target="_blank" rel="noopener noreferrer">
                <TbCoffee className="text-white" size={30} />
-            </Button>
+            </Button>  
             </div>
 
             <div className={ nav ? 'bg-black/80 w-full fixed h-screen z-10 top-0 left-0 duration-200' : 'flex'}>
@@ -130,20 +147,19 @@ export default function Navigation() {
                   </Dropdown.Menu>
             </Dropdown>
                   </li>
-                  <li className='mr-2 flex items-center py-2'><AiOutlineHome size={22} className='mr-5'/><a href="#home" onClick={()=> setNav(!nav)}>HOME</a></li>
-                  <li className='mr-2 flex items-center py-2'><AiOutlineInfoCircle size={22} className='mr-5' /><a href="#aboutUs" onClick={()=> setNav(!nav)}>ABOUT ME</a></li>
-                  <Link href="/shop"><li className='mr-2 flex items-center py-2'><AiOutlineShoppingCart size={22} className='mr-5' /><a onClick={()=> setNav(!nav)}>SHOP</a></li></Link>
-                  <li className='mr-2 flex items-center py-2'><AiOutlinePhone  size={22} className='mr-5'/><a href="#contact" onClick={()=> setNav(!nav)}>CONTACT</a></li>
+                  <Link href="/"><li className='mr-2 flex items-center py-2'  onClick={()=> setNav(!nav)}><AiOutlineHome size={22} className='mr-5'/>HOME</li></Link>
+                  <Link href="/#aboutMe"><li className='mr-2 flex items-center py-2' onClick={()=> setNav(!nav)}><AiOutlineInfoCircle size={22} className='mr-5' />ABOUT ME</li></Link>
+                  <Link href="/shop"><li className='mr-2 flex items-center py-2' onClick={()=> setNav(!nav)}><AiOutlineShoppingCart size={22} className='mr-5' />SHOP</li></Link>
+                  <Link href="/#contact"><li className='mr-2 flex items-center py-2' onClick={()=> setNav(!nav)}><AiOutlinePhone  size={22} className='mr-5'/>CONTACT</li></Link>
                  
                </ul>
-
          </div>
 
 
         </div>
         </div>
 
-      </div>        
+      </div>  
      </div>
     )
   }

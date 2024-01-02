@@ -26,6 +26,7 @@ const PaypalCheckoutButton = ({product}) => {
     if(paidFor){
         // display success message, modal or redirect the user to the success page
         alert("Thank you for your purchase")
+        window.location.reload(true);
     }
 
     if(error){
@@ -34,14 +35,16 @@ const PaypalCheckoutButton = ({product}) => {
     }
 
   return (
-    <PayPalButtons 
-    className='pt-3'
+    <PayPalButtons
+    className='pt-3 w-[50%]'
     style={{
+        locale: 'en-US',
         color: "black",
         size: "responsive",
         layout: "horizontal",
         tagline: "false",
-        shape: "pill"
+        shape: "pill",
+        label: "pay"
     }}
     forceReRender={[description,price]}
         createOrder={(data,actions)=>{
