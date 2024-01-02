@@ -39,10 +39,11 @@ import Form from 'react-bootstrap/Form';
                             md:flex-row h-auto"> 
                             {/* card item parent */}
 
-                <div className="flex justify-center items-center
+                <div className="flex justify-center items-center flex-col
                                 xxs:w-full md:w-[50%]"> {/* left side image */}
                 <Image src="/images/MOCKUP/Hoodie/grey.png" unoptimized alt="hoddie"
                 width={100} height={100} className="flex w-auto justify-center items-center max-h-[60vh]"/>
+                <p>Warning: Picture is ilustration and colors can vary a little</p>
                 </div>
 
 
@@ -60,7 +61,7 @@ import Form from 'react-bootstrap/Form';
                 }} /> 
                   <button className="px-3 py-2 bg-white text-black" onClick={()=>setIsOpen(false)}>CLOSE</button>
                     </div>
-                <div className={open ? "hidden" : "mx-auto xxs:w-full md:w-[40%]"}> {/* right side options */}
+                <div className={open ? "hidden" : "mx-auto xxs:w-full md:w-[45%] lg:max-w-[35%]"}> {/* right side options */}
 
                     <div>
                         <p className="pb-4 text-white">Please select the image position</p>
@@ -81,8 +82,8 @@ import Form from 'react-bootstrap/Form';
                   </Dropdown.Menu>
             </Dropdown>
 
-                        <p className="pt-6">Write your custom logo</p>
-                        <Form.Control size="md" type="text" placeholder="Type here" onChange={(e)=>setText(e.target.value)}/>
+                        <p className="pt-6 flex flex-col">Write your custom sign {"(Optional)"} <span className="text-sm text-gray-400">*Max 12 characters</span> </p>
+                        <Form.Control size="md" type="text" placeholder="Type here" maxLength="12" onChange={(e)=>setText(e.target.value)}/>
                         
                         <p className="pt-4">Color</p>
                         <div className="items-center justify-around">   
@@ -113,14 +114,14 @@ import Form from 'react-bootstrap/Form';
 
                         </div>
 
-                        <div className="flex flex-row justify-center items-center pt-10">
+                        <div className="flex flex-row justify-between items-center pt-10">
 
-                            <div className="w-full">
+                            <div className="w-full pr-10">
                             <p>Size</p>
                            
                                         <Dropdown>
                                 <Dropdown.Toggle variant="success" id="dropdown-basic"
-                                className="flex flex-row justify-center items-center w-[90%]">
+                                className="flex flex-row justify-center items-center w-full">
                                 {size}
                                 </Dropdown.Toggle>
 
@@ -143,10 +144,10 @@ import Form from 'react-bootstrap/Form';
                             <p>Quantity</p>
                             <Dropdown>
                             <Dropdown.Toggle variant="success" id="dropdown-basic"
-                  className="w-[90%]">
+                  className="w-full">
                    {quantity}
                   </Dropdown.Toggle>
-                            <Dropdown.Menu>
+                            <Dropdown.Menu className="text-center">
                                 <Dropdown.Item onClick={()=>setQuantity(1)}>
                                     1
                                 </Dropdown.Item>
@@ -206,7 +207,7 @@ import Form from 'react-bootstrap/Form';
                 }} /> 
                   <button className="px-3 py-2 bg-white text-black" onClick={()=>setIsLongSleeveOpen(false)}>CLOSE</button>
                     </div>
-                <div className={longSleeveOpen ? "hidden" : "mx-auto xxs:w-full md:w-[40%]"}> {/* right side options */}
+                <div className={longSleeveOpen ? "hidden" : "mx-auto xxs:w-full md:w-[45%] lg:max-w-[35%]"}> {/* right side options */}
 
 
                 <p className="pt-6">Write your custom logo</p>
@@ -239,13 +240,13 @@ import Form from 'react-bootstrap/Form';
                   </Dropdown.Menu>
             </Dropdown>
 
-                        <div className="flex flex-row justify-center place-items-center pt-10">
+                        <div className="flex flex-row justify-between place-items-center pt-10">
 
-                            <div className="w-full">
+                            <div className="w-full pr-10">
                             <p>Size</p>
                             <Dropdown>
                                 <Dropdown.Toggle variant="success" id="dropdown-basic"
-                                className="flex flex-row justify-center items-center w-[90%]">
+                                className="flex flex-row justify-center items-center w-full">
                                 {size}
                                 </Dropdown.Toggle>
 
@@ -267,7 +268,7 @@ import Form from 'react-bootstrap/Form';
                             <p>Quantity</p>
                             <Dropdown>
                             <Dropdown.Toggle variant="success" id="dropdown-basic"
-                  className="w-[90%]">
+                  className="w-full">
                    {quantity}
                   </Dropdown.Toggle>
                             <Dropdown.Menu>
@@ -329,7 +330,7 @@ import Form from 'react-bootstrap/Form';
       }} /> 
         <button className="px-3 py-2 bg-white text-black" onClick={()=>setIsTshirtOpen(false)}>CLOSE</button>
           </div>
-      <div className={isTshirtOpen ? "hidden" : "mx-auto xxs:w-full md:w-[40%]"}> {/* right side options */}
+      <div className={isTshirtOpen ? "hidden" : "mx-auto xxs:w-full md:w-[45%] lg:max-w-[35%]"}> {/* right side options */}
                     <div>
 
                     <p className="pt-6">Write your custom logo</p>
@@ -365,13 +366,13 @@ import Form from 'react-bootstrap/Form';
 
                         </div>
 
-                        <div className="flex flex-row justify-center place-items-center pt-10">
+                        <div className="flex flex-row justify-between place-items-center pt-10">
 
-                        <div className="w-full">
+                        <div className="w-full pr-10">
                             <p>Size</p>
                             <Dropdown>
                                 <Dropdown.Toggle variant="success" id="dropdown-basic"
-                                className="flex flex-row justify-center items-center w-[90%]">
+                                className="flex flex-row justify-center items-center w-full">
                                 {size}
                                 </Dropdown.Toggle>
 
@@ -393,7 +394,7 @@ import Form from 'react-bootstrap/Form';
                             <p>Quantity</p>
                             <Dropdown>
                             <Dropdown.Toggle variant="success" id="dropdown-basic"
-                  className="w-[90%]">
+                  className="w-full">
                    {quantity}
                   </Dropdown.Toggle>
                             <Dropdown.Menu>
@@ -459,7 +460,7 @@ import Form from 'react-bootstrap/Form';
       }} /> 
         <button className="px-3 py-2 bg-white text-black" onClick={()=>setIsCapOpen(false)}>CLOSE</button>
           </div>
-      <div className={isCapOpen ? "hidden" : "mx-auto xxs:w-full md:w-[40%]"}> {/* right side options */}
+      <div className={isCapOpen ? "hidden" : "mx-auto xxs:w-full md:w-[45%] lg:max-w-[35%]"}> {/* right side options */}
 
                     <div>
                         <p className="pt-6 pb-2">Color</p>
@@ -493,8 +494,8 @@ import Form from 'react-bootstrap/Form';
 
                         <div className="flex flex-row justify-center place-items-center pt-10">
 
-                            <div className="w-full pb-2">
-                            <p>*Sizes are universal</p>
+                            <div className="w-full pt-3 justify-center items-center pr-10">
+                            <p className="text-xl text-gray-400">*Sizes are universal</p>
                             </div>
                         
                             
@@ -502,7 +503,7 @@ import Form from 'react-bootstrap/Form';
                             <p>Quantity</p>
                             <Dropdown>
                             <Dropdown.Toggle variant="success" id="dropdown-basic"
-                  className="w-[90%]">
+                  className="w-full">
                    {quantity}
                   </Dropdown.Toggle>
                             <Dropdown.Menu>

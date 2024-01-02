@@ -24,10 +24,10 @@ export default function Content(){
                         </h1>
 
                         <div className='text-white w-[80%] mt-10 '>
-                            Lorem ipsum dolor sit amet consectetur 
-                            adipisicing elit. Unde eum hic error, ratione 
-                            dignissimos perferendis quas veritatis voluptate atque aspernatur eius assumenda illum, expedita modi. Tempora exercitationem iure quidem
-                            repudiandae. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim earum, quas veniam est aperiam officia.
+                        Vjera u sebe i svoj rad vam donosi uspjeh. Svaki korak naprijed
+                         koji napravite, napravite ga sa nadom i vjerujem da je to onaj pravi
+                          korak i nikada nećete pasti! Moj životni moto je: " Ne volim da 
+                          vjerujem, volim da se uvjerim! ".
                         </div>
 
                     </div>
