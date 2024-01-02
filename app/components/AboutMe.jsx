@@ -19,7 +19,7 @@ export default function AboutMe(){
                 </div>
 
                 <div className="w-[60%]"> {/* picture right side */}
-                   <Image src="/images/leo2.jpg" alt='leo picture'  width={200} height={200} className='object-contain mx-auto h-[40vh] w-full' />
+                   <Image src="/images/leo.jpg" alt='leo picture'  width={400} height={400} className='object-contain mx-auto h-[60vh] w-full' />
                    <p className='text-white text-xl'>add different picture</p>
                 </div>
             </div>
