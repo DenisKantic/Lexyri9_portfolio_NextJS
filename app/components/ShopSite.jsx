@@ -24,6 +24,8 @@ import Form from 'react-bootstrap/Form';
         const [longSleeveOpen, setIsLongSleeveOpen] = useState(false);
         const [isCapOpen, setIsCapOpen] = useState(false);
         const [isTshirtOpen, setIsTshirtOpen] = useState(false);
+        const [bih, isSetBih] = useState(false);
+        const [eu, isSetEu] = useState(false);
 
         
     return (
@@ -165,6 +167,9 @@ import Form from 'react-bootstrap/Form';
                                 </Dropdown.Item>
                             </Dropdown.Menu>
                             </Dropdown>
+
+                            <button className="text-white" onClick={()=>isSetBih(5)}>BIH</button>
+                            <button className="text-white pl-5" onClick={()=>isSetBih(10)}>EU</button>
                             </div>
 
                             
@@ -172,7 +177,7 @@ import Form from 'react-bootstrap/Form';
 
                         <div className={open ? "hidden" : "block"}>
                         <h1 className="text-lg pt-10">Price</h1>
-                        <p className="text-4xl font-bold">USD 0,01 </p>
+                        <p className="text-4xl font-bold text-white">USD 30 +  <span className="text-gray-400 text-sm"> {bih} shipping cost</span> </p>
                         </div>
                     </div>
                     <div className="xxs:w-[50%] md:w-[50%] pt-3">
@@ -294,7 +299,7 @@ import Form from 'react-bootstrap/Form';
 
                         <div>
                         <h1 className="text-lg pt-10">Price</h1>
-                        <p className="text-4xl font-bold">USD 0.01</p>
+                        <p className="text-4xl font-bold">USD 0.01 + 10.00</p>
                         </div>
                         <div className="xxs:w-[50%] md:w-[50%] pt-3">
                         <Button className={longSleeveOpen ? "hidden" : "h-[40px] p-2"} onClick={()=>setIsLongSleeveOpen(true)}>Order right now!</Button>

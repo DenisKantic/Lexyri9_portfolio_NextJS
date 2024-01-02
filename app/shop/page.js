@@ -9,7 +9,7 @@ import { PayPalScriptProvider } from "@paypal/react-paypal-js"
 export default function Shop(){
     
     
-          const clientID= "AZgNYuU-Izni1FEJjQSn62Lbp8Dx_ThVYXFTV8KX5Dt7rl6NUiKG_btqiyjsSQigbuJh8An7Z9gtqA7Z"
+          const clientID= "AYe6kMGJrxSJkvqb99RxWetKgQgzw6c0E0x_1MYMP3o_Uviio8hjbO-u7g9K_4Fq0cKwQvJ865SvDetn"
         
 
     return (
