@@ -14,7 +14,7 @@ export default function Checkout ({items}){
         <div className="flex flex-col items-center justify-center text-xl w-full w-full h-[350px]">
         <h1>You choosed:</h1>
         <p className={(position==undefined) ? "hidden" : "block"}>Image position: {position}</p>
-        <p>Custom text: {text}</p>
+        <p className={(text==undefined) ? "hidden" : "block"}>Custom text: {(text==undefined) ? "/" : (text)}</p>
         <p>Color: {color}</p>
         <p className={(size==undefined) ? "hidden" : "block"}>Size: {size}</p>
         <p>Quantity: {quantity}</p>
