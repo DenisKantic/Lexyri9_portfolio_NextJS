@@ -7,7 +7,8 @@ const inter = Inter({ subsets: ['latin'] })
 
 export const metadata = {
   title: 'LEXYRI9',
-  description: 'Your favorite tiktoker!'
+  description: 'Your favorite tiktoker!',
+  metadataBase: new URL('http://localhost:3000')
 }
 
 export default function RootLayout({ children }) {
