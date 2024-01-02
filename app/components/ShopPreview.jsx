@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 export default function ShopPreview(){
 
@@ -10,7 +11,10 @@ export default function ShopPreview(){
 
         <div className="text-white pt-10 text-xl w-[50%]">
             <h1 className="text-white">Take a look at my shop where you can find different styled <br /> t-shirts and choose your favorite one.</h1>
-            <p className="text-white pt-5">Buying one of my products, you support directly "RE-SET" non-profit organisation, which made all of this product</p>
+            <p className="text-white pt-5">U mom web shopu svakako možete pronaći za sebe nešto što mu odgovara. Svaki kupljeni artikal
+             izravno utječe na poboljšanje rada osoba s invaliditetom, pa tako i vašom kupovinom bilo kojeg proizvoda omogućujete da se još jedna osoba 
+            zaposli i uljepšate joj život tako da će se osjećati bitno i odgovorno u današnjem svijetu koji je grub prema 
+            njima. Hvala vam na doprinosu.</p>
         </div>
 
         <div className="pt-10 flex flex-row justify-between items-center">
@@ -21,7 +25,7 @@ export default function ShopPreview(){
             </div>
 
             <div className="h-[450px] w-[350px] border-2 rounded-3xl flex justify-center items-center"> {/* card item */}
-                <Image src="/images/MOCKUP/T-shirt/NAVY.png" alt="T-shirt blue" unoptimized width={200} height={200}
+                <Image src="/images/MOCKUP/T-shirt/WHITE.png" alt="T-shirt blue" unoptimized width={200} height={200}
                 className="object-contain h-auto w-auto"
                 />
             </div>
@@ -36,7 +40,7 @@ export default function ShopPreview(){
         </div>
 
             <div className="w-full flex justify-center items-center pt-10">
-                <button className="h-[60px] w-[220px] bg-white rounded-xl text-md">Let's shop</button>
+                <Link href="/shop" className="h-[60px] flex justify-center items-center w-[220px] bg-white rounded-xl text-md">Let's shop</Link>
             </div>
         </div>
     )

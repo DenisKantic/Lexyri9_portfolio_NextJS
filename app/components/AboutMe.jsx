@@ -10,10 +10,11 @@ export default function AboutMe(){
                     <div className="mt-2 border-t-2  w-[80%]"></div>
 
                     <div className='text-white w-[80%] mt-10'>
-                        Lorem ipsum dolor sit amet consectetur 
-                        adipisicing elit. Unde eum hic error, ratione 
-                        dignissimos perferendis quas veritatis voluptate atque aspernatur eius assumenda illum, expedita modi. Tempora exercitationem iure quidem
-                         repudiandae. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim earum, quas veniam est aperiam officia.
+                    Ja sam osoba koja je svoju takozvanu zaradu na tiktoku preusmjerila ka osobama kojima 
+                    je svaka pomoć potrebna. Bavim se sa više različitih sportova, imam napisane dvije knjige, 
+                    aktivno se bavim nogometom i ribolovom. Magistar sporta, fitness instruktor, majstor kineske 
+                    borilačke vještine Kung Fu Wu Shu i u slobodno vrijeme se bavim TikTok-om gdje svu zaradu od 
+                    prijenosa uživo doniram osobama kojima je to zaista potrebno
                     </div>
                 </div>
 
