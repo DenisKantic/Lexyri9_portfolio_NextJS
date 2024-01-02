@@ -8,23 +8,28 @@ export default function Main(){
             <div className="xxs:w-[80%] flex flex-col justify-center
                                 xxs:w-full xxs:h-[40vh] md:h-[70vh] md:w-[55%]"> {/* left side text */}
 
-                    <div className="xxs:w-full xxs:justify-start xxs:items-center md:max-w-[80%]">
+                    <div className="xxs:w-full xxs:justify-start xxs:items-center md:w-[95%]">
                     <p className="
                                  xxs:text-md xxs:text-center md:text-start md:text-xl">I am Lexyri9,</p>
                     <h1 className="
                                   xxs:text-lg xxs:pt-3 xxs:text-center xxs:w-full
                                   md:text-xl md:text-start
                                   lg:text-3xl
-                                  xl:text-4xl">
-                                    TikTok creator with <br />
-                    fanbase of 110+ thousand <br />
+                                  xl:text-5xl
+                                  bg-clip-text text-transparent
+                    bg-gradient-to-r from-green-300 via-blue-500 to-purple-600">
+                                    TikTok creator with 
+                    fanbase of 110+ thousand 
                     followers and 3M likes</h1>
                     <p className="mt-6
                                   xxs:text-md xxs:text-center xxs:text-sm md:text-start font-bold
                                   xxs:w-[80%] xxs:mx-auto md:mx-0
-                                  sm:w-[50%] md:w-[80%] lg:w-full">
+                                  sm:w-[50%] md:w-[80%] lg:w-full
+                                  md:text-xl">
                                     I'm on a mission to help people with disabilities, 
-                                    so join my community and be a part of the story</p>
+                                    so join my community and be a part of the story.
+                                    By buying products, you are helping me to hire more people with disabilities <br /></p>
+                                    <p className="pt-2 text-md">Scroll down below to see how to help</p>
                     </div>
 
                     <div className="flex justify-center items-center 
