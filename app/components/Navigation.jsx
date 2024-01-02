@@ -25,7 +25,7 @@ export default function Navigation() {
      <div className="w-[90%] mx-auto z-10">
       <div className="flex h-[8vh] fixed w-[90%]
       xxs:items-start xxs:justify-start  xxs:pt-3 
-      md:flex-row-reverse md:justify-between md:items-center md:pt-5 z-40 overflow-hidden bg-[#000D2E]">                    
+      md:flex-row-reverse md:justify-between md:items-center md:pt-5 z-40 bg-[#000D2E]">                    
 
 
         <div>

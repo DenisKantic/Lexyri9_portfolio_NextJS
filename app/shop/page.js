@@ -19,7 +19,7 @@ export default function Shop(){
         <div className="bg-[#000D2E] min-h-[100vh]">
         <Navigation className="z-40"></Navigation>
             <ShopSite />
-        </div>
+        </div> 
         </PayPalScriptProvider>
     )
 }
