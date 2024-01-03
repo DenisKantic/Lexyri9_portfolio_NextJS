@@ -48,6 +48,7 @@ export default function Main(){
                         xxs:w-[80px] xxs:h-[80px] 
                         sm:w-[100px] sm:h-[100px]
                         md:w-[110px] md:h-[120px]"
+                        target="_blank"
                         href="https://www.instagram.com/lexyri9/">
                             <Image src="/images/insta.png" unoptimized alt="instagram_logo" width={60} height={60} 
                             className="mx-auto
@@ -64,6 +65,7 @@ export default function Main(){
                         xxs:w-[80px] xxs:h-[80px]
                         sm:w-[100px] sm:h-[100px]
                         md:w-[110px] md:h-[120px]"
+                        target="_blank"
                         href="tiktok.com/@lexyri9?lang=en">
                             <Image src="/images/tiktok.png"  width={50} height={50} alt="tiktok_logo" unoptimized
                              className="mx-auto
@@ -80,6 +82,7 @@ export default function Main(){
                         xxs:w-[80px] xxs:h-[80px]
                         sm:w-[100px] sm:h-[100px]
                         md:w-[110px] md:h-[120px]"
+                        target="_blank"
                         href="https://www.youtube.com/@lexyri9">
                             <Image src="/images/youtube.png" unoptimized width={60} alt="youtube_logo"  height={60} 
                              className="mx-auto

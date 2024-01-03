@@ -18,8 +18,7 @@ export default function AboutMe(){
                 
                     <div className='text-white w-full
                     '>
-                    <p className='bg-clip-text text-transparent
-                    bg-gradient-to-r from-green-300 via-blue-500 to-purple-600
+                    <p className='
                     xxs:text-md xxs:mt-5 md:mt-2 lg:mt-10 
                     xxs:h-auto md:h-[40vh]
                     md:text-xl'>

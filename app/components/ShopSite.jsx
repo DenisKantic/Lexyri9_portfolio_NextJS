@@ -26,6 +26,7 @@ import Form from 'react-bootstrap/Form';
         const [isTshirtOpen, setIsTshirtOpen] = useState(false);
         const [bih, isSetBih] = useState(false);
         const [eu, isSetEu] = useState(false);
+        const shipingCost = 12;
 
         
     return (
@@ -53,7 +54,7 @@ import Form from 'react-bootstrap/Form';
               
                         <Checkout
                     items={{ 
-                    price:(hodiePrice*quantity),
+                    price:((hodiePrice*quantity)+shipingCost),
                     position:position,
                     color: color,
                     quantity: quantity,
@@ -144,6 +145,15 @@ import Form from 'react-bootstrap/Form';
                             
                             <div className="w-full">
                             <p>Quantity</p>
+                            <Form.Control 
+                            className="text-center"
+                            size="md" type="number" 
+                            required inputMode="numeric" 
+                            placeholder="1" min="1" max="20" 
+                            onChange={(e)=>setQuantity(e.target.value)}/>
+                            {console.log(quantity+ "testing")}
+
+                            {/* 
                             <Dropdown>
                             <Dropdown.Toggle variant="success" id="dropdown-basic"
                   className="w-full">
@@ -168,8 +178,7 @@ import Form from 'react-bootstrap/Form';
                             </Dropdown.Menu>
                             </Dropdown>
 
-                            <button className="text-white" onClick={()=>isSetBih(5)}>BIH</button>
-                            <button className="text-white pl-5" onClick={()=>isSetBih(10)}>EU</button>
+            */ }
                             </div>
 
                             
@@ -181,7 +190,13 @@ import Form from 'react-bootstrap/Form';
                         </div>
                     </div>
                     <div className="xxs:w-[50%] md:w-[50%] pt-3">
-                        <Button className={open ? "hidden" : "h-[40px] p-2"} onClick={()=>setIsOpen(true)}>Order right now!</Button>
+                        <Button className={open ? "hidden" : "h-[40px] p-2"} onClick={()=>
+                            {if(quantity!=0)
+                            setIsOpen(true)
+                        else {
+                            alert("Please enter quantity number")
+                        }}
+                        }>Order right now!</Button>
                      </div>
                 </div>
             </div>
@@ -271,29 +286,12 @@ import Form from 'react-bootstrap/Form';
                             
                             <div className="w-full">
                             <p>Quantity</p>
-                            <Dropdown>
-                            <Dropdown.Toggle variant="success" id="dropdown-basic"
-                  className="w-full">
-                   {quantity}
-                  </Dropdown.Toggle>
-                            <Dropdown.Menu>
-                                <Dropdown.Item onClick={()=>setQuantity(1)}>
-                                    1
-                                </Dropdown.Item>
-                                <Dropdown.Item onClick={()=>setQuantity(2)}>
-                                    2
-                                </Dropdown.Item>
-                                <Dropdown.Item onClick={()=>setQuantity(3)}>
-                                    3
-                                </Dropdown.Item>
-                                <Dropdown.Item onClick={()=>setQuantity(4)}>
-                                    4
-                                </Dropdown.Item>
-                                <Dropdown.Item onClick={()=>setQuantity(5)}>
-                                    5
-                                </Dropdown.Item>
-                            </Dropdown.Menu>
-                            </Dropdown>
+                            <Form.Control 
+                            className="text-center"
+                            size="md" type="number" 
+                            required inputMode="numeric" 
+                            placeholder="1" min="1" max="20" 
+                            onChange={(e)=>setQuantity(e.target.value)}/>
                             </div>
                         </div>
 
@@ -397,29 +395,12 @@ import Form from 'react-bootstrap/Form';
                             
                             <div className="w-full">
                             <p>Quantity</p>
-                            <Dropdown>
-                            <Dropdown.Toggle variant="success" id="dropdown-basic"
-                  className="w-full">
-                   {quantity}
-                  </Dropdown.Toggle>
-                            <Dropdown.Menu>
-                                <Dropdown.Item onClick={()=>setQuantity(1)}>
-                                    1
-                                </Dropdown.Item>
-                                <Dropdown.Item onClick={()=>setQuantity(2)}>
-                                    2
-                                </Dropdown.Item>
-                                <Dropdown.Item onClick={()=>setQuantity(3)}>
-                                    3
-                                </Dropdown.Item>
-                                <Dropdown.Item onClick={()=>setQuantity(4)}>
-                                    4
-                                </Dropdown.Item>
-                                <Dropdown.Item onClick={()=>setQuantity(5)}>
-                                    5
-                                </Dropdown.Item>
-                            </Dropdown.Menu>
-                            </Dropdown>
+                            <Form.Control 
+                            className="text-center"
+                            size="md" type="number" 
+                            required inputMode="numeric" 
+                            placeholder="1" min="1" max="20" 
+                            onChange={(e)=>setQuantity(e.target.value)}/>
                             </div>
                            
                         </div>
@@ -506,29 +487,12 @@ import Form from 'react-bootstrap/Form';
                             
                             <div className="w-full">
                             <p>Quantity</p>
-                            <Dropdown>
-                            <Dropdown.Toggle variant="success" id="dropdown-basic"
-                  className="w-full">
-                   {quantity}
-                  </Dropdown.Toggle>
-                            <Dropdown.Menu>
-                                <Dropdown.Item onClick={()=>setQuantity(1)}>
-                                    1
-                                </Dropdown.Item>
-                                <Dropdown.Item onClick={()=>setQuantity(2)}>
-                                    2
-                                </Dropdown.Item>
-                                <Dropdown.Item onClick={()=>setQuantity(3)}>
-                                    3
-                                </Dropdown.Item>
-                                <Dropdown.Item onClick={()=>setQuantity(4)}>
-                                    4
-                                </Dropdown.Item>
-                                <Dropdown.Item onClick={()=>setQuantity(5)}>
-                                    5
-                                </Dropdown.Item>
-                            </Dropdown.Menu>
-                            </Dropdown>
+                            <Form.Control 
+                            className="text-center"
+                            size="md" type="number" 
+                            required inputMode="numeric" 
+                            placeholder="1" min="1" maxValue="20" 
+                            onChange={(e)=>setQuantity(e.target.value)}/>
                             </div>
                         </div>
 
