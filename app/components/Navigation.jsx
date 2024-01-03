@@ -24,17 +24,18 @@ export default function Navigation() {
     return (
      <div className="w-[90%] mx-auto z-10">
       <div className="flex h-[8vh] fixed w-[90%]
-      xxs:items-start xxs:justify-start  xxs:pt-3 
-      md:flex-row-reverse md:justify-between md:items-center md:pt-5 z-40 bg-[#000D2E]">                    
+      xxs:items-center xxs:justify-start lg:pt-0
+      md:flex-row-reverse md:justify-between md:items-center md:pt-5 z-40
+      bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-[#000D2E] to-[#000D2E]">                    
 
 
         <div>
             <Button variant="primary" href="https://www.paypal.com/paypalme/lexyri"
             target="_blank" rel="noopener noreferrer"
-            className="bg-white rounded-xl flex items-center justify-center text-black z-40
+            className="bg-white rounded-xl flex items-center justify-center text-black z-40 px-3 py-2
                            xxs:hidden 
-                           md:flex md:w-[180px] md:h-[50px] md:text-sm md:text-md
-                           lg:text-lg lg:w-[220px]">
+                           md:flex md:text-sm md:text-md
+                           lg:text-lg">
                Buy me a coffee
                <TbCoffee className="ml-2" size={25}/>
                </Button>
@@ -83,6 +84,8 @@ export default function Navigation() {
                </span>
             </li>
             </Link>
+
+            {/* }
                <Dropdown>
                   <Dropdown.Toggle variant="success" id="dropdown-basic"
                   className="flex flex-row justify-center items-center">
@@ -90,19 +93,20 @@ export default function Navigation() {
                   </Dropdown.Toggle>
 
                   <Dropdown.Menu>
-                     <Dropdown.Item href="#/action-1"  
+                     <Dropdown.Item   
                      onClick={()=>setLang('EN')}
                      className="flex justify-start items-center">
                         <Image width={20} height={20} className="mr-2" src="/images/US_logo.png" alt="us_logo" />
                         EN
                      </Dropdown.Item>
-                  <Dropdown.Item href="#/action-2" onClick={()=>setLang("BA")}
+                  <Dropdown.Item onClick={()=>setLang("BA")}
                   className="flex justify-start items-center">
                   <Image width={20} height={20} className="mr-2" src="/images/bhs_logo.png" alt="ba_logo"/>
                      BA
                      </Dropdown.Item>
                   </Dropdown.Menu>
             </Dropdown>
+    */}
          </ul>
    
          <div className="md:hidden xxs:flex xxs:w-full  xxs:mx-auto xxs:justify-center">

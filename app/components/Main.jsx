@@ -3,14 +3,14 @@ import Image from "next/image"
 export default function Main(){
     return (
         <div className="h-screen xxs:w-[90%] md:w-[80%] mx-auto">
-            <div className="flex justify-center xxs:flex-col md:flex-row items-center text-white h-full">
+            <div className="flex justify-center xxs:flex-col md:flex-row items-center text-white h-full mt-3">
 
             <div className="xxs:w-[80%] flex flex-col justify-center
-                                xxs:w-full xxs:h-[40vh] md:h-[70vh] md:w-[55%]"> {/* left side text */}
+                                xxs:w-full xxs:h-[40vh] md:h-[60vh] md:w-[55%]"> {/* left side text */}
 
-                    <div className="xxs:w-full xxs:justify-start xxs:items-center md:w-[95%]">
+                    <div className="xxs:w-full xxs:justify-start xxs:items-center md:w-[95%] h-[60vh]">
                     <p className="
-                                 xxs:text-md xxs:text-center md:text-start md:text-xl">I am Lexyri9,</p>
+                                 xxs:text-md xxs:text-center md:text-start md:text-xl">Ja sam Lexyri9,</p>
                     <h1 className="
                                   xxs:text-lg xxs:pt-3 xxs:text-center xxs:w-full
                                   md:text-xl md:text-start
@@ -18,18 +18,23 @@ export default function Main(){
                                   xl:text-5xl
                                   bg-clip-text text-transparent
                     bg-gradient-to-r from-green-300 via-blue-500 to-purple-600">
-                                    TikTok creator with 
-                    fanbase of 110+ thousand 
-                    followers and 3M likes</h1>
+                                    TikTok kreator sa 110+ hiljada vjernih
+                    pratioca i 3M lajkova</h1>
                     <p className="mt-6
                                   xxs:text-md xxs:text-center xxs:text-sm md:text-start font-bold
                                   xxs:w-[80%] xxs:mx-auto md:mx-0
                                   sm:w-[50%] md:w-[80%] lg:w-full
                                   md:text-xl">
+                                    Trenutno sprovodim akciju pomaganja osobama sa invaliditetom. 
+                                    Pridruži se mojoj zajednici i budi dio ove priče.
+                                    Kupovinom proizvoda, pomažete da otvorimo više poslovnih prilika
+                                    za zapošljavanje osoba sa invaliditetom.
+
+                                    {/*
                                     I'm on a mission to help people with disabilities, 
                                     so join my community and be a part of the story.
-                                    By buying products, you are helping me to hire more people with disabilities <br /></p>
-                                    <p className="pt-2 text-md">Scroll down below to see how to help</p>
+                                    By buying products, you are helping me to hire more people with disabilities 
+                                */} <br /></p>
                     </div>
 
                     <div className="flex justify-center items-center 
@@ -48,6 +53,7 @@ export default function Main(){
                         xxs:w-[80px] xxs:h-[80px] 
                         sm:w-[100px] sm:h-[100px]
                         md:w-[110px] md:h-[120px]"
+                        target="_blank"
                         href="https://www.instagram.com/lexyri9/">
                             <Image src="/images/insta.png" unoptimized alt="instagram_logo" width={60} height={60} 
                             className="mx-auto
@@ -64,7 +70,8 @@ export default function Main(){
                         xxs:w-[80px] xxs:h-[80px]
                         sm:w-[100px] sm:h-[100px]
                         md:w-[110px] md:h-[120px]"
-                        href="tiktok.com/@lexyri9?lang=en">
+                        target="_blank"
+                        href="https://www.tiktok.com/@lexyri9?_t=8ijTV2jh5IU&_r=1">
                             <Image src="/images/tiktok.png"  width={50} height={50} alt="tiktok_logo" unoptimized
                              className="mx-auto
                              xxs:w-[30px] xxs:h-[30px]  xxs:m-0 
@@ -80,6 +87,7 @@ export default function Main(){
                         xxs:w-[80px] xxs:h-[80px]
                         sm:w-[100px] sm:h-[100px]
                         md:w-[110px] md:h-[120px]"
+                        target="_blank"
                         href="https://www.youtube.com/@lexyri9">
                             <Image src="/images/youtube.png" unoptimized width={60} alt="youtube_logo"  height={60} 
                              className="mx-auto
