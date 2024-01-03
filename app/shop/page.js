@@ -1,8 +1,7 @@
 'use client'
-import ShopSite from "../components/ShopSite"
+import ShopSite from "./ShopSite"
 import Navigation from "../components/Navigation"
 import { PayPalScriptProvider } from "@paypal/react-paypal-js"
- 
 
 
 
@@ -16,7 +15,7 @@ export default function Shop(){
         <PayPalScriptProvider options={{
             "clientId": clientID
           }}>
-        <div className="bg-[#000D2E] min-h-[100vh]">
+        <div className="bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-[#000D2E] via-[#021d62] to-[#000D2E] min-h-[100vh]">
         <Navigation className="z-40"></Navigation>
             <ShopSite />
         </div> 
