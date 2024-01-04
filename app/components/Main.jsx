@@ -2,29 +2,28 @@ import Image from "next/image"
 
 export default function Main(){
     return (
-        <div className="h-screen xxs:w-[90%] md:w-[80%] mx-auto">
-            <div className="flex justify-center xxs:flex-col md:flex-row items-center text-white h-full mt-3">
+        <div className="h-screen flex xxs:w-[90%] md:w-[80%] mx-auto scroll-smooth">
+            <div className="flex justify-center xxs:flex-col md:flex-row items-center text-white h-full mt-3 mx-auto xxs:w-[95%] sm:w-full">
 
-            <div className="xxs:w-[80%] flex flex-col justify-center
-                                xxs:w-full xxs:h-[40vh] md:h-[60vh] md:w-[55%]"> {/* left side text */}
+            <div className="xxs:w-[80%] flex flex-col justify-center items-center
+                                xxs:w-full xxs:h-[40vh] sm:h-[30vh] lg:h-[30vh] xl:h-max-[40vh] md:w-[80%] lg:w-[80%] xl:max-w-[40%]"> {/* left side text */}
 
-                    <div className="xxs:w-full xxs:justify-start xxs:items-center md:w-[95%] h-[60vh]">
+                    <div className="xxs:w-full xxs:justify-start xxs:items-center sm:w-[80%] lg:w-full h-[60vh]">
                     <p className="
                                  xxs:text-md xxs:text-center md:text-start md:text-xl">Ja sam Lexyri9,</p>
                     <h1 className="
-                                  xxs:text-lg xxs:pt-3 xxs:text-center xxs:w-full
-                                  md:text-xl md:text-start
-                                  lg:text-3xl
-                                  xl:text-5xl
+                                  xxs:text-md xxs:pt-3 xxs:text-center xxs:w-full
+                                  md:text-xl md:text-center
+                                  lg:text-3xl lg:text-start
+                                  xl:text-5xl z-10
                                   bg-clip-text text-transparent
                     bg-gradient-to-r from-green-300 via-blue-500 to-purple-600">
                                     TikTok kreator sa 110+ hiljada vjernih
                     pratioca i 3M lajkova</h1>
                     <p className="mt-6
-                                  xxs:text-md xxs:text-center xxs:text-sm md:text-start font-bold
-                                  xxs:w-[80%] xxs:mx-auto md:mx-0
-                                  sm:w-[50%] md:w-[80%] lg:w-full
-                                  md:text-xl">
+                                  xxs:text-sm xxs:text-justify xxs:text-sm md:text-start  font-bold
+                                  xxs:w-[90%] xxs:mx-auto md:mx-0 md:w-full
+                                  md:text-lg lg:text-xl">
                                     Trenutno sprovodim akciju pomaganja osobama sa invaliditetom. 
                                     Pridruži se mojoj zajednici i budi dio ove priče.
                                     Kupovinom proizvoda, pomažete da otvorimo više poslovnih prilika
@@ -38,15 +37,15 @@ export default function Main(){
                     </div>
 
                     <div className="flex justify-center items-center 
-                                xxs:w-full xxs:h-[30vh] md:w-[60%] md:h-[70vh] md:hidden"> {/*right side of the photo*/}
+                                xxs:w-full xxs:h-[30vh] sm:absolute sm:right-0 sm:opacity-20 sm:h-auto xl:hidden"> {/*right side of the photo*/}
                     <Image src="/images/logo.webp" width={400} unoptimized height={400} alt="lexiry_logo" 
-                    className="xxs:h-[30vh] w-auto object-contain md:h-[70vh]"/>
+                        className="xxs:h-[30vh] w-auto object-contain sm:h-auto lg:h-[70vh]"/>
                 </div>
 
                     <div className="flex
+                                    xxs:w-full
                                     xxs:flex-row xxs:justify-center xxs:items-center xxs:pt-2 
-                                    md:flex-row md:pt-8 md:justify-start md:w-[80%]
-                                    md:justify-between">
+                                    md:flex-row md:pt-8 sm:justify-around md:justify-between sm:w-[80%] lg:w-full z-3">
                         <a className="w-[110px] h-[120px] bg-green-400 rounded-lg cursor-pointer
                         bg-gradient-to-r from-[#001B61] to-[#001B61BF]
                         cursor-pointer flex justify-center items-center flex-col
@@ -106,8 +105,7 @@ export default function Main(){
 
                
                 <div className="flex justify-center items-center 
-                                xxs:w-full xxs:h-[30vh] md:w-[70%] md:h-[70vh] xxs:hidden md:flex
-                                md:w-[80%]"> {/*right side of the photo*/}
+                                xxs:w-full xxs:h-[30vh] md:w-[60%] md:h-[20vh] xxs:hidden xl:flex lg:h-auto"> {/*right side of the photo*/}
                     <Image src="/images/logo.webp" width={400} unoptimized height={400} alt="lexiry_logo" 
                     className="xxs:h-[30vh] object-contain md:h-[70vh] md:w-full"/>
                 </div>

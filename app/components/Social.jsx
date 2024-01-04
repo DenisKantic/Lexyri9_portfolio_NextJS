@@ -2,7 +2,7 @@ import Image from "next/image"
 
 export default function Social(){
     return (
-        <div className="w-[80%] mx-auto h-auto mb-5">
+        <div className="w-[80%] mx-auto h-auto mb-5 scroll-smooth">
 
             <h1 className="text-4xl text-white
             ">Nekoliko mojih sadržaja</h1>

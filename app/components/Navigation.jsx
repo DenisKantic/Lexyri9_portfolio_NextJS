@@ -17,16 +17,17 @@ export default function Navigation() {
    const [color,setColor] = useState(false);
 
    
-
+{/*bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-[#000D2E] to-[#000D2E]*/}
    const [nav,setNav] = useState(false);
    const [lang,setLang] = useState('EN');
 
     return (
-     <div className="w-[90%] mx-auto z-10">
-      <div className="flex h-[8vh] fixed w-[90%]
+     <div className="w-full flex justify-center items-center min-h-[8vh] max-h-auto z-20 fixed
+     bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-[#000D2E] to-[#000D2E]">
+      <div className="flex h-auto pt-3 pb-3 fixed w-[90%]
       xxs:items-center xxs:justify-start lg:pt-0
       md:flex-row-reverse md:justify-between md:items-center md:pt-5 z-40
-      bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-[#000D2E] to-[#000D2E]">                    
+      ">                    
 
 
         <div>
@@ -109,7 +110,7 @@ export default function Navigation() {
     */}
          </ul>
    
-         <div className="md:hidden xxs:flex xxs:w-full  xxs:mx-auto xxs:justify-center">
+         <div className="md:hidden xxs:flex xxs:w-full xxs:mx-auto xxs:justify-center">
 
             <div className="flex justify-between items-center w-[90%]">
             <Image src="/images/logo.webp" alt="lexiry_logo" width={35} height={35} />
@@ -122,12 +123,12 @@ export default function Navigation() {
             </div>
 
             <div className={ nav ? 'bg-black/80 w-full fixed h-screen z-10 top-0 left-0 duration-200' : 'flex'}>
-            <div className={nav ? 'flex justify-center items-center text-white' : 'fixed left-[-100%] w-0 top-0 duration-300 bg-purple-400'}>
+            <div className={nav ? 'flex justify-center items-center text-white' : 'fixed left-[-100%] w-0 top-0 duration-300'}>
             <AiOutlineClose className='absolute top-4 right-4 cursor-pointer' 
                         onClick={()=> setNav(!nav)}  size={30}></AiOutlineClose> 
 
 
-               <ul className={ nav ? 'flex flex-col items-start justify-center p-5 text-black text-lg mt-[50px] bg-white text-black w-full h-[40vh]' : 'hidden'}>
+               <ul className={ nav ? 'flex flex-col items-start justify-center p-5 text-black text-lg mt-[50px] bg-white text-black w-full h-auto' : 'hidden'}>
                   <li className='mr-2 flex items-center py-2'>
                   <HiLanguage size={22} className='mr-5' />
                   <Dropdown>

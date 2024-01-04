@@ -2,11 +2,13 @@ import Image from 'next/image';
 import '../globals.css';
 
 export default function AboutMe(){
+
     
+        
     return (
         <div className="mx-auto w-[80%] 
-                           xxs:h-auto mb-5"
-        id='aboutMe'>
+                           xxs:h-auto mb-5 mt-5 scroll-smooth"
+        id='aboutMe' >
             <h1 className="text-4xl text-white">Ko sam ja?</h1>
          <div className="mt-2 h-[3px] bg-gradient-to-r from-green-300 via-blue-500 to-purple-600 xxs:w-full md:w-[50%]"></div>
 

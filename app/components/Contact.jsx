@@ -2,7 +2,7 @@ import Image from "next/image"
 export default function Contact(){
 
     return (
-    <div className="w-[80%] mx-auto xxs:h-auto mt-5 xxs:mb-10" id="contact">
+    <div className="w-[80%] mx-auto xxs:h-auto mt-5 xxs:mb-10 scroll-smooth" id="contact">
 
             <h1 className="text-white text-2xl">Kontakt</h1>
             <div className="mt-4 border-t-2  w-full"></div>

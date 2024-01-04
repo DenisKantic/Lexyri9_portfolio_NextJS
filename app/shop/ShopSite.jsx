@@ -102,23 +102,10 @@ import Form from 'react-bootstrap/Form';
                   </Dropdown.Menu>
             </Dropdown>
 
-            <h1 className="mt-5">Sadržaj <br />20ml</h1>
-
-                        <div className="flex flex-row justify-start w-[50%] place-items-center pt-10">
-                            
-                            <div className="w-full">
-                            <p>Količina</p>
-                            <Form.Control 
-                            className="text-center text-black"
-                            size="md" type="number" 
-                            required inputMode="numeric" 
-                            placeholder="1" min="1" max="20" 
-                            onChange={(e)=>setQuantity(e.target.value)}/>
-                            </div>
-                        </div>
+            <h1 className="mt-5 ">Sadržaj <br />20ml</h1>
 
                         <div>
-                        <h1 className="text-lg pt-10">Cijena</h1>
+                        <h1 className="text-lg pt-5">Cijena</h1>
                         <p className="text-4xl font-bold">6 &euro;  <span className="text-sm text-gray-400">+ poštarina</span> </p>
                         <p className="font-bold">Promotivna cijena!!!</p>
                         </div>
