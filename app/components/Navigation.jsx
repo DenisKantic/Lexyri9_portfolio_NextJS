@@ -37,7 +37,7 @@ export default function Navigation() {
                            xxs:hidden 
                            md:flex md:text-sm md:text-md
                            lg:text-lg">
-               Buy me a coffee
+               Kupi mi kafu
                <TbCoffee className="ml-2" size={25}/>
                </Button>
         </div> 
@@ -50,7 +50,7 @@ export default function Navigation() {
                            md:pr-2 lg:pr-10">
                <span className="p-2 bg-left-bottom bg-gradient-to-r from-pink-500 to-pink-500 bg-[length:0%_2px] 
                bg-no-repeat group-hover:bg-[length:100%_2px] transition-all duration-500 ease-out">
-                Home
+                Početna
                </span>
             </li>
             </Link>
@@ -60,7 +60,7 @@ export default function Navigation() {
                            md:pr-2 lg:pr-10">
                <span className="p-2 bg-left-bottom bg-gradient-to-r from-pink-500 to-pink-500 bg-[length:0%_2px] 
                bg-no-repeat group-hover:bg-[length:100%_2px] transition-all duration-500 ease-out">
-               About me
+               O meni
                </span>
             </li>
             </Link>
@@ -81,7 +81,7 @@ export default function Navigation() {
                            md:pr-2 lg:pr-10">
                <span className="p-2 bg-left-bottom bg-gradient-to-r from-pink-500 to-pink-500 bg-[length:0%_2px] 
                bg-no-repeat group-hover:bg-[length:100%_2px] transition-all duration-500 ease-out">
-                Contact
+                Kontakt
                </span>
             </li>
             </Link>

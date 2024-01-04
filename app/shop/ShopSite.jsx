@@ -10,11 +10,11 @@ import Form from 'react-bootstrap/Form';
     export default function Shop(){
 
 
-        const [color,setColor] = useState("Gray");
+        const [color,setColor] = useState("Siva");
         const [size,setSize] = useState("S");
-        const [position,setPosition] = useState("Front");
+        const [position,setPosition] = useState("Prednja");
         const [text, setText] = useState("");
-        const [capPrice, setCapPrice] = useState(6);
+        
         const [open,setIsOpen] = useState(false);
         const [longSleeveOpen, setIsLongSleeveOpen] = useState(false);
         const [isCapOpen, setIsCapOpen] = useState(false);
@@ -26,6 +26,7 @@ import Form from 'react-bootstrap/Form';
         const longShirtPrice = 12;
         const perfumePrice = 6;
         const shipping = 6;
+        const capPrice = 6;
        
         
     return (
@@ -35,8 +36,8 @@ import Form from 'react-bootstrap/Form';
         <div className="mt-4 border-t-2  w-full pb-20"></div>
 
                 
-            <h1 className="text-4xl bg-clip-text text-transparent
-                  bg-gradient-to-r from-fuchsia-500 to-cyan-500">Parfemi</h1>
+            <h1 className="text-4xl bg-clip-text text-transparent 
+                  bg-gradient-to-r from-fuchsia-500 to-cyan-500 xxs:pb-10 md:mb-[-50px]">Parfemi</h1>
 
             <div className="text-white w-[70%] h-[50vh] flex h-auto items-center
             xxs:flex-col xxs:w-full
@@ -47,7 +48,8 @@ import Form from 'react-bootstrap/Form';
                 xxs:w-full md:w-[50%]"> {/* left side image */}
                 <Image src="/images/parfume.png" alt="perfum" unoptimized
                 width={100} height={100} className="w-auto flex justify-center items-center max-h-[50vh]"/>
-                <p className="bg-gradient-to-r from-amber-200 to-yellow-500 bg-clip-text text-transparent">Napomena: Fotografija je ilustrativna i može se razlikovati</p>
+                <p className="bg-gradient-to-r from-amber-200 to-yellow-500 bg-clip-text text-transparent text-center p-3">
+                    Napomena: Fotografija je ilustrativna i može se razlikovati</p>
                 </div>
 
                 <div className={perfumeOpen ? "flex flex-col xss:w-full md:w-[40%]" : "hidden"}>
@@ -136,7 +138,8 @@ import Form from 'react-bootstrap/Form';
                                 xxs:w-full md:w-[50%]"> {/* left side image */}
                 <Image src="/images/MOCKUP/Hoodie/grey.png" unoptimized alt="hoddie"
                 width={100} height={100} className="flex w-auto justify-center items-center max-h-[60vh]"/>
-                <p className="bg-gradient-to-r from-amber-200 to-yellow-500 bg-clip-text text-transparent">Napomena: Fotografija je ilustrativna i može se razlikovati</p>
+                <p className="bg-gradient-to-r from-amber-200 to-yellow-500 bg-clip-text text-transparent text-center p-4">
+                    Napomena: Fotografija je ilustrativna i može se razlikovati</p>
                 </div>
 
 
@@ -186,23 +189,23 @@ import Form from 'react-bootstrap/Form';
                   </Dropdown.Toggle>
 
                   <Dropdown.Menu>
-                     <Dropdown.Item onClick={()=>setColor("Blue")} > {/*crna crvena plava teget plava zelena siva */}
-                        Blue
+                     <Dropdown.Item onClick={()=>setColor("Plava")} > {/*crna crvena plava teget plava zelena siva */}
+                        Plava
                      </Dropdown.Item>
-                  <Dropdown.Item  onClick={()=>{setColor("Navy Blue")}}>
-                        Navy Blue
+                  <Dropdown.Item  onClick={()=>{setColor("Navy Plava")}}>
+                        Navy Plava
                      </Dropdown.Item>
-                     <Dropdown.Item  onClick={()=>{setColor("Black")}}>
-                        Black
+                     <Dropdown.Item  onClick={()=>{setColor("Crna")}}>
+                        Crna
                      </Dropdown.Item>
-                     <Dropdown.Item  onClick={()=>{setColor("Green")}}>
-                        Green
+                     <Dropdown.Item  onClick={()=>{setColor("Zelena")}}>
+                        Zelena
                      </Dropdown.Item>
-                     <Dropdown.Item  onClick={()=>{setColor("Gray")}}>
-                        Gray
+                     <Dropdown.Item  onClick={()=>{setColor("Siva")}}>
+                        Siva
                      </Dropdown.Item>
-                     <Dropdown.Item  onClick={()=>{setColor("Red")}}>
-                        Red
+                     <Dropdown.Item  onClick={()=>{setColor("Crvena")}}>
+                        Crvena
                      </Dropdown.Item>
                   </Dropdown.Menu>
             </Dropdown>
@@ -262,7 +265,8 @@ import Form from 'react-bootstrap/Form';
                 xxs:w-full md:w-[50%]"> {/* left side image */}
                 <Image src="/images/MOCKUP/Long_sleeve/green.png" alt="long sleeve" unoptimized
                 width={100} height={100} className="w-auto h-auto flex justify-center items-center max-h-[60vh]"/>
-                <p className="bg-gradient-to-r from-amber-200 to-yellow-500 bg-clip-text text-transparent">Napomena: Fotografija je ilustrativna i može se razlikovati</p>
+                <p className="bg-gradient-to-r from-amber-200 to-yellow-500 bg-clip-text text-transparent text-center p-4">
+                    Napomena: Fotografija je ilustrativna i može se razlikovati</p>
                 </div>
 
                 <div className={longSleeveOpen ? "flex flex-col xss:w-full md:w-[40%]" : "hidden"}>
@@ -292,23 +296,23 @@ import Form from 'react-bootstrap/Form';
                   </Dropdown.Toggle>
 
                   <Dropdown.Menu>
-                     <Dropdown.Item onClick={()=>setColor("Blue")} > {/*crna, crvena, plava, teget plava, zelena,siva */}
-                        Blue
+                     <Dropdown.Item onClick={()=>setColor("Plava")} > {/*crna, crvena, plava, teget plava, zelena,siva */}
+                        Plava
                      </Dropdown.Item>
-                     <Dropdown.Item  onClick={()=>{setColor("Navy Blue")}}>
-                        Navy Blue
+                     <Dropdown.Item  onClick={()=>{setColor("Navy Plava")}}>
+                        Navy Plava
                      </Dropdown.Item>
-                  <Dropdown.Item onClick={()=>{setColor("Red")}}>
-                        Red
+                  <Dropdown.Item onClick={()=>{setColor("Crvena")}}>
+                        Crvena
                      </Dropdown.Item>
-                     <Dropdown.Item  onClick={()=>{setColor("Black")}}>
-                        Black
+                     <Dropdown.Item  onClick={()=>{setColor("Crna")}}>
+                        Crna
                      </Dropdown.Item>
-                     <Dropdown.Item  onClick={()=>{setColor("Green")}}>
-                        Green
+                     <Dropdown.Item  onClick={()=>{setColor("Zelena")}}>
+                        Zelena
                      </Dropdown.Item>
-                     <Dropdown.Item  onClick={()=>{setColor("Gray")}}>
-                        Gray
+                     <Dropdown.Item  onClick={()=>{setColor("Siva")}}>
+                        Siva
                      </Dropdown.Item>
                   </Dropdown.Menu>
             </Dropdown>
@@ -366,7 +370,8 @@ import Form from 'react-bootstrap/Form';
                 "> {/* left side image */}
                 <Image src="/images/MOCKUP/T-shirt/RED.png" unoptimized alt="t-shirt"
                 width={100} height={100} className="w-auto h-auto flex justify-center items-center max-h-[60vh]"/>
-                <p className="bg-gradient-to-r from-amber-200 to-yellow-500 bg-clip-text text-transparent">Napomena: Fotografija je ilustrativna i može se razlikovati</p>
+                <p className="bg-gradient-to-r from-amber-200 to-yellow-500 bg-clip-text text-transparent text-center p-4">
+                    Napomena: Fotografija je ilustrativna i može se razlikovati</p>
                 </div>
 
                 <div className={isTshirtOpen ? "flex flex-col xss:w-full md:w-[40%]" : "hidden"}>
@@ -398,23 +403,23 @@ import Form from 'react-bootstrap/Form';
                   </Dropdown.Toggle>
 
                   <Dropdown.Menu>
-                     <Dropdown.Item  onClick={()=>setColor("Blue")} > {/*crna, crvena, plava, teget plava, zelena, siva */}
-                        Blue
+                     <Dropdown.Item  onClick={()=>setColor("Plava")} > {/*crna, crvena, plava, teget plava, zelena, siva */}
+                        Plava
                      </Dropdown.Item>
-                     <Dropdown.Item onClick={()=>{setColor("Navy Blue")}}>
-                        Navy Blue
+                     <Dropdown.Item onClick={()=>{setColor("Navy Plava")}}>
+                        Navy Plava
                      </Dropdown.Item>
-                  <Dropdown.Item  onClick={()=>{setColor("Red")}}>
-                        Red
+                  <Dropdown.Item  onClick={()=>{setColor("Crvena")}}>
+                        Crvena
                      </Dropdown.Item>
-                     <Dropdown.Item onClick={()=>{setColor("Green")}}>
-                        Green
+                     <Dropdown.Item onClick={()=>{setColor("Zelena")}}>
+                        Zelena
                      </Dropdown.Item>
-                     <Dropdown.Item  onClick={()=>{setColor("Gray")}}>
-                        Gray
+                     <Dropdown.Item  onClick={()=>{setColor("Siva")}}>
+                        Siva
                      </Dropdown.Item>
-                     <Dropdown.Item  onClick={()=>{setColor("Black")}}>
-                        Black
+                     <Dropdown.Item  onClick={()=>{setColor("Crna")}}>
+                        Crna
                      </Dropdown.Item>
                   </Dropdown.Menu>
             </Dropdown>
@@ -479,7 +484,8 @@ import Form from 'react-bootstrap/Form';
                 xxs:w-full md:w-[50%]"> {/* left side image */}
                 <Image src="/images/MOCKUP/Cap/CAPBLACK.png" unoptimized alt="cap"
                 width={100} height={100} className="w-auto h-auto flex justify-center items-center max-h-[60vh]"/>
-                <p className="bg-gradient-to-r from-amber-200 to-yellow-500 bg-clip-text text-transparent">Napomena: Fotografija je ilustrativna i može se razlikovati</p>
+                <p className="bg-gradient-to-r from-amber-200 to-yellow-500 bg-clip-text text-transparent text-center p-4">
+                    Napomena: Fotografija je ilustrativna i može se razlikovati</p>
                 </div>
 
                 <div className={isCapOpen ? "flex flex-col xss:w-full md:w-[40%]" : "hidden"}>
@@ -504,26 +510,26 @@ import Form from 'react-bootstrap/Form';
                   </Dropdown.Toggle>
 
                   <Dropdown.Menu>
-                     <Dropdown.Item  onClick={()=>setColor("Blue")} > {/*bijeli , tamno plavi, plavi, crni ,crveni, tamno sivi, royal plavi */}
-                        Blue
+                     <Dropdown.Item  onClick={()=>setColor("Plava")} > {/*bijeli , tamno plavi, plavi, crni ,crveni, tamno sivi, royal plavi */}
+                        Plava
                      </Dropdown.Item>
-                     <Dropdown.Item  onClick={()=>{setColor("Dark Blue")}}>
-                        Dark Blue
+                     <Dropdown.Item  onClick={()=>{setColor("Navy Plava")}}>
+                        Navy Plava
                      </Dropdown.Item>
-                     <Dropdown.Item  onClick={()=>{setColor("Royal Blue")}}>
-                        Royal Blue
+                     <Dropdown.Item  onClick={()=>{setColor("Royal Plava")}}>
+                        Royal Plava
                      </Dropdown.Item>
-                  <Dropdown.Item  onClick={()=>{setColor("Red")}}>
-                        Red
+                  <Dropdown.Item  onClick={()=>{setColor("Crvena")}}>
+                        Crvena
                      </Dropdown.Item>
-                     <Dropdown.Item  onClick={()=>{setColor("Green")}}>
-                        Green
+                     <Dropdown.Item  onClick={()=>{setColor("Zelena")}}>
+                        Zelena
                      </Dropdown.Item>
-                     <Dropdown.Item  onClick={()=>{setColor("Gray")}}>
-                        Dark Gray
+                     <Dropdown.Item  onClick={()=>{setColor("Tamno Siva")}}>
+                        Tamno Siva
                      </Dropdown.Item>
-                     <Dropdown.Item  onClick={()=>{setColor("White")}}>
-                        White
+                     <Dropdown.Item  onClick={()=>{setColor("Bijela")}}>
+                        Bijela
                      </Dropdown.Item>
                   </Dropdown.Menu>
             </Dropdown>
