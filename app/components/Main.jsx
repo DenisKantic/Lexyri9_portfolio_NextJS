@@ -19,7 +19,7 @@ export default function Main(){
                                   bg-clip-text text-transparent
                     bg-gradient-to-r from-green-300 via-blue-500 to-purple-600">
                                     TikTok kreator sa 110+ hiljada vjernih
-                    pratioca i 3M lajkova</h1>
+                    pratioca i 3M+ lajkova</h1>
                     <p className="mt-6
                                   xxs:text-sm xxs:text-justify xxs:text-sm md:text-start
                                   xxs:w-[90%] xxs:mx-auto md:mx-0 md:w-full

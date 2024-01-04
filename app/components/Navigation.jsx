@@ -152,10 +152,10 @@ export default function Navigation() {
                   </Dropdown.Menu>
             </Dropdown>
                   </li>
-                  <Link href="/"><li className='mr-2 flex items-center py-2'  onClick={()=> setNav(!nav)}><AiOutlineHome size={22} className='mr-5'/>HOME</li></Link>
-                  <Link href="/#aboutMe"><li className='mr-2 flex items-center py-2' onClick={()=> setNav(!nav)}><AiOutlineInfoCircle size={22} className='mr-5' />ABOUT ME</li></Link>
+                  <Link href="/"><li className='mr-2 flex items-center py-2'  onClick={()=> setNav(!nav)}><AiOutlineHome size={22} className='mr-5'/>POČETNA</li></Link>
+                  <Link href="/#aboutMe"><li className='mr-2 flex items-center py-2' onClick={()=> setNav(!nav)}><AiOutlineInfoCircle size={22} className='mr-5' />O MENI</li></Link>
                   <Link href="/shop"><li className='mr-2 flex items-center py-2' onClick={()=> setNav(!nav)}><AiOutlineShoppingCart size={22} className='mr-5' />SHOP</li></Link>
-                  <Link href="/#contact"><li className='mr-2 flex items-center py-2' onClick={()=> setNav(!nav)}><AiOutlinePhone  size={22} className='mr-5'/>CONTACT</li></Link>
+                  <Link href="/#contact"><li className='mr-2 flex items-center py-2' onClick={()=> setNav(!nav)}><AiOutlinePhone  size={22} className='mr-5'/>KONTAKT</li></Link>
                  
                </ul>
          </div>
