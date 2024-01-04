@@ -94,13 +94,13 @@ import Form from 'react-bootstrap/Form';
                   </Dropdown.Toggle>
 
                   <Dropdown.Menu>
-                     <Dropdown.Item href="#/action-1" onClick={()=>setPerfum("Unisex")} >
+                     <Dropdown.Item  onClick={()=>setPerfum("Unisex")} >
                         Unisex
                      </Dropdown.Item>
-                  <Dropdown.Item href="#/action-2" onClick={()=>{setPerfum("Woman Secret")}}>
+                  <Dropdown.Item  onClick={()=>{setPerfum("Woman Secret")}}>
                         Woman Secret
                      </Dropdown.Item>
-                     <Dropdown.Item href="#/action-2" onClick={()=>{setPerfum("Men Secret")}}>
+                     <Dropdown.Item  onClick={()=>{setPerfum("Men Secret")}}>
                         Men Secret
                      </Dropdown.Item>
                   </Dropdown.Menu>
@@ -186,22 +186,22 @@ import Form from 'react-bootstrap/Form';
                   </Dropdown.Toggle>
 
                   <Dropdown.Menu>
-                     <Dropdown.Item href="#/action-1" onClick={()=>setColor("Blue")} > {/*crna crvena plava teget plava zelena siva */}
+                     <Dropdown.Item onClick={()=>setColor("Blue")} > {/*crna crvena plava teget plava zelena siva */}
                         Blue
                      </Dropdown.Item>
-                  <Dropdown.Item href="#/action-2" onClick={()=>{setColor("Navy Blue")}}>
+                  <Dropdown.Item  onClick={()=>{setColor("Navy Blue")}}>
                         Navy Blue
                      </Dropdown.Item>
-                     <Dropdown.Item href="#/action-2" onClick={()=>{setColor("Black")}}>
+                     <Dropdown.Item  onClick={()=>{setColor("Black")}}>
                         Black
                      </Dropdown.Item>
-                     <Dropdown.Item href="#/action-2" onClick={()=>{setColor("Green")}}>
+                     <Dropdown.Item  onClick={()=>{setColor("Green")}}>
                         Green
                      </Dropdown.Item>
-                     <Dropdown.Item href="#/action-2" onClick={()=>{setColor("Gray")}}>
+                     <Dropdown.Item  onClick={()=>{setColor("Gray")}}>
                         Gray
                      </Dropdown.Item>
-                     <Dropdown.Item href="#/action-2" onClick={()=>{setColor("Red")}}>
+                     <Dropdown.Item  onClick={()=>{setColor("Red")}}>
                         Red
                      </Dropdown.Item>
                   </Dropdown.Menu>
@@ -292,22 +292,22 @@ import Form from 'react-bootstrap/Form';
                   </Dropdown.Toggle>
 
                   <Dropdown.Menu>
-                     <Dropdown.Item href="#/action-1" onClick={()=>setColor("Blue")} > {/*crna, crvena, plava, teget plava, zelena,siva */}
+                     <Dropdown.Item onClick={()=>setColor("Blue")} > {/*crna, crvena, plava, teget plava, zelena,siva */}
                         Blue
                      </Dropdown.Item>
-                     <Dropdown.Item href="#/action-2" onClick={()=>{setColor("Navy Blue")}}>
+                     <Dropdown.Item  onClick={()=>{setColor("Navy Blue")}}>
                         Navy Blue
                      </Dropdown.Item>
-                  <Dropdown.Item href="#/action-2" onClick={()=>{setColor("Red")}}>
+                  <Dropdown.Item onClick={()=>{setColor("Red")}}>
                         Red
                      </Dropdown.Item>
-                     <Dropdown.Item href="#/action-2" onClick={()=>{setColor("Black")}}>
+                     <Dropdown.Item  onClick={()=>{setColor("Black")}}>
                         Black
                      </Dropdown.Item>
-                     <Dropdown.Item href="#/action-2" onClick={()=>{setColor("Green")}}>
+                     <Dropdown.Item  onClick={()=>{setColor("Green")}}>
                         Green
                      </Dropdown.Item>
-                     <Dropdown.Item href="#/action-2" onClick={()=>{setColor("Gray")}}>
+                     <Dropdown.Item  onClick={()=>{setColor("Gray")}}>
                         Gray
                      </Dropdown.Item>
                   </Dropdown.Menu>
@@ -398,22 +398,22 @@ import Form from 'react-bootstrap/Form';
                   </Dropdown.Toggle>
 
                   <Dropdown.Menu>
-                     <Dropdown.Item href="#/action-1" onClick={()=>setColor("Blue")} > {/*crna, crvena, plava, teget plava, zelena, siva */}
+                     <Dropdown.Item  onClick={()=>setColor("Blue")} > {/*crna, crvena, plava, teget plava, zelena, siva */}
                         Blue
                      </Dropdown.Item>
-                     <Dropdown.Item href="#/action-2" onClick={()=>{setColor("Navy Blue")}}>
+                     <Dropdown.Item onClick={()=>{setColor("Navy Blue")}}>
                         Navy Blue
                      </Dropdown.Item>
-                  <Dropdown.Item href="#/action-2" onClick={()=>{setColor("Red")}}>
+                  <Dropdown.Item  onClick={()=>{setColor("Red")}}>
                         Red
                      </Dropdown.Item>
-                     <Dropdown.Item href="#/action-2" onClick={()=>{setColor("Green")}}>
+                     <Dropdown.Item onClick={()=>{setColor("Green")}}>
                         Green
                      </Dropdown.Item>
-                     <Dropdown.Item href="#/action-2" onClick={()=>{setColor("Gray")}}>
+                     <Dropdown.Item  onClick={()=>{setColor("Gray")}}>
                         Gray
                      </Dropdown.Item>
-                     <Dropdown.Item href="#/action-2" onClick={()=>{setColor("Black")}}>
+                     <Dropdown.Item  onClick={()=>{setColor("Black")}}>
                         Black
                      </Dropdown.Item>
                   </Dropdown.Menu>
@@ -504,25 +504,25 @@ import Form from 'react-bootstrap/Form';
                   </Dropdown.Toggle>
 
                   <Dropdown.Menu>
-                     <Dropdown.Item href="#/action-1" onClick={()=>setColor("Blue")} > {/*bijeli , tamno plavi, plavi, crni ,crveni, tamno sivi, royal plavi */}
+                     <Dropdown.Item  onClick={()=>setColor("Blue")} > {/*bijeli , tamno plavi, plavi, crni ,crveni, tamno sivi, royal plavi */}
                         Blue
                      </Dropdown.Item>
-                     <Dropdown.Item href="#/action-2" onClick={()=>{setColor("Dark Blue")}}>
+                     <Dropdown.Item  onClick={()=>{setColor("Dark Blue")}}>
                         Dark Blue
                      </Dropdown.Item>
-                     <Dropdown.Item href="#/action-2" onClick={()=>{setColor("Royal Blue")}}>
+                     <Dropdown.Item  onClick={()=>{setColor("Royal Blue")}}>
                         Royal Blue
                      </Dropdown.Item>
-                  <Dropdown.Item href="#/action-2" onClick={()=>{setColor("Red")}}>
+                  <Dropdown.Item  onClick={()=>{setColor("Red")}}>
                         Red
                      </Dropdown.Item>
-                     <Dropdown.Item href="#/action-2" onClick={()=>{setColor("Green")}}>
+                     <Dropdown.Item  onClick={()=>{setColor("Green")}}>
                         Green
                      </Dropdown.Item>
-                     <Dropdown.Item href="#/action-2" onClick={()=>{setColor("Gray")}}>
+                     <Dropdown.Item  onClick={()=>{setColor("Gray")}}>
                         Dark Gray
                      </Dropdown.Item>
-                     <Dropdown.Item href="#/action-2" onClick={()=>{setColor("White")}}>
+                     <Dropdown.Item  onClick={()=>{setColor("White")}}>
                         White
                      </Dropdown.Item>
                   </Dropdown.Menu>

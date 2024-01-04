@@ -32,7 +32,7 @@ export default function ShopPreview(){
 
             <div className="xxs:mt-5 lg:mt-0 h-auto xxs:h-auto xxs:w-full md:w-[30%] md:h-[300px]
                              flex justify-center items-center flex-col"> {/* card item */}
-                <Image src="/images/MOCKUP/T-shirt/WHITE.png" alt="T-shirt blue" unoptimized width={200} height={200}
+                <Image src="/images/MOCKUP/T-shirt/RED.png" alt="T-shirt blue" unoptimized width={200} height={200}
                 className="object-center h-auto w-auto"
                 />
                 <p className="text-white text-center w-[50%]">Unisex dukserice u svim bojama i veličinama</p>
