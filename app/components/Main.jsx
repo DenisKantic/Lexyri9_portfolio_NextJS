@@ -24,9 +24,10 @@ export default function Main(){
                                   xxs:text-sm xxs:text-justify xxs:text-sm md:text-start
                                   xxs:w-[90%] xxs:mx-auto md:mx-0 md:w-full
                                   md:text-lg lg:text-xl">
-                                    Pridruži se mojoj zajednici i budi dio ove priče.
-                                    Kupovinom proizvoda društveno ste odgovorni i 
-                                    pomažete da otvorimo više poslovnih prilika za <span className="font-bold bg-gradient-to-r from-amber-200 to-yellow-500 bg-clip-text text-transparent">zapošljavanje osoba sa invaliditetom.</span>
+                                    Kupovinom mojih proizvoda ne samo da podržavate vrhunski proizvod,
+                                     već i  <span className="font-bold bg-gradient-to-r from-amber-200 to-yellow-500 bg-clip-text text-transparent">pružate podršku osobama s invaliditetom. </span> Svakom kupovinom doprinosite stvaranju radnih mjesta,
+                                      unapređujete kvalitet života i promovišete inkluzivnost, čineći svijet boljim mjestom za sve
+                                 
 
                                     {/*
                                     I'm on a mission to help people with disabilities, 

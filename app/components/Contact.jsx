@@ -18,7 +18,7 @@ export default function Contact(){
                     href="mailto: denis.kantic18@gmail.com" target="_blank"> {/*card item */}
                         <div className="xxs:px-2 xxs:py-2 md:px-3 md:py-3 bg-white rounded-full
                         flex flex-row items-center justify-center mt-5">
-                            <Image src="/images/insta.png" alt="instagram lexyri9" unoptimized width={30} height={30}/>
+                            <Image src="/images/gmail.png" alt="instagram lexyri9" unoptimized width={30} height={30}/>
                         </div>
                     </a>
 
