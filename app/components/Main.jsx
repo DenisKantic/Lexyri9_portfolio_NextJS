@@ -10,24 +10,23 @@ export default function Main(){
 
                     <div className="xxs:w-full xxs:justify-start xxs:items-center sm:w-[80%] lg:w-full h-[60vh]">
                     <p className="
-                                 xxs:text-md xxs:text-center md:text-start md:text-xl">Ja sam Lexyri9,</p>
+                                 xxs:text-md xxs:text-center md:text-start md:text-xl font-bold">Ja sam Lexyri9,</p>
                     <h1 className="
                                   xxs:text-md xxs:pt-3 xxs:text-center xxs:w-full
-                                  md:text-xl md:text-center
+                                  md:text-xl md:text-center font-bold
                                   lg:text-3xl lg:text-start
                                   xl:text-5xl z-10
                                   bg-clip-text text-transparent
                     bg-gradient-to-r from-green-300 via-blue-500 to-purple-600">
                                     TikTok kreator sa 110+ hiljada vjernih
-                    pratioca i 3M lajkova</h1>
+                    pratioca i 3M+ lajkova</h1>
                     <p className="mt-6
-                                  xxs:text-sm xxs:text-justify xxs:text-sm md:text-start  font-bold
+                                  xxs:text-sm xxs:text-justify xxs:text-sm md:text-start
                                   xxs:w-[90%] xxs:mx-auto md:mx-0 md:w-full
                                   md:text-lg lg:text-xl">
-                                    Trenutno sprovodim akciju pomaganja osobama sa invaliditetom. 
                                     Pridruži se mojoj zajednici i budi dio ove priče.
-                                    Kupovinom proizvoda, pomažete da otvorimo više poslovnih prilika
-                                    za zapošljavanje osoba sa invaliditetom.
+                                    Kupovinom proizvoda društveno ste odgovorni i 
+                                    pomažete da otvorimo više poslovnih prilika za <span className="font-bold bg-gradient-to-r from-amber-200 to-yellow-500 bg-clip-text text-transparent">zapošljavanje osoba sa invaliditetom.</span>
 
                                     {/*
                                     I'm on a mission to help people with disabilities, 
