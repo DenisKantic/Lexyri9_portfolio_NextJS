@@ -13,7 +13,9 @@ import Form from 'react-bootstrap/Form';
         const [color,setColor] = useState("Siva");
         const [size,setSize] = useState("S");
         const [position,setPosition] = useState("Prednja");
-        const [text, setText] = useState("");
+        const [textHodie, setHodieText] = useState("");
+        const [tshirtText, setTshirtText] = useState("");
+        const [longSleveText, setLongSleveText] = useState("");
         
         const [open,setIsOpen] = useState(false);
         const [longSleeveOpen, setIsLongSleeveOpen] = useState(false);
@@ -51,16 +53,8 @@ import Form from 'react-bootstrap/Form';
                     Napomena: Fotografija je ilustrativna i može se razlikovati</p>
                 </div>
 
-                <div className={perfumeOpen ? "flex flex-col xss:w-full md:w-[40%]" : "hidden"}>
-              
-                        <Checkout
-                    items={{ 
-                    price:((perfumePrice)+shipping),
-                    perfum: perfume
-                }} /> 
-                  <button className="px-3 py-2 bg-white text-black" onClick={()=>setIsPerfumOpen(false)}>CLOSE</button>
-                    </div>
-                <div className={perfumeOpen ? "hidden" : "mx-auto xxs:w-full md:w-[45%] lg:max-w-[35%]"}> {/* right side options */}
+               
+                <div className="mx-auto xxs:w-full md:w-[45%] lg:max-w-[35%]"> {/* right side options */}
 
                     <div className="text-justify break-normal">
                         <h1 className="text-white text-md pb-2">Opis: </h1>
@@ -114,11 +108,22 @@ import Form from 'react-bootstrap/Form';
                         <p className="text-4xl font-bold">6 &euro;  <span className="text-sm text-gray-400">+ poštarina</span> </p>
                         <p className="font-bold bg-gradient-to-r from-amber-200 to-yellow-500 bg-clip-text text-transparent">Promotivna cijena!!!</p>
                         </div>
-                        <div className="xxs:w-[50%] md:w-[50%] pt-3">
-                        <Button  className={perfumeOpen ? "hidden" : "flex items-center px-3"} onClick={()=>setIsPerfumOpen(true)}>Naruči!</Button>
+                        <div className={perfumeOpen ? "xxs:w-full pt-3" : "xxs:w-[50%] pt-3"}>
+                       
+                       <div className={perfumeOpen ? "w-full" : "hidden"}>
+                        <Checkout 
+                    items={{ 
+                    price:(perfumePrice+shipping),
+                    perfume: perfume,
+                }} /> 
+                  <button className="py-2 bg-white text-black w-full font-bold" onClick={()=>setIsPerfumOpen(false)}>ODUSTANI</button>
+                  </div>
+                    
+                        <Button className={perfumeOpen ? "hidden" : "flex items-center px-3"} onClick={()=>setIsPerfumOpen(true)}>
+                        Naruči ovdje!</Button>
                      </div>
                     </div>
-                </div>
+                 </div>
             </div>
 
             <h1 className="text-5xl pt-20 pb-5 text-white">
@@ -140,24 +145,8 @@ import Form from 'react-bootstrap/Form';
                 <p className="bg-gradient-to-r from-amber-200 to-yellow-500 bg-clip-text text-transparent text-center p-4">
                     Napomena: Fotografija je ilustrativna i može se razlikovati</p>
                 </div>
+                <div className="mx-auto xxs:w-full md:w-[45%] lg:max-w-[35%]"> {/* right side options */}
 
-
-                <div className={open ? "flex flex-col xss:w-full md:w-[40%]" : "hidden"}>
-              
-                        <Checkout
-                    items={{ 
-                    price:((hodiePrice)+shipping),
-                    position:position,
-                    color: color,
-                    text: text,
-                    size: size,
-                    clothes: "dukserica"
-                }} /> 
-                  <button className="px-3 py-2 bg-white text-black" onClick={()=>setIsOpen(false)}>CLOSE</button>
-                    </div>
-                <div className={open ? "hidden" : "mx-auto xxs:w-full md:w-[45%] lg:max-w-[35%]"}> {/* right side options */}
-
-                    <div>
                         <p className="pb-4 text-white">Izaberi stranu natpisa {"(naprijed ili nazad)"}</p>
 
                         <Dropdown>
@@ -167,17 +156,17 @@ import Form from 'react-bootstrap/Form';
                   </Dropdown.Toggle>
 
                   <Dropdown.Menu>
-                     <Dropdown.Item onClick={()=>setPosition("Front")} >
+                     <Dropdown.Item onClick={()=>setPosition("Prednja")} >
                         Prednja {"(natpis na prednjoj strani)"}
                      </Dropdown.Item>
-                  <Dropdown.Item onClick={()=>{setPosition("Back")}}>
+                  <Dropdown.Item onClick={()=>{setPosition("Zadnja")}}>
                         Zadnja {"(natpis na leđima)"}
                      </Dropdown.Item>
                   </Dropdown.Menu>
             </Dropdown>
 
                         <p className="pt-6 flex flex-col">Upiši svoj natpis po želji {"(Opcionalno)"} <span className="text-sm text-gray-400">*Max 12 karaktera</span> </p>
-                        <Form.Control size="md" type="text" placeholder="Type here" maxLength="12" onChange={(e)=>setText(e.target.value)}/>
+                        <Form.Control size="md" type="text"  placeholder="Type here" maxLength="12" onChange={(e)=>setHodieText(e.target.value)}/>
                         
                         <p className="pt-4">Boja</p>
                         <div className="items-center justify-around">   
@@ -209,8 +198,6 @@ import Form from 'react-bootstrap/Form';
                   </Dropdown.Menu>
             </Dropdown>
 
-                        </div>
-
                         <div className="flex flex-row justify-between items-center pt-10">
 
                             <div className="w-full pr-10">
@@ -241,14 +228,29 @@ import Form from 'react-bootstrap/Form';
                             
                               </div>
 
-                        <div className={open ? "hidden" : "block"}>
+                        <div>
                         <h1 className="text-lg pt-10">Cijena</h1>
                         <p className="text-4xl font-bold text-white">18 &euro; <span className="text-sm text-gray-400">+ poštarina</span></p>
                         </div>
                     </div>
-                    <div className="xxs:w-[50%] md:w-[50%] pt-3">
-                        <Button className={open ? "hidden" : "flex items-center px-3"}>
-                        Naruči!</Button>
+                    <div className={open ? "xxs:w-full pt-3" : "xxs:w-[50%] pt-3"}>
+                       
+                       <div className={open ? "w-full" : "hidden"}>
+                        <Checkout 
+                    items={{ 
+                    price:(hodiePrice+shipping),
+                    color: color,
+                    position: position,
+                    clothes: "Dukserica",
+                    text: textHodie,
+                    size: size
+                }} /> 
+                  <button className="py-2 bg-white text-black w-full font-bold" onClick={()=>setIsOpen(false)}
+                  >ODUSTANI</button>
+                  </div>
+                    
+                        <Button className={open ? "hidden" : "flex items-center px-3"} onClick={()=>setIsOpen(true)}>
+                        Naruči ovdje!</Button>
                      </div>
                 </div>
             </div>
@@ -266,24 +268,13 @@ import Form from 'react-bootstrap/Form';
                 <p className="bg-gradient-to-r from-amber-200 to-yellow-500 bg-clip-text text-transparent text-center p-4">
                     Napomena: Fotografija je ilustrativna i može se razlikovati</p>
                 </div>
-
-                <div className={longSleeveOpen ? "flex flex-col xss:w-full md:w-[40%]" : "hidden"}>
               
-                        <Checkout
-                    items={{ 
-                    price:((longShirtPrice)+shipping),
-                    color: color,
-                    clothes: "Dugi rukav",
-                    text: text,
-                    size: size
-                }} /> 
-                  <button className="px-3 py-2 bg-white text-black" onClick={()=>setIsLongSleeveOpen(false)}>CLOSE</button>
-                    </div>
-                <div className={longSleeveOpen ? "hidden" : "mx-auto xxs:w-full md:w-[45%] lg:max-w-[35%]"}> {/* right side options */}
+                    
+                <div className="mx-auto xxs:w-full md:w-[45%] lg:max-w-[35%]"> {/* right side options */}
 
 
                 <p className="pt-6 flex flex-col">Upiši svoj natpis po želji {"(Opcionalno)"} <span className="text-sm text-gray-400">*Max 12 karaktera</span> </p>
-                        <Form.Control size="md" type="text" placeholder="Type here" onChange={(e)=>setText(e.target.value)}/>
+                        <Form.Control size="md" type="text" placeholder="Type here" onChange={(e)=>setLongSleveText(e.target.value)}/>
                     <div>
                         <p className="pt-6 pb-2">Boja</p>
 
@@ -346,13 +337,26 @@ import Form from 'react-bootstrap/Form';
 
                         <div>
                         <h1 className="text-lg pt-10">Cijena</h1>
-                        <p className="text-4xl font-bold">11 &euro; <span className="text-sm text-gray-400">+poštarina</span> </p>
+                        <p className="text-4xl font-bold">12 &euro; <span className="text-sm text-gray-400">+poštarina</span> </p>
                         </div>
-                        <div className="xxs:w-[50%] md:w-[50%] pt-3">
-                        <Button className={longSleeveOpen ? "hidden" : "flex items-center px-3"} onClick={()=>setIsLongSleeveOpen(true)}>Naruči!</Button>
+                        </div>
+                        <div className={longSleeveOpen ? "xxs:w-full pt-3" : "xxs:w-[50%] pt-3"}>
+                       
+                       <div className={longSleeveOpen ? "w-full" : "hidden"}>
+                        <Checkout 
+                    items={{ 
+                    price:(longShirtPrice+shipping),
+                    color: color,
+                    clothes: "Dugi rukav",
+                    text: longSleveText,
+                    size: size
+                }} /> 
+                  <button className="py-2 bg-white text-black w-full font-bold" onClick={()=>setIsLongSleeveOpen(false)}>ODUSTANI</button>
+                  </div>
+
+                        <Button className={longSleeveOpen ? "hidden" : "flex items-center px-3"} onClick={()=>setIsLongSleeveOpen(true)}>Naruči ovdje!</Button>
                      </div>
                     </div>
-                </div>
             </div>
 
            {/* t-shirt item */}
@@ -372,20 +376,7 @@ import Form from 'react-bootstrap/Form';
                     Napomena: Fotografija je ilustrativna i može se razlikovati</p>
                 </div>
 
-                <div className={isTshirtOpen ? "flex flex-col xss:w-full md:w-[40%]" : "hidden"}>
-              
-              <Checkout
-          items={{ 
-          price:((tshirtPrice)+shipping),
-          color: color,
-          text: text,
-          clothes: "t-shirt",
-          size: size
-      }} /> 
-        <button className="px-3 py-2 bg-white text-black" onClick={()=>setIsTshirtOpen(false)}>CLOSE</button>
-          </div>
-      <div className={isTshirtOpen ? "hidden" : "mx-auto xxs:w-full md:w-[45%] lg:max-w-[35%]"}> {/* right side options */}
-                    <div>
+                  <div className="mx-auto xxs:w-full md:w-[45%] lg:max-w-[35%]"> {/* right side options */}
 
                     <p className="pt-6 flex flex-col">Upiši svoj natpis po želji {"(Opcionalno)"} <span className="text-sm text-gray-400">*Max 12 karaktera</span> </p>
 
@@ -422,8 +413,6 @@ import Form from 'react-bootstrap/Form';
                   </Dropdown.Menu>
             </Dropdown>
 
-                        </div>
-
                         <div className="flex flex-row justify-between place-items-center pt-10">
 
                         <div className="w-full pr-10">
@@ -458,16 +447,25 @@ import Form from 'react-bootstrap/Form';
                         <h1 className="text-lg pt-10">Cijena</h1>
                         <p className="text-4xl font-bold">8 &euro; <span className="text-sm text-gray-400">+poštarina</span> </p>
                         </div>
-                        <div className="xxs:w-[50%] md:w-[50%] pt-3">
-                        <Button className={isTshirtOpen ? "hidden" : "flex items-center px-3"} onClick={()=>setIsTshirtOpen(true)}>Naruči!</Button>
+                        </div>
+                        <div className={isTshirtOpen ? "xxs:w-full pt-3" : "xxs:w-[50%] pt-3"}>
+                       
+                       <div className={isTshirtOpen ? "w-full" : "hidden"}>
+                        <Checkout 
+                    items={{ 
+                    price:(tshirtPrice+shipping),
+                    color: color,
+                    clothes: "T-Shirt",
+                    text: tshirtText,
+                    size: size
+                }} /> 
+                  <button className="py-2 bg-white text-black w-full font-bold" onClick={()=>setIsTshirtOpen(false)}>ODUSTANI</button>
+                  </div>
+                    
+                        <Button className={isTshirtOpen ? "hidden" : "flex items-center px-3"} onClick={()=>setIsTshirtOpen(true)}>
+                        Naruči ovdje!</Button>
                      </div>
                     </div>
-
-
-                    
-                </div>
-
-                
             </div>
 
 
@@ -486,19 +484,9 @@ import Form from 'react-bootstrap/Form';
                     Napomena: Fotografija je ilustrativna i može se razlikovati</p>
                 </div>
 
-                <div className={isCapOpen ? "flex flex-col xss:w-full md:w-[40%]" : "hidden"}>
-              
-              <Checkout
-          items={{ 
-          price:((capPrice)+shipping),
-          color: color,
-          clothes: "Kapa"
-      }} /> 
-        <button className="px-3 py-2 bg-white text-black" onClick={()=>setIsCapOpen(false)}>CLOSE</button>
-          </div>
-      <div className={isCapOpen ? "hidden" : "mx-auto xxs:w-full md:w-[45%] lg:max-w-[35%]"}> {/* right side options */}
+               
+      <div className="mx-auto xxs:w-full md:w-[45%] lg:max-w-[35%]"> {/* right side options */}
 
-                    <div>
                         <p className="pt-6 pb-2">Boja</p>
                         <div className="items-center justify-around">
                         <Dropdown>
@@ -532,8 +520,6 @@ import Form from 'react-bootstrap/Form';
                   </Dropdown.Menu>
             </Dropdown>
 
-                        </div>
-
                         <div className="flex flex-row justify-center place-items-center pt-10">
 
                             <div className="w-full pt-3 justify-center items-center pr-10">
@@ -547,16 +533,23 @@ import Form from 'react-bootstrap/Form';
                         <h1 className="text-lg pt-10">Cijena</h1>
                         <p className="text-4xl font-bold">6 &euro; <span className="text-sm text-gray-400">+poštarina</span> </p>
                         </div>
-                        <div className="xxs:w-[50%] md:w-[50%] pt-3">
-                        <Button className={isCapOpen ? "hidden" : "flex items-center px-3"} onClick={()=>setIsCapOpen(true)}>Naruči!</Button>
-
-                     </div>
-                    </div>
-
-
+                        <div className={isCapOpen ? "xxs:w-full pt-3" : "xxs:w-[50%] pt-3"}>
+                       
+                       <div className={isCapOpen ? "w-full" : "hidden"}>
+                        <Checkout 
+                    items={{ 
+                    price:(capPrice+shipping),
+                    color: color,
+                    clothes: "Kapa"
+                }} /> 
+                  <button className="py-2 bg-white text-black w-full font-bold" onClick={()=>setIsCapOpen(false)}>ODUSTANI</button>
+                  </div>
                     
+                        <Button className={isCapOpen ? "hidden" : "flex items-center px-3"} onClick={()=>setIsCapOpen(true)}>
+                        Naruči ovdje!</Button>
+                     </div>
                 </div>
-
+                    </div>
                 
             </div>
 
