@@ -7,15 +7,15 @@ export default function AboutMe(){
         
     return (
         <div className="mx-auto w-[80%] 
-                           xxs:h-auto mb-5 mt-5 scroll-smooth"
+                        h-auto  scroll-smooth"
         id='aboutMe' >
-            <h1 className="text-4xl text-white">Ko sam ja?</h1>
-         <div className="mt-2 h-[3px] bg-gradient-to-r from-green-300 via-blue-500 to-purple-600 xxs:w-full md:w-[50%]"></div>
+            <h1 className="text-5xl text-white pt-20">Ko sam ja?</h1>
+         <div className="mt-4 h-[3px] bg-gradient-to-r from-green-300 via-blue-500 to-purple-600 xxs:w-full md:w-[50%]"></div>
 
 
             <div className="flex justify-between items-center xxs:flex-col md:flex-row">
                 <div className="flex justify-start items-center flex-col
-                                xxs:w-full xxs:h-auto 
+                                xxs:w-full xxs:h-auto
                                 md:w-full  mb-5 lg:w-[70%]"> {/*left side text */}
                 
                     <div className='text-white w-full
@@ -35,11 +35,11 @@ export default function AboutMe(){
                     </div>
                 </div>
 
-                <div className="xxs:w-full md:w-[60%] xxs:h-auto md:hidden lg:flex lg:h-[50vh]  items-center
-                                xxs:w-full xxs:mt-5"> {/* picture right side */}
+                <div className="xxs:w-full md:w-[60%] xxs:h-auto md:hidden lg:flex   items-center
+                             xxs:mt-5"> {/* picture right side */}
                    <Image src="/images/leo.jpg" alt='leo picture'  width={200} height={200} 
-                   className='object-contain mx-auto  h-[50vh] pb-5 float-right
-                              xxs:h-auto xxs:w-auto
+                   className='object-contain mx-auto pb-5 float-right
+                              xxs:h-auto xxs:w-auto md:h-[45vh]
                               md:w-[80%]
                               lg:block lg:max-w-[80%]' />
                 </div>

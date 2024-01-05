@@ -32,12 +32,11 @@ import Form from 'react-bootstrap/Form';
     return (
         <div className="w-[80%] mx-auto min-h-[100vh]">
 
-        <h1 className="text-white text-2xl pt-20">Moj shop</h1>
+        <h1 className="text-white text-5xl pt-20">Moj shop</h1>
         <div className="mt-4 border-t-2  w-full pb-20"></div>
 
                 
-            <h1 className="text-4xl bg-clip-text text-transparent 
-                  bg-gradient-to-r from-fuchsia-500 to-cyan-500 xxs:pb-10 md:mb-[-50px]">Parfemi</h1>
+            <h1 className="text-5xl text-white md:mb-[-50px]">Parfemi</h1>
 
             <div className="text-white w-[70%] h-[50vh] flex h-auto items-center
             xxs:flex-col xxs:w-full
@@ -122,7 +121,7 @@ import Form from 'react-bootstrap/Form';
                 </div>
             </div>
 
-            <h1 className="text-4xl pt-20 pb-5 text-white">
+            <h1 className="text-5xl pt-20 pb-5 text-white">
                 Unisex Dukserice</h1>
 
             <div className="text-white w-[70%] h-[50vh] flex  items-center
@@ -255,8 +254,7 @@ import Form from 'react-bootstrap/Form';
             </div>
 
             {/* long sleeve t-shirt item */}
-
-            <h1 className="text-4xl mt-[100px] text-white">Unisex Majice Dugih Rukava</h1>
+            <h1 className="text-5xl mt-[100px] text-white">Unisex Majice Dugih Rukava</h1>
             <div className="text-white w-[70%] h-[50vh] flex h-auto items-center
             xxs:flex-col xxs:w-full
             md:flex-row"> {/* card item parent */}
@@ -359,7 +357,7 @@ import Form from 'react-bootstrap/Form';
 
            {/* t-shirt item */}
 
-           <h1 className="text-4xl mt-[100px]
+           <h1 className="text-5xl mt-[100px]
            text-white">Unisex T-Shirt</h1>
             <div className="text-white w-[70%] h-[50vh] flex h-auto items-center
             xxs:flex-col xxs:w-full
@@ -475,7 +473,7 @@ import Form from 'react-bootstrap/Form';
 
             {/* man cap item */}
 
-           <h1 className="text-4xl text-white mt-[100px]">Unisex Kape</h1>
+           <h1 className="text-5xl text-white mt-[100px]">Unisex Kape</h1>
             <div className="text-white w-[70%] h-[50vh] flex h-auto items-center pb-5
             xxs:flex-col xxs:w-full
             md:flex-row h-auto"> {/* card item parent */}

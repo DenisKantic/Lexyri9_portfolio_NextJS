@@ -4,9 +4,9 @@ export default function Social(){
     return (
         <div className="w-[80%] mx-auto h-auto mb-5 scroll-smooth">
 
-            <h1 className="text-4xl text-white
+            <h1 className="text-5xl text-white
             ">Nekoliko mojih sadržaja</h1>
-             <div className="mt-4 h-[3px] w-full
+             <div className="mt-4 h-[3px] w-full text-transparent bg-text-clip
              bg-gradient-to-r from-green-300 via-blue-500 to-purple-600 ">
 
              </div>
