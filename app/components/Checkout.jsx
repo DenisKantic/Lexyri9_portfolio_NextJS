@@ -4,29 +4,29 @@ import PaypalCheckoutButton from "./PaypalCheckoutButton";
 export default function Checkout ({items}){
 
 
-    const { price, position, color, size, quantity, text, clothes,perfum} = items;
 
-    const hodieDescription = "Boja " +clothes + ": " + color + " / " + " Pozicija natpisa: " +position + " / " + "Natpis po zelji:" +text+ " / " + " Velicina:" + size + " / " + " kolicina: " +quantity;
+    const { price, position, color, size,  text, clothes,perfume} = items;
+
+    const hodieDescription = "Tip majice: " + clothes + "/" + "Boja: "  + color + " / " + " Pozicija natpisa: " +position + " / " + "Natpis po zelji:" +text+ " / " + " Velicina:" + size + " / ";
 
     return (
-        <div className="w-full h-[350px] flex justify-center items-center bg-black/50" >
+        <div className="w-full h-auto flex flex-row justify-center items-center bg-black/50 p-3" >
         
-        <div className="flex flex-col items-center justify-center text-xl w-full w-full h-[350px]">
-        <h1>You choosed:</h1>
-        <p className={(position==undefined) ? "hidden" : "block"}>Image position: {position}</p>
-        <p className={(text==undefined) ? "hidden" : "block"}>Custom text: {(text==undefined) ? "/" : (text)}</p>
-        <p className={(color==undefined) ? "hidden" : "block"}>Color: {color}</p>
-        <p className={perfum ? "block" : "hidden"}>Perfume: {perfum}</p>
-        <p className={(size==undefined) ? "hidden" : "block"}>Size: {size}</p>
-        <p>Quantity: {quantity}</p>
-        <p>Total: {(price)}</p>
+        <div className="flex flex-col items-center justify-center text-xl w-full h-auto">
+        <h1>Vaš izbor:</h1> <br />
+        <div className="flex justify-center items-center flex-col">
+        <p className={(position==undefined) ? "hidden" : "block"}>Pozicija natpisa: {position}</p> 
+        <p className={(text=="") ? "hidden" : "block"}>Text po želji: {text}</p>
+        <p className={(color==undefined) ? "hidden" : "block"}>Boja: {color}</p> 
+        <p className={perfume ? "block" : "hidden"}>Parfem: {perfume}</p> 
+        <p className={(size==undefined) ? "hidden" : "block"}>Veličina: {size}</p> 
+        <p>Ukupno: {(price)} &euro;</p>
+        </div>
 
         
-        <PaypalCheckoutButton 
+        <PaypalCheckoutButton
         product={{description: hodieDescription, price: price}}/>
 
-        <h1 className="text-md text-center w-[90%]">If you don't have paypal, you can contact me  directly on e-mail with order</h1>
-        <h1 className="text-md text-center w-[90%]">Moguce placanje prilikom preuzimanja poste u Bosni i Hercegovini</h1>
         </div>
 
           </div>

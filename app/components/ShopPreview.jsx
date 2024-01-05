@@ -6,8 +6,9 @@ export default function ShopPreview(){
     return (
         <div className="w-[80%] mx-auto xxs:h-auto mb-5 mt-5">
 
-        <h1 className="text-white text-2xl">Moj web shop</h1>
-        <div className="mt-4 border-t-2  w-full"></div>
+        <h1 className="text-white text-5xl pt-5">Moj web shop</h1>
+        <div className="mt-4 h-[3px] bg-gradient-to-r from-green-300 via-blue-500 to-purple-600 w-full"></div>
+
 
         <div className="text-white pt-10 text-xl w-[50%]
                         xxs:w-full md:w-[90%] lg:w-[80%] text-justify">

@@ -3,7 +3,7 @@ import Image from "next/image"
 export default function Main(){
     return (
         <div className="h-screen flex xxs:w-[90%] md:w-[80%] mx-auto scroll-smooth">
-            <div className="flex justify-center xxs:flex-col md:flex-row items-center text-white h-full mt-3 mx-auto xxs:w-[95%] sm:w-full">
+            <div className="flex justify-center xxs:flex-col md:flex-row items-center text-white h-full mt-3 mx-auto xxs:w-[95%] sm:w-full h-auto">
 
             <div className="xxs:w-[80%] flex flex-col justify-center items-center
                                 xxs:w-full xxs:h-[40vh] sm:h-[30vh] lg:h-[30vh] xl:h-max-[40vh] md:w-[80%] lg:w-[80%] xl:max-w-[40%]"> {/* left side text */}
@@ -24,9 +24,10 @@ export default function Main(){
                                   xxs:text-sm xxs:text-justify xxs:text-sm md:text-start
                                   xxs:w-[90%] xxs:mx-auto md:mx-0 md:w-full
                                   md:text-lg lg:text-xl">
-                                    Pridruži se mojoj zajednici i budi dio ove priče.
-                                    Kupovinom proizvoda društveno ste odgovorni i 
-                                    pomažete da otvorimo više poslovnih prilika za <span className="font-bold bg-gradient-to-r from-amber-200 to-yellow-500 bg-clip-text text-transparent">zapošljavanje osoba sa invaliditetom.</span>
+                                    Kupovinom mojih proizvoda ne samo da podržavate vrhunski proizvod,
+                                     već i  <span className="font-bold bg-gradient-to-r from-amber-200 to-yellow-500 bg-clip-text text-transparent">pružate podršku osobama s invaliditetom. </span> Svakom kupovinom doprinosite stvaranju radnih mjesta,
+                                      unapređujete kvalitet života i promovišete inkluzivnost, čineći svijet boljim mjestom za sve
+                                 
 
                                     {/*
                                     I'm on a mission to help people with disabilities, 
@@ -57,10 +58,10 @@ export default function Main(){
                             className="mx-auto
                                         xxs:w-[30px] xxs:h-[30px]  xxs:m-0 
                                         md:m-3 md:w-[60px] md:h-[60px]"/>
-                            <h1 className="text-xl text-center
+                            <p className="text-xl text-center
                                             xxs:text-sm xxs:pt-2
                                             sm:text-md
-                                            md:text-lg">@lexyri9</h1>
+                                            md:text-lg">@lexyri9</p>
                         </a>
 
                         <a className="w-[110px] h-[120px] bg-green-400 rounded-lg ml-8 bg-gradient-to-r from-[#001B61] to-[#001B61BF]
@@ -74,10 +75,10 @@ export default function Main(){
                              className="mx-auto
                              xxs:w-[30px] xxs:h-[30px]  xxs:m-0 
                              md:m-3 md:w-[60px] md:h-[60px]"/>
-                            <h1 className="text-xl text-center
+                            <p className="text-xl text-center
                                             xxs:text-sm xxs:pt-2
                                             sm:text-md
-                                            md:text-lg">@lexyri9</h1>
+                                            md:text-lg">@lexyri9</p>
                         </a>
 
                         <a className="w-[110px] h-[120px] bg-green-400 rounded-lg ml-8 bg-gradient-to-r from-[#001B61] to-[#001B61BF]
@@ -91,10 +92,10 @@ export default function Main(){
                              className="mx-auto
                              xxs:w-[30px] xxs:h-[30px]  xxs:m-0 
                              md:m-3 md:w-[60px] md:h-[60px]"/>
-                            <h1 className="text-xl text-center
+                            <p className="text-xl text-center
                                             xxs:text-sm xxs:pt-2
                                             sm:text-md
-                                            md:text-lg">@lexyri9</h1>
+                                            md:text-lg">@lexyri9</p>
                         </a>
                     </div>
 

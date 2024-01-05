@@ -13,7 +13,8 @@ export default function Paypal(){
 
     return (
         <PayPalScriptProvider options={{
-            "clientId": clientID
+            "clientId": clientID,
+            currency: "EUR"
           }}>
         <div className="bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-[#000D2E] via-[#021d62] to-[#000D2E] min-h-[100vh]">
         <Navigation className="z-40"></Navigation>

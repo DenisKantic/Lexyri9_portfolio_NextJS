@@ -38,7 +38,7 @@ const PaypalCheckoutButton = ({product}) => {
     <PayPalButtons
     className='pt-3 w-[50%]'
     style={{
-        locale: 'en-US',
+        locale: 'en-USD',
         color: "black",
         size: "responsive",
         layout: "horizontal",
@@ -54,11 +54,10 @@ const PaypalCheckoutButton = ({product}) => {
                         description,   // ovdje nastaje problem, on ne cita uopste nekada sta je za description
                         amount: {
                             value: price,
-                            description: description // ovdje uredno cita cijenu 
+                            description: description, // ovdje uredno cita cijenu 
                         }
                     }
                 ]
-    
             })
         }}
 

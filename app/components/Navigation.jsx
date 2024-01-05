@@ -22,7 +22,7 @@ export default function Navigation() {
    const [lang,setLang] = useState('EN');
 
     return (
-     <div className="w-full flex justify-center items-center min-h-[8vh] max-h-auto z-20 fixed
+     <div className="w-full flex justify-center items-center min-h-[7vh] xxs:py-5 md:py-0 max-h-auto z-20 fixed
      bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-[#000D2E] to-[#000D2E]">
       <div className="flex h-auto pt-3 pb-3 fixed w-[90%]
       xxs:items-center xxs:justify-start lg:pt-0
@@ -129,6 +129,8 @@ export default function Navigation() {
 
 
                <ul className={ nav ? 'flex flex-col items-start justify-center p-5 text-black text-lg mt-[50px] bg-white text-black w-full h-auto' : 'hidden'}>
+                  
+                  {/*
                   <li className='mr-2 flex items-center py-2'>
                   <HiLanguage size={22} className='mr-5' />
                   <Dropdown>
@@ -152,6 +154,8 @@ export default function Navigation() {
                   </Dropdown.Menu>
             </Dropdown>
                   </li>
+
+                   */}
                   <Link href="/"><li className='mr-2 flex items-center py-2'  onClick={()=> setNav(!nav)}><AiOutlineHome size={22} className='mr-5'/>POČETNA</li></Link>
                   <Link href="/#aboutMe"><li className='mr-2 flex items-center py-2' onClick={()=> setNav(!nav)}><AiOutlineInfoCircle size={22} className='mr-5' />O MENI</li></Link>
                   <Link href="/shop"><li className='mr-2 flex items-center py-2' onClick={()=> setNav(!nav)}><AiOutlineShoppingCart size={22} className='mr-5' />SHOP</li></Link>
