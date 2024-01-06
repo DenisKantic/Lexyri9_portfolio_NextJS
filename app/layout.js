@@ -6,7 +6,7 @@ import './globals.css';
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata = {
-  title: 'LEXYRI9 TikTok kreator',
+  title: 'ŁEXYRI9 TikTok kreator',
   description: 'Vaš omiljeni tiktoker, Lexyri9! Kupovinom mojih proizvoda ne samo da \n' +
   'podržavate vrhunski proizvod, već i pružate podršku osobama s invaliditetom. \n' +
   'Unisex kape, unisex majice, unisex parfemi i mnogo toga',

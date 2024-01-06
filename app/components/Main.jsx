@@ -3,6 +3,9 @@ import Image from "next/image"
 import {motion} from "framer-motion"
 
 export default function Main(){
+
+
+
     return (
         <div className="h-screen flex xxs:w-[90%] md:w-[80%] mx-auto scroll-smooth">
             <div className="flex justify-center xxs:flex-col md:flex-row items-center text-white h-full mt-3 mx-auto xxs:w-[95%] sm:w-full h-auto">
@@ -16,7 +19,7 @@ export default function Main(){
                                  initial={{opacity: 0, x: -100}}
                                  animate={{opacity: 1, x:0}}
                                  transition={{duration: 0.5}}
-                                 >Ja sam Lexyri9,</motion.p>
+                                 >Ja sam Łexyri9,</motion.p>
                     <motion.h1 className="
                                   xxs:text-md xxs:pt-3 xxs:text-center xxs:w-full
                                   md:text-xl md:text-center font-bold
@@ -49,11 +52,14 @@ export default function Main(){
                                 */} <br /></motion.p>
                     </div>
 
-                    <div className="flex justify-center items-center 
-                                xxs:w-full xxs:h-[30vh] sm:absolute sm:right-0 sm:opacity-20 sm:h-auto xl:hidden"> {/*right side of the photo*/}
+                    <motion.div className="flex justify-center items-center 
+                                xxs:w-full xxs:h-[30vh] sm:absolute sm:right-0 sm:opacity-20 sm:h-auto xl:hidden"
+                                initial={{opacity: 0, x:1000}}
+                                animate={{opacity: 1, x:0}}
+                                transition={{duration: 0.2}}> {/*right side of the photo*/}
                     <Image src="/images/logo.webp" width={400} unoptimized height={400} alt="lexiry_logo" 
-                        className="xxs:h-[30vh] w-auto object-contain sm:h-auto lg:h-[70vh]"/>
-                </div>
+                        className="xxs:h-[30vh] w-auto object-contain sm:h-auto md:opacity-20 lg:h-[70vh]"/>
+                </motion.div>
 
                     <motion.div className="flex
                                     xxs:w-full

@@ -1,19 +1,51 @@
+"use client"
 import Image from "next/image"
+import {motion,useAnimation,useInView} from 'framer-motion'
+import { useEffect,useRef } from "react";
 
 export default function Social(){
+
+    const refTitle = useRef(null);
+    const isTitleInView = useInView(refTitle, {once: true});
+    const animationControls = useAnimation();
+
+  
+    useEffect(() => {
+  
+      if (isTitleInView) {
+        animationControls.start(
+        {
+            x: 0,
+            opacity: 1
+        })
+        console.log(isTitleInView)
+    }
+  }, [isTitleInView, animationControls]);
+  
     return (
         <div className="w-[80%] mx-auto h-auto mb-5 scroll-smooth">
 
-            <h1 className="text-5xl text-white
-            ">Nekoliko mojih sadržaja</h1>
+            <motion.h1 className="text-5xl text-white" ref={refTitle}
+            initial={{opacity: 0, x:-200}}
+            animate={animationControls}
+            transition={{duration: 0.8}}>
+                Nekoliko mojih sadržaja</motion.h1>
+
+
              <div className="mt-4 h-[3px] w-full text-transparent bg-text-clip
              bg-gradient-to-r from-green-300 via-blue-500 to-purple-600 ">
 
              </div>
-                <div className="flex justify-between items-center mt-10
-                                xxs:flex-col sm:flex-row">
+                <motion.div className="flex justify-between items-center mt-10
+                                xxs:flex-col sm:flex-row"
+                                ref={refTitle}
+                                initial={{opacity: 0, x:-900}}
+                                animate={{opacity: 1, x:0}}
+                                transition={{duration: 0.8}}
+                               >
 
-                    <div className="flex flex-col items-center justify-center xxs:w-[80%] sm:w-[45%] md:w-[20%]"> {/*card item */}
+                    <div className="flex flex-col items-center justify-center xxs:w-[80%] sm:w-[45%] md:w-[20%]"
+                  > {/*card item */}
             
                         <Image src="/images/mob1.png" alt="instagram lexyri9" unoptimized width={200} height={400}
                         className="h-auto w-full object-contain"/>
@@ -53,7 +85,7 @@ export default function Social(){
                         <p className="text-white  mt-3 xxs:text-md sm:text-sm md:text-md">1000+ followers</p>
                     </div>
 
-                </div>
+                </motion.div>
         </div>
     )
 }
