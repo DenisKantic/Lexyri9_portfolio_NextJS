@@ -392,7 +392,7 @@ import Form from 'react-bootstrap/Form';
 
                     <p className="pt-6 flex flex-col">Upiši svoj natpis po želji za print {"(Opcionalno)"} <span className="text-sm text-gray-400">*Max 12 karaktera</span> </p>
 
-                        <Form.Control size="md" type="text" placeholder="Type here" onChange={(e)=>setText(e.target.value)}/>
+                        <Form.Control size="md" type="text" placeholder="Type here" onChange={(e)=>setTshirtText(e.target.value)}/>
 
 
                         <p className="pt-6 pb-2">Boja</p>
