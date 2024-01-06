@@ -1,18 +1,51 @@
+"use client"
 import Image from "next/image"
+import {motion,useInView,useAnimation} from 'framer-motion'
+import { useEffect,useRef } from "react";
+
+
 export default function Contact(){
+
+    const refTitle = useRef(null);
+    const isTitleInView = useInView(refTitle, {once: true});
+    const animationControls = useAnimation();
+
+  
+    useEffect(() => {
+  
+      if (isTitleInView) {
+        animationControls.start(
+        {
+            x: 0,
+            opacity: 1
+        })
+        console.log(isTitleInView)
+    }
+  }, [isTitleInView, animationControls]);
 
     return (
     <div className="w-[80%] mx-auto xxs:h-auto mt-5 xxs:mb-10 scroll-smooth" id="contact">
 
-            <h1 className="text-white text-5xl">Kontakt</h1>
+            <motion.h1 className="text-white text-5xl overflow-hidden"
+            ref={refTitle}
+            initial={{opacity: 0, x:-200}}
+            animate={animationControls}
+            transition={{duration: 0.8}}
+            >Kontakt</motion.h1>
             <div className="mt-4 h-[3px] bg-gradient-to-r from-green-300 via-blue-500 to-purple-600 w-full"></div>
 
-            <div className="xxs:w-full md:w-[80%] lg:w-[80%] xl:w-[60%] text-white pt-10">
+            <motion.div className="xxs:w-full md:w-[80%] lg:w-[80%] xl:w-[60%] text-white pt-10"
+            ref={refTitle}
+            initial={{opacity: 0, x:800}}
+            animate={{opacity: 1, x:0}}
+            transition={{duration: 0.8}}>
             <p className="text-3xl
             bg-clip-text text-transparent
             bg-gradient-to-r from-green-300 via-blue-500 to-purple-600">Spremni da napravimo magiju zajedno ?</p>
 
-            <p className="text-lg mt-5 text-justify break-normal w-[80%]">Radujem se mogućnosti buduće saradnje! Za sve saradnje i poslovne upite, slobodno me kontaktirajte putem e-maila  ili direktno putem navedenih socijalnih platformi. Hvala na interesovanju!.</p>
+            <p className="text-lg mt-5 text-justify break-normal w-[80%]">Radujem se mogućnosti buduće saradnje! Za sve saradnje i 
+            poslovne upite, slobodno me kontaktirajte putem e-maila  ili direktno putem navedenih socijalnih platformi. Hvala na 
+            interesovanju!.</p>
 
             <div className="grid grid-cols-4 mt-4 w-[90%]">
 
@@ -50,7 +83,7 @@ export default function Contact(){
                     </a>
 
             </div>
-            </div>
+            </motion.div>
 
 
     </div>
