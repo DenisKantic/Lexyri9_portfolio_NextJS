@@ -6,11 +6,10 @@ import './globals.css';
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata = {
-  title: 'LEXYRI9',
+  title: 'LEXYRI9 TikTok kreator',
   description: 'Vaš omiljeni tiktoker, Lexyri9! Kupovinom mojih proizvoda ne samo da \n' +
-  'podržavate vrhunski proizvod, već i pružate podršku osobama s invaliditetom. Svakom kupovinom \n' +
-  'doprinosite stvaranju radnih mjesta, unapređujete kvalitet života i promovišete inkluzivnost, čineći \n' + 
-  'svijet boljim mjestom za sve. Unisex kape, unisex majice kratkih rukava, unisex majice dugih rukava, parfemi i mnogo toga',
+  'podržavate vrhunski proizvod, već i pružate podršku osobama s invaliditetom. \n' +
+  'Unisex kape, unisex majice, unisex parfemi i mnogo toga',
   metadataBase: new URL('http://www.lexyri9.com'),
 }
 
