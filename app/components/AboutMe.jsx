@@ -7,7 +7,7 @@ export default function AboutMe(){
         
     return (
         <div className="mx-auto w-[80%] 
-                        h-auto  scroll-smooth"
+                        h-auto  scroll-smooth pt-10"
         id='aboutMe' >
             <h1 className="text-5xl text-white pt-20">Ko sam ja?</h1>
          <div className="mt-4 h-[3px] bg-gradient-to-r from-green-300 via-blue-500 to-purple-600 xxs:w-full md:w-[50%]"></div>

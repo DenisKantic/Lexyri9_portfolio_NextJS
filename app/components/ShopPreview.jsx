@@ -12,12 +12,14 @@ export default function ShopPreview(){
 
         <div className="text-white pt-10 text-xl w-[50%]
                         xxs:w-full md:w-[90%] lg:w-[80%] text-justify">
-            <p className="text-white">U mom web shopu svakako možete pronaći za sebe nešto što mu odgovara. Svaki kupljeni artikal
-             izravno utječe na poboljšanje rada osoba s invaliditetom, pa tako i vašom kupovinom bilo kojeg proizvoda omogućujete da se još jedna osoba 
-            zaposli i uljepšate joj život tako da će se osjećati bitno i odgovorno u današnjem svijetu koji je grub prema 
-            njima. Hvala vam na doprinosu.</p> <br />
+            <p className="text-white">Kupovinom ovih proizvoda podržavate rad osoba sa invaliditetom i pomažete im da se uključe u društvo. 
+            Također doprinosite stvaranju radnih mjesta i poboljšanju kvalitete života osoba s invaliditetom.
+             Podstičete senzibilaciju o potrebama i sposobnostima osoba sa invaliditetom.</p> <br />
 
-            <div className="text-red">Svi proizvodi su napravljeni od strane <a href="https://www.facebook.com/Intraggiftshop" target="_blank" className="text-md text-red">INTRAG</a> d.o.o za profesionalnu rehabilitaciju i zapošljavanje osoba sa invaliditetom </div>
+            <div className="">Svi proizvodi su napravljeni od strane <span className="text-yellow-400">INTRAG d.o.o za profesionalnu rehabilitaciju i zapošljavanje osoba sa invaliditetom.</span>
+            <h2 className="py-3 break-normal">Njihove proizvode možete posjetiti na sljedećem linku: </h2>
+            <a href="https://www.facebook.com/Intraggiftshop" target="_blank" className="text-md text-red text-gray-800 rounded-xl px-2 py-2 bg-white xxs:mt-3">INTRAG d.o.o</a>
+            </div>
         
         </div>
 
@@ -50,10 +52,10 @@ export default function ShopPreview(){
 
             
         </div>
-            <h1 className="text-white text-center text-lg mt-5">Pogledaj i ostale proizvode</h1>
+            <h1 className="text-white text-center text-xl mt-5">Pogledaj i ostale proizvode</h1>
 
             <div className="w-full flex justify-center items-center pt-10">
-                <Link href="/shop" className="flex justify-center items-center px-5 py-3 hover:bg-green-400 bg-white rounded-xl text-md">Moj shop</Link>
+                <Link href="/shop" className="flex justify-center items-center px-5 py-3 rounded-xl text-md bg-white hover:text-red-400 hover:font-bold">Moj shop</Link>
             </div>
         </div>
     )

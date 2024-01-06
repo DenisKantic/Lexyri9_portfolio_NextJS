@@ -17,7 +17,7 @@ export default function Contact(){
             <div className="grid grid-cols-4 mt-4 w-[90%]">
 
             <a className="flex flex-col items-center justify-center xxs:w-[80%] sm:w-[45%] md:w-[30%] lg:w-[50%]"
-                    href="mailto: denis.kantic18@gmail.com" target="_blank"> {/*card item */}
+                    href="mailto: collaboration@lexyri9.com" target="_blank"> {/*card item */}
                         <div className="xxs:px-2 xxs:py-2 md:px-3 md:py-3 bg-white rounded-full
                         flex flex-row items-center justify-center">
                             <Image src="/images/gmail.png" alt="instagram lexyri9" unoptimized width={30} height={30}/>

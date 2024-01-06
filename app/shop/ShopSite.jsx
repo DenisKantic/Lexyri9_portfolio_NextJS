@@ -32,10 +32,21 @@ import Form from 'react-bootstrap/Form';
        
         
     return (
-        <div className="w-[80%] mx-auto min-h-[100vh]">
+        <div className="w-[80%] mx-auto min-h-[100vh] pt-5">
 
         <h1 className="text-white text-5xl pt-20">Moj shop</h1>
         <div className="mt-4 border-t-2  w-full pb-20"></div>
+
+        <div className="text-white text-xl text-justify break-normal mx-start pb-10 flex flex-col justify-start items-start
+                        xl:w-[50%] xxs:w-full md:w-[80%]">
+            <h2>Svoj željeni proizvod možete odmah naručiti i platiti putem paypal aplikacije.</h2>
+            <p className="py-2">Mogućnost plaćanja pouzećem u Bosni i Hercegovini narudžbom preko maila: <span className="font-bold text-yellow-400">orders@lexyri9.com
+            </span>  ili putem facebook stranice <a href="https://www.facebook.com/lexyri9webshop" target="_blank" className="font-bold text-yellow-400 underline">Lexyri9 FB Shop</a> </p>
+            <p className="py-2">U slučaju većeg broja količine narudžbe, obratite se na mail, kako bi dobili najbolju cijenu.</p>
+            <p className="font-bold">Dostava na čitavom području Europe!</p>
+
+            <p className="pt-3">U slučaju problema prilikom kupovine putem paypal opcije, obratite se na mail: <br /> <span className="text-yellow-400 font-bold">support@lexyri9.com</span></p>
+        </div>
 
                 
             <h1 className="text-5xl text-white md:mb-[-50px]">Parfemi</h1>
@@ -46,7 +57,7 @@ import Form from 'react-bootstrap/Form';
             {/* card item parent */}
 
                 <div className="flex justify-center items-center flex-col
-                xxs:w-full md:w-[50%]"> {/* left side image */}
+                xxs:w-full xxs:pt-10 md:pt-2 md:w-[50%]"> {/* left side image */}
                 <Image src="/images/parfume.png" alt="perfum" unoptimized
                 width={100} height={100} className="w-auto flex justify-center items-center max-h-[50vh]"/>
                 <p className="bg-gradient-to-r from-amber-200 to-yellow-500 bg-clip-text text-transparent text-center p-3">
@@ -115,6 +126,7 @@ import Form from 'react-bootstrap/Form';
                     items={{ 
                     price:(perfumePrice+shipping),
                     perfume: perfume,
+                    text: ""
                 }} /> 
                   <button className="py-2 bg-white text-black w-full font-bold" onClick={()=>setIsPerfumOpen(false)}>ODUSTANI</button>
                   </div>
@@ -165,7 +177,7 @@ import Form from 'react-bootstrap/Form';
                   </Dropdown.Menu>
             </Dropdown>
 
-                        <p className="pt-6 flex flex-col">Upiši svoj natpis po želji {"(Opcionalno)"} <span className="text-sm text-gray-400">*Max 12 karaktera</span> </p>
+                        <p className="pt-6 flex flex-col">Upiši svoj natpis po želji za print {"(Opcionalno)"} <span className="text-sm text-gray-400">*Max 12 karaktera</span> </p>
                         <Form.Control size="md" type="text"  placeholder="Type here" maxLength="12" onChange={(e)=>setHodieText(e.target.value)}/>
                         
                         <p className="pt-4">Boja</p>
@@ -273,7 +285,7 @@ import Form from 'react-bootstrap/Form';
                 <div className="mx-auto xxs:w-full md:w-[45%] lg:max-w-[35%]"> {/* right side options */}
 
 
-                <p className="pt-6 flex flex-col">Upiši svoj natpis po želji {"(Opcionalno)"} <span className="text-sm text-gray-400">*Max 12 karaktera</span> </p>
+                <p className="pt-6 flex flex-col">Upiši svoj natpis po želji za print {"(Opcionalno)"} <span className="text-sm text-gray-400">*Max 12 karaktera</span> </p>
                         <Form.Control size="md" type="text" placeholder="Type here" onChange={(e)=>setLongSleveText(e.target.value)}/>
                     <div>
                         <p className="pt-6 pb-2">Boja</p>
@@ -378,7 +390,7 @@ import Form from 'react-bootstrap/Form';
 
                   <div className="mx-auto xxs:w-full md:w-[45%] lg:max-w-[35%]"> {/* right side options */}
 
-                    <p className="pt-6 flex flex-col">Upiši svoj natpis po želji {"(Opcionalno)"} <span className="text-sm text-gray-400">*Max 12 karaktera</span> </p>
+                    <p className="pt-6 flex flex-col">Upiši svoj natpis po želji za print {"(Opcionalno)"} <span className="text-sm text-gray-400">*Max 12 karaktera</span> </p>
 
                         <Form.Control size="md" type="text" placeholder="Type here" onChange={(e)=>setText(e.target.value)}/>
 
@@ -540,7 +552,8 @@ import Form from 'react-bootstrap/Form';
                     items={{ 
                     price:(capPrice+shipping),
                     color: color,
-                    clothes: "Kapa"
+                    clothes: "Kapa",
+                    text: ""
                 }} /> 
                   <button className="py-2 bg-white text-black w-full font-bold" onClick={()=>setIsCapOpen(false)}>ODUSTANI</button>
                   </div>
