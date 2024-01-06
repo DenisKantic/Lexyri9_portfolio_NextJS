@@ -26,7 +26,7 @@ export default function Contact(){
     return (
     <div className="w-[80%] mx-auto xxs:h-auto mt-5 xxs:mb-10 scroll-smooth" id="contact">
 
-            <motion.h1 className="text-white text-5xl"
+            <motion.h1 className="text-white text-5xl overflow-hidden"
             ref={refTitle}
             initial={{opacity: 0, x:-200}}
             animate={animationControls}
@@ -37,7 +37,7 @@ export default function Contact(){
             <motion.div className="xxs:w-full md:w-[80%] lg:w-[80%] xl:w-[60%] text-white pt-10"
             ref={refTitle}
             initial={{opacity: 0, x:800}}
-            animate={animationControls}
+            animate={{opacity: 1, x:0}}
             transition={{duration: 0.8}}>
             <p className="text-3xl
             bg-clip-text text-transparent

@@ -29,7 +29,7 @@ export default function AboutMe(){
         <div className="mx-auto w-[80%] 
                         h-auto  scroll-smooth pt-10" 
         id='aboutMe' >
-            <motion.h1 className="text-5xl text-white pt-20 overflow-y-hidden" ref={refTitle}
+            <motion.h1 className="xxs:text-4xl sm:text-5xl text-white pt-20 overflow-y-hidden" ref={refTitle}
              initial={{opacity: 0, x:-200}}
              animate={animationControls}
              transition={{duration: 0.25, ease: 'easeInOut', delay: 0.60}} 
