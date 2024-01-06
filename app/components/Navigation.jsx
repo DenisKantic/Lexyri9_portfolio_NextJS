@@ -42,7 +42,7 @@ export default function Navigation() {
                </Button>
         </div> 
 
-        <ul className='xxs:hidden md:flex justify-start items-center text-white'>
+        <ul className='xxs:hidden md:flex justify-start items-center text-white text-xl'>
             <Image src="/images/logo.webp" alt="lexiry_logo" width={50} height={50} 
             className="mr-10"/>
             <Link href="/">
