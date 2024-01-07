@@ -206,7 +206,7 @@ import {motion, useInView, useAnimation} from 'framer-motion'
                 initial={{opacity: 0, x:-200}}
                 animate={{opacity: 1, x:0}}
                 transition={{duration: 0.8}}> {/* left side image */}
-                <Image src="/images/MOCKUP/Hoodie/grey.png" unoptimized alt="hoddie"
+                <Image src="/images/MOCKUP/Hoodie/grey.webp" unoptimized alt="hoddie"
                 width={100} height={100} className="flex w-auto justify-center items-center max-h-[60vh]"/>
                 <p className="bg-gradient-to-r from-amber-200 to-yellow-500 bg-clip-text text-transparent text-center p-4">
                     Napomena: Fotografija je ilustrativna i može se razlikovati</p>
@@ -336,7 +336,7 @@ import {motion, useInView, useAnimation} from 'framer-motion'
 
                 <div className="flex justify-center items-center flex-col
                 xxs:w-full md:w-[50%]"> {/* left side image */}
-                <Image src="/images/MOCKUP/Long_sleeve/green.png" alt="long sleeve" unoptimized
+                <Image src="/images/MOCKUP/Long_sleeve/green.webp" alt="long sleeve" unoptimized
                 width={100} height={100} className="w-auto h-auto flex justify-center items-center max-h-[60vh]"/>
                 <p className="bg-gradient-to-r from-amber-200 to-yellow-500 bg-clip-text text-transparent text-center p-4">
                     Napomena: Fotografija je ilustrativna i može se razlikovati</p>
@@ -450,7 +450,7 @@ import {motion, useInView, useAnimation} from 'framer-motion'
                 <div className="flex justify-center items-center flex-col
                 xxs:w-full md:w-[50%]
                 "> {/* left side image */}
-                <Image src="/images/MOCKUP/T-shirt/RED.png" unoptimized alt="t-shirt"
+                <Image src="/images/MOCKUP/T-shirt/RED.webp" unoptimized alt="t-shirt"
                 width={100} height={100} className="w-auto h-auto flex justify-center items-center max-h-[60vh]"/>
                 <p className="bg-gradient-to-r from-amber-200 to-yellow-500 bg-clip-text text-transparent text-center p-4">
                     Napomena: Fotografija je ilustrativna i može se razlikovati</p>

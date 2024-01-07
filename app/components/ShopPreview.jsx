@@ -65,7 +65,7 @@ export default function ShopPreview(){
                             initial={{opacity: 0, x:-400}}
             animate={animationControls}
             transition={{duration: 1.5}}> {/* card item */}
-                <Image src="/images/parfume.png" alt="hoodie_grey" unoptimized width={100} height={100}
+                <Image src="/images/parfume.png" alt="perfume" unoptimized width={100} height={100}
                 className="object-contain xxs:h-auto md:h-[300px] w-auto"
                 />
                 <p className="text-white text-center w-[50%]">Parfemi: Unisex, Men Secret, Woman Secret</p>
@@ -77,7 +77,7 @@ export default function ShopPreview(){
             animate={animationControls}
             transition={{duration: 1.5}}
             > {/* card item */}
-                <Image src="/images/MOCKUP/T-shirt/RED.png" alt="T-shirt blue" unoptimized width={200} height={200}
+                <Image src="/images/MOCKUP/T-shirt/RED.webp" alt="T-shirt red" unoptimized width={200} height={200}
                 className="object-center h-auto w-auto"
                 />
                 <p className="text-white text-center w-[50%]">Unisex T-Shirt u svim bojama i veličinama</p>
@@ -88,7 +88,7 @@ export default function ShopPreview(){
             initial={{opacity: 0, x:-800}}
             animate={animationControls}
             transition={{duration: 1.5}}> {/* card item */}
-                <Image src="/images/MOCKUP/Long_sleeve/green.png" alt="long sleeve green" unoptimized width={200} height={200}
+                <Image src="/images/MOCKUP/Long_sleeve/green.webp" alt="long sleeve" unoptimized width={200} height={200}
                 className="object-center h-auto w-auto"
                 />
               <p className="text-white text-center w-[50%]">Unisex majice dugih rukava u svim bojama i veličinama</p>

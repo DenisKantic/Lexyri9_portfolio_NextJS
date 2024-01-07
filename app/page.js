@@ -4,6 +4,7 @@ import AboutMe from "./components/AboutMe"
 import Social from "./components/Social"
 import ShopPreview from "./components/ShopPreview"
 import Contact from "./components/Contact"
+import Footer from "./components/Footer"
 
 
 export default function Home() {
@@ -18,6 +19,7 @@ export default function Home() {
     <Social />
     <ShopPreview />
     <Contact />
+    <Footer />
    </div>
   )
 }
