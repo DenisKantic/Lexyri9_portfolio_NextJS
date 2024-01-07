@@ -24,21 +24,20 @@ export default function Contact(){
   }, [isTitleInView, animationControls]);
 
     return (
-    <div className="w-[80%] mx-auto xxs:h-auto mt-5 xxs:mb-10 scroll-smooth" id="contact">
+    <div className="w-[80%] mx-auto xxs:h-auto mt-5 xxs:mb-10" id="contact">
 
             <motion.h1 className="text-white text-5xl overflow-hidden"
             ref={refTitle}
             initial={{opacity: 0, x:-200}}
             animate={animationControls}
-            transition={{duration: 0.8}}
+            transition={{duration: 1}}
             >Kontakt</motion.h1>
             <div className="mt-4 h-[3px] bg-gradient-to-r from-green-300 via-blue-500 to-purple-600 w-full"></div>
 
             <motion.div className="xxs:w-full md:w-[80%] lg:w-[80%] xl:w-[60%] text-white pt-10"
-            ref={refTitle}
             initial={{opacity: 0, x:800}}
-            animate={{opacity: 1, x:0}}
-            transition={{duration: 0.8}}>
+            animate={animationControls}
+            transition={{duration: 1.3}}>
             <p className="text-3xl
             bg-clip-text text-transparent
             bg-gradient-to-r from-green-300 via-blue-500 to-purple-600">Spremni da napravimo magiju zajedno ?</p>

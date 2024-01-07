@@ -41,7 +41,7 @@ export default function Social(){
                                 ref={refTitle}
                                 initial={{opacity: 0, x:-900}}
                                 animate={{opacity: 1, x:0}}
-                                transition={{duration: 0.8}}
+                                transition={{duration: 1.5}}
                                >
 
                     <div className="flex flex-col items-center justify-center xxs:w-[80%] sm:w-[45%] md:w-[20%]"
