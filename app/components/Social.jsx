@@ -54,7 +54,7 @@ export default function Social(){
                         flex flex-row items-center justify-center mt-5"
                         href="https://www.instagram.com/lexyri9/" target="_blank">
                             <Image src="/images/insta.png" alt="instagram lexyri9" unoptimized width={30} height={30}/>
-                            <h1 className="ml-3 xxs:text-md sm:text-sm md:text-md">@lexyri9</h1>
+                            <p className="ml-3 xxs:text-md sm:text-sm md:text-md">@lexyri9</p>
                         </a>
                         <p className="text-white text-md mt-3 xxs:text-md sm:text-sm md:text-md">4000+ followers</p>
                     </div>
@@ -67,7 +67,7 @@ export default function Social(){
                         flex-row items-center justify-center mt-5"
                         href="https://www.tiktok.com/@lexyri9?_t=8ijTV2jh5IU&_r=1" target="_blank">
                             <Image src="/images/tiktok.png" alt="tiktok lexyri9" unoptimized width={30} height={30}/>
-                            <h1 className="text-lg ml-3 xxs:text-md sm:text-sm md:text-md">@lexyri9</h1>
+                            <p className="text-lg ml-3 xxs:text-md sm:text-sm md:text-md">@lexyri9</p>
                         </a>
                         <p className="text-white  mt-3 text-center xxs:text-md sm:text-sm md:text-md">3M+ likes</p>
                     </div>
@@ -80,7 +80,7 @@ export default function Social(){
                         flex-row items-center justify-center mt-5"
                         href="https://www.youtube.com/channel/UCznHaNy4Q_4DOdVx7EiCANA" target="_blank">
                             <Image src="/images/youtube.png" alt="lexyri9" unoptimized width={30} height={30}/>
-                            <h1 className="text-lg ml-3 xxs:text-md sm:text-sm md:text-md">@lexyri9</h1>
+                            <p className="text-lg ml-3 xxs:text-md sm:text-sm md:text-md">@lexyri9</p>
                         </a>
                         <p className="text-white  mt-3 xxs:text-md sm:text-sm md:text-md">1000+ followers</p>
                     </div>

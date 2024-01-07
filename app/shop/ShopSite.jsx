@@ -83,12 +83,12 @@ import {motion, useInView, useAnimation} from 'framer-motion'
         </motion.div>
 
                 
-            <motion.h1 className="text-5xl text-white md:mb-[-50px]"
+            <motion.h2 className="text-5xl text-white md:mb-[-50px]"
                 initial={{opacity: 0, x:-200}}
                 animate={{opacity: 1, x:0}}
                 transition={{duration: 0.8}}>
                     Parfemi
-                    </motion.h1>
+                    </motion.h2>
 
             <div className="text-white w-[70%] h-[50vh] flex h-auto items-center
             xxs:flex-col xxs:w-full
@@ -101,7 +101,7 @@ import {motion, useInView, useAnimation} from 'framer-motion'
                 animate={{opacity: 1, x:0}}
                 transition={{duration: 0.8}}
                 > {/* left side image */}
-                <Image src="/images/parfume.png" alt="perfum" unoptimized
+                <Image src="/images/perfume.png" alt="perfum" unoptimized
                 width={100} height={100} className="w-auto flex justify-center items-center max-h-[50vh]"/>
                 <p className="bg-gradient-to-r from-amber-200 to-yellow-500 bg-clip-text text-transparent text-center p-3">
                     Napomena: Fotografija je ilustrativna i može se razlikovati</p>
@@ -114,7 +114,7 @@ import {motion, useInView, useAnimation} from 'framer-motion'
                  transition={{duration: 1}}> {/* right side options */}
 
                     <div className="text-justify break-normal">
-                        <h1 className="text-white text-md pb-2">Opis: </h1>
+                        <p className="text-white text-md pb-2">Opis: </p>
                         <div>
                         <span className="bg-gradient-to-r from-cyan-500 to-blue-500 bg-clip-text text-transparent">
                         UNISEX guess the smell:
@@ -158,10 +158,10 @@ import {motion, useInView, useAnimation} from 'framer-motion'
                   </Dropdown.Menu>
             </Dropdown>
 
-            <h1 className="mt-5 ">Količina: <br />20ml</h1>
+            <p className="mt-5 ">Količina: <br />20ml</p>
 
                         <div>
-                        <h1 className="text-lg pt-5">Cijena</h1>
+                        <p className="text-lg pt-5">Cijena</p>
                         <p className="text-4xl font-bold">6 &euro;  <span className="text-sm text-gray-400">+ poštarina</span> </p>
                         <p className="font-bold bg-gradient-to-r from-amber-200 to-yellow-500 bg-clip-text text-transparent">Promotivna cijena!!!</p>
                         </div>
@@ -184,12 +184,12 @@ import {motion, useInView, useAnimation} from 'framer-motion'
                  </motion.div>
             </div>
 
-            <motion.h2 className="text-5xl pt-20 pb-5 text-white"
+            <motion.h3 className="text-5xl pt-20 pb-5 text-white"
             initial={{opacity: 0, x:-200}}
             animate={{opacity: 1, x:0}}
             transition={{duration: 2}}>
                 Unisex Dukserice
-                </motion.h2>
+                </motion.h3>
 
             <div className="text-white w-[70%] h-[50vh] flex  items-center
                             xxs:flex-col xxs:w-full
@@ -298,7 +298,7 @@ import {motion, useInView, useAnimation} from 'framer-motion'
                               </div>
 
                         <div>
-                        <h1 className="text-lg pt-10">Cijena</h1>
+                        <p className="text-lg pt-10">Cijena</p>
                         <p className="text-4xl font-bold text-white">18 &euro; <span className="text-sm text-gray-400">+ poštarina</span></p>
                         </div>
                     </div>
@@ -325,11 +325,11 @@ import {motion, useInView, useAnimation} from 'framer-motion'
             </div>
 
             {/* long sleeve t-shirt item */}
-            <motion.h1 className="text-5xl mt-[100px] text-white"
+            <motion.h4 className="text-5xl mt-[100px] text-white"
             initial={{opacity: 0, x:-200}}
             animate={{opacity: 1, x:0}}
             transition={{duration: 0.8}}
-            >Unisex Majice Dugih Rukava</motion.h1>
+            >Unisex Majice Dugih Rukava</motion.h4>
             <div className="text-white w-[70%] h-[50vh] flex h-auto items-center
             xxs:flex-col xxs:w-full
             md:flex-row"> {/* card item parent */}
@@ -348,9 +348,27 @@ import {motion, useInView, useAnimation} from 'framer-motion'
                  animate={{opacity: 1, x:0}}
                  transition={{duration: 1}}> {/* right side options */}
 
+                 
+<p className="pb-4 text-white">Izaberi stranu natpisa {"(naprijed ili nazad)"}</p>
 
-                <p className="pt-6 flex flex-col">Upiši svoj natpis po želji za print {"(Opcionalno)"} <span className="text-sm text-gray-400">*Max 12 karaktera</span> </p>
-                        <Form.Control size="md" type="text" placeholder="Type here" onChange={(e)=>setLongSleveText(e.target.value)}/>
+                        <Dropdown>
+                  <Dropdown.Toggle variant="success" id="dropdown-basic"
+                  className="flex flex-row justify-start items-center w-full">
+                   {position}
+                  </Dropdown.Toggle>
+
+                  <Dropdown.Menu>
+                     <Dropdown.Item onClick={()=>setPosition("Prednja")} >
+                        Prednja {"(natpis na prednjoj strani)"}
+                     </Dropdown.Item>
+                  <Dropdown.Item onClick={()=>{setPosition("Zadnja")}}>
+                        Zadnja {"(natpis na leđima)"}
+                     </Dropdown.Item>
+                  </Dropdown.Menu>
+            </Dropdown>
+
+                        <p className="pt-6 flex flex-col">Upiši svoj natpis po želji za print {"(Opcionalno)"} <span className="text-sm text-gray-400">*Max 12 karaktera</span> </p>
+                        <Form.Control size="md" type="text"  placeholder="Type here" maxLength="12" onChange={(e)=>setLongSleveText(e.target.value)}/>
                     <div>
                         <p className="pt-6 pb-2">Boja</p>
 
@@ -412,7 +430,7 @@ import {motion, useInView, useAnimation} from 'framer-motion'
                         </div>
 
                         <div>
-                        <h1 className="text-lg pt-10">Cijena</h1>
+                        <p className="text-lg pt-10">Cijena</p>
                         <p className="text-4xl font-bold">12 &euro; <span className="text-sm text-gray-400">+poštarina</span> </p>
                         </div>
                         </div>
@@ -423,6 +441,8 @@ import {motion, useInView, useAnimation} from 'framer-motion'
                     items={{ 
                     price:(longShirtPrice+shipping),
                     color: color,
+                    position: position,
+                    text: longSleveText,
                     clothes: "Dugi rukav",
                     text: longSleveText,
                     size: size
@@ -437,12 +457,12 @@ import {motion, useInView, useAnimation} from 'framer-motion'
 
            {/* t-shirt item */}
 
-           <motion.h1 className="text-5xl mt-[100px]
+           <motion.h5 className="text-5xl mt-[100px]
            text-white"
            initial={{opacity: 0, x:-200}}
                 animate={{opacity: 1, x:0}}
                 transition={{duration: 0.8}}
-                >Unisex T-Shirt</motion.h1>
+                >Unisex T-Shirt</motion.h5>
             <div className="text-white w-[70%] h-[50vh] flex h-auto items-center
             xxs:flex-col xxs:w-full
             md:flex-row"> {/* card item parent */}
@@ -461,9 +481,26 @@ import {motion, useInView, useAnimation} from 'framer-motion'
                    animate={{opacity: 1, x:0}}
                    transition={{duration: 1}}> {/* right side options */}
 
-                    <p className="pt-6 flex flex-col">Upiši svoj natpis po želji za print {"(Opcionalno)"} <span className="text-sm text-gray-400">*Max 12 karaktera</span> </p>
+<p className="pb-4 text-white">Izaberi stranu natpisa {"(naprijed ili nazad)"}</p>
 
-                        <Form.Control size="md" type="text" placeholder="Type here" onChange={(e)=>setTshirtText(e.target.value)}/>
+<Dropdown>
+<Dropdown.Toggle variant="success" id="dropdown-basic"
+className="flex flex-row justify-start items-center w-full">
+{position}
+</Dropdown.Toggle>
+
+<Dropdown.Menu>
+<Dropdown.Item onClick={()=>setPosition("Prednja")} >
+Prednja {"(natpis na prednjoj strani)"}
+</Dropdown.Item>
+<Dropdown.Item onClick={()=>{setPosition("Zadnja")}}>
+Zadnja {"(natpis na leđima)"}
+</Dropdown.Item>
+</Dropdown.Menu>
+</Dropdown>
+
+<p className="pt-6 flex flex-col">Upiši svoj natpis po želji za print {"(Opcionalno)"} <span className="text-sm text-gray-400">*Max 12 karaktera</span> </p>
+<Form.Control size="md" type="text"  placeholder="Type here" maxLength="12" onChange={(e)=>setTshirtText(e.target.value)}/>
 
 
                         <p className="pt-6 pb-2">Boja</p>
@@ -527,7 +564,7 @@ import {motion, useInView, useAnimation} from 'framer-motion'
                         </div>
 
                         <div>
-                        <h1 className="text-lg pt-10">Cijena</h1>
+                        <p className="text-lg pt-10">Cijena</p>
                         <p className="text-4xl font-bold">8 &euro; <span className="text-sm text-gray-400">+poštarina</span> </p>
                         </div>
                         </div>
@@ -538,6 +575,8 @@ import {motion, useInView, useAnimation} from 'framer-motion'
                     items={{ 
                     price:(tshirtPrice+shipping),
                     color: color,
+                    position: position,
+                    text: tshirtText,
                     clothes: "T-Shirt",
                     text: tshirtText,
                     size: size
@@ -554,11 +593,11 @@ import {motion, useInView, useAnimation} from 'framer-motion'
 
             {/* man cap item */}
 
-           <motion.h1 className="text-5xl text-white mt-[100px]"
+           <motion.h6 className="text-5xl text-white mt-[100px]"
            initial={{opacity: 0, x:-200}}
            animate={{opacity: 1, x:0}}
            transition={{duration: 0.8}}
-           >Unisex Kape</motion.h1>
+           >Unisex Kape</motion.h6>
             <div className="text-white w-[70%] h-[50vh] flex h-auto items-center pb-5
             xxs:flex-col xxs:w-full
             md:flex-row h-auto"> {/* card item parent */}
@@ -620,7 +659,7 @@ import {motion, useInView, useAnimation} from 'framer-motion'
                         </div>
 
                         <div>
-                        <h1 className="text-lg pt-10">Cijena</h1>
+                        <p className="text-lg pt-10">Cijena</p>
                         <p className="text-4xl font-bold">6 &euro; <span className="text-sm text-gray-400">+poštarina</span> </p>
                         </div>
                         <div className={isCapOpen ? "xxs:w-full pt-3" : "xxs:w-[50%] pt-3"}>

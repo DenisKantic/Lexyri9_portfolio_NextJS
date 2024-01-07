@@ -65,7 +65,7 @@ export default function ShopPreview(){
                             initial={{opacity: 0, x:-400}}
             animate={animationControls}
             transition={{duration: 1.5}}> {/* card item */}
-                <Image src="/images/parfume.png" alt="perfume" unoptimized width={100} height={100}
+                <Image src="/images/perfume.png" alt="perfume" unoptimized width={100} height={100}
                 className="object-contain xxs:h-auto md:h-[300px] w-auto"
                 />
                 <p className="text-white text-center w-[50%]">Parfemi: Unisex, Men Secret, Woman Secret</p>
@@ -97,7 +97,7 @@ export default function ShopPreview(){
 
             
         </div>
-            <h1 className="text-white text-center text-xl mt-5">Pogledaj i ostale proizvode</h1>
+            <p className="text-white text-center text-xl mt-5">Pogledaj i ostale proizvode</p>
 
             <div className="w-full flex justify-center items-center pt-10">
                 <Link href="/shop" className="flex justify-center items-center px-4 py-2 rounded-xl text-md bg-white hover:font-bold hover:text-lg">Moj shop</Link>
