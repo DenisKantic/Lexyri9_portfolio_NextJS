@@ -1,10 +1,11 @@
 "use client"
 import Image from "next/image"
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import Dropdown from 'react-bootstrap/Dropdown';
 import Checkout from "../components/Checkout";
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
+import {motion, useInView, useAnimation} from 'framer-motion'
 
     
     export default function Shop(){
@@ -29,46 +30,98 @@ import Form from 'react-bootstrap/Form';
         const perfumePrice = 6;
         const shipping = 6;
         const capPrice = 6;
+
+        const refTitle = useRef(null);
+        const isTitleInView = useInView(refTitle, {once: true});
+        const animationControls = useAnimation();
+    
+      
+        useEffect(() => {
+      
+          if (isTitleInView) {
+            animationControls.start(
+            {
+                x: 0,
+                opacity: 1
+            })
+            console.log(isTitleInView)
+        }
+      }, [isTitleInView, animationControls]);
+      
        
         
     return (
         <div className="w-[80%] mx-auto min-h-[100vh] pt-5">
 
-        <h1 className="text-white text-5xl pt-20">Moj shop</h1>
-        <div className="mt-4 border-t-2  w-full pb-20"></div>
+        <motion.h1 className="text-white xxs:pt-5 xxs:text-3xl md:text-5xl md:pt-20"
+        initial={{opacity: 0, x:-200}}
+        animate={{opacity:1, x:0}}
+        transition={{duration: 0.5}}
+        >
+        Moj shop
+        </motion.h1>
+        <motion.div className="mt-4 h-[3px] bg-gradient-to-r from-green-300 via-blue-500 to-purple-600 w-full mb-5"
+            initial={{opacity: 0, x:-200}}
+            animate={{opacity:1, x:0}}
+            transition={{duration: 1}}></motion.div>
 
-        <div className="text-white text-xl text-justify break-normal mx-start pb-10 flex flex-col justify-start items-start
-                        xl:w-[50%] xxs:w-full md:w-[80%]">
+
+        <motion.div className="text-white xxs:text-sm md:text-xl text-start break-normal mx-start pb-10 flex flex-col justify-start items-start
+                         xxs:w-full xl:w-[60%]"
+                        initial={{opacity: 0, x:-400}}
+                        animate={{opacity:1, x:0}}
+                        transition={{duration: 1.3}}
+                       >
+<div className="break-normal">Kupovinom ovih proizvoda društveno ste odgovorni i direktno podržavate zapošljavanje osoba sa invaliditetom.. Svi proizvodi su napravljeni od strane <br /> <span className="text-yellow-400">INTRAG d.o.o za profesionalnu rehabilitaciju i zapošljavanje osoba sa invaliditetom.</span>
+            <p className="py-3 break-normal">Njihove proizvode možete posjetiti na sljedećem linku:            
+             <a href="https://www.facebook.com/Intraggiftshop" target="_blank" 
+             className="text-md ml-2 text-yellow-400 underline xxs:mt-3 hover:font-bold">
+                 INTRAG d.o.o</a>
+                </p>
+            </div>                     
             <h2>Svoj željeni proizvod možete odmah naručiti i platiti putem paypal aplikacije.</h2>
             <p className="py-2">Mogućnost plaćanja pouzećem u Bosni i Hercegovini narudžbom preko maila: <span className="font-bold text-yellow-400">orders@lexyri9.com
             </span>  ili putem facebook stranice <a href="https://www.facebook.com/lexyri9webshop" target="_blank" className="font-bold text-yellow-400 underline">Lexyri9 FB Shop</a> </p>
             <p className="py-2">U slučaju većeg broja količine narudžbe, obratite se na mail, kako bi dobili najbolju cijenu.</p>
             <p className="font-bold">Dostava na čitavom području Europe!</p>
+            <p className="font-bold">Rok isporuke cca 10 dana!</p>
 
             <p className="pt-3">U slučaju problema prilikom kupovine putem paypal opcije, obratite se na mail: <br /> <span className="text-yellow-400 font-bold">support@lexyri9.com</span></p>
-        </div>
+        </motion.div>
 
                 
-            <h1 className="text-5xl text-white md:mb-[-50px]">Parfemi</h1>
+            <motion.h2 className="text-5xl text-white md:mb-[-50px]"
+                initial={{opacity: 0, x:-200}}
+                animate={{opacity: 1, x:0}}
+                transition={{duration: 0.8}}>
+                    Parfemi
+                    </motion.h2>
 
             <div className="text-white w-[70%] h-[50vh] flex h-auto items-center
             xxs:flex-col xxs:w-full
             md:flex-row"> 
             {/* card item parent */}
 
-                <div className="flex justify-center items-center flex-col
-                xxs:w-full xxs:pt-10 md:pt-2 md:w-[50%]"> {/* left side image */}
-                <Image src="/images/parfume.png" alt="perfum" unoptimized
+                <motion.div className="flex justify-center items-center flex-col
+                xxs:w-full xxs:pt-10 md:pt-2 md:w-[50%]"
+                initial={{opacity: 0, x:-200}}
+                animate={{opacity: 1, x:0}}
+                transition={{duration: 0.8}}
+                > {/* left side image */}
+                <Image src="/images/perfume.png" alt="perfum" unoptimized
                 width={100} height={100} className="w-auto flex justify-center items-center max-h-[50vh]"/>
                 <p className="bg-gradient-to-r from-amber-200 to-yellow-500 bg-clip-text text-transparent text-center p-3">
                     Napomena: Fotografija je ilustrativna i može se razlikovati</p>
-                </div>
+                </motion.div>
 
                
-                <div className="mx-auto xxs:w-full md:w-[45%] lg:max-w-[35%]"> {/* right side options */}
+                <motion.div className="mx-auto xxs:w-full md:text-sm lg:text-lg md:w-[45%] overflow-hidden"
+                 initial={{opacity: 0, x:-400}}
+                 animate={{opacity: 1, x:0}}
+                 transition={{duration: 1}}> {/* right side options */}
 
                     <div className="text-justify break-normal">
-                        <h1 className="text-white text-md pb-2">Opis: </h1>
+                        <p className="text-white text-md pb-2">Opis: </p>
                         <div>
                         <span className="bg-gradient-to-r from-cyan-500 to-blue-500 bg-clip-text text-transparent">
                         UNISEX guess the smell:
@@ -112,10 +165,10 @@ import Form from 'react-bootstrap/Form';
                   </Dropdown.Menu>
             </Dropdown>
 
-            <h1 className="mt-5 ">Sadržaj: <br />20ml</h1>
+            <p className="mt-5 ">Količina: <br />20ml</p>
 
                         <div>
-                        <h1 className="text-lg pt-5">Cijena</h1>
+                        <p className="text-lg pt-5">Cijena</p>
                         <p className="text-4xl font-bold">6 &euro;  <span className="text-sm text-gray-400">+ poštarina</span> </p>
                         <p className="font-bold bg-gradient-to-r from-amber-200 to-yellow-500 bg-clip-text text-transparent">Promotivna cijena!!!</p>
                         </div>
@@ -135,11 +188,15 @@ import Form from 'react-bootstrap/Form';
                         Naruči ovdje!</Button>
                      </div>
                     </div>
-                 </div>
+                 </motion.div>
             </div>
 
-            <h1 className="text-5xl pt-20 pb-5 text-white">
-                Unisex Dukserice</h1>
+            <motion.h3 className="text-5xl pt-20 pb-5 text-white"
+            initial={{opacity: 0, x:-200}}
+            animate={{opacity: 1, x:0}}
+            transition={{duration: 2}}>
+                Unisex Dukserice
+                </motion.h3>
 
             <div className="text-white w-[70%] h-[50vh] flex  items-center
                             xxs:flex-col xxs:w-full
@@ -150,14 +207,21 @@ import Form from 'react-bootstrap/Form';
 
                             {/* finish */}
 
-                <div className="flex justify-center items-center flex-col
-                                xxs:w-full md:w-[50%]"> {/* left side image */}
-                <Image src="/images/MOCKUP/Hoodie/grey.png" unoptimized alt="hoddie"
+                <motion.div className="flex justify-center items-center flex-col
+                                xxs:w-full md:w-[50%]"
+                                ref={refTitle}
+                initial={{opacity: 0, x:-200}}
+                animate={{opacity: 1, x:0}}
+                transition={{duration: 0.8}}> {/* left side image */}
+                <Image src="/images/MOCKUP/Hoodie/grey.webp" unoptimized alt="hoddie"
                 width={100} height={100} className="flex w-auto justify-center items-center max-h-[60vh]"/>
                 <p className="bg-gradient-to-r from-amber-200 to-yellow-500 bg-clip-text text-transparent text-center p-4">
                     Napomena: Fotografija je ilustrativna i može se razlikovati</p>
-                </div>
-                <div className="mx-auto xxs:w-full md:w-[45%] lg:max-w-[35%]"> {/* right side options */}
+                </motion.div>
+                <motion.div className="mx-auto xxs:w-full md:w-[45%] lg:max-w-[35%]"
+                 initial={{opacity: 0, x:-400}}
+                 animate={{opacity: 1, x:0}}
+                 transition={{duration: 1}}> {/* right side options */}
 
                         <p className="pb-4 text-white">Izaberi stranu natpisa {"(naprijed ili nazad)"}</p>
 
@@ -231,7 +295,7 @@ import Form from 'react-bootstrap/Form';
                                     <Dropdown.Item  onClick={()=>{setSize("L")}}>
                                         L
                                     </Dropdown.Item>
-                                    <Dropdown.Item onClick={()=>{setSize("L")}}>
+                                    <Dropdown.Item onClick={()=>{setSize("XL")}}>
                                         XL
                                     </Dropdown.Item>
                                 </Dropdown.Menu>
@@ -241,7 +305,7 @@ import Form from 'react-bootstrap/Form';
                               </div>
 
                         <div>
-                        <h1 className="text-lg pt-10">Cijena</h1>
+                        <p className="text-lg pt-10">Cijena</p>
                         <p className="text-4xl font-bold text-white">18 &euro; <span className="text-sm text-gray-400">+ poštarina</span></p>
                         </div>
                     </div>
@@ -264,29 +328,54 @@ import Form from 'react-bootstrap/Form';
                         <Button className={open ? "hidden" : "flex items-center px-3"} onClick={()=>setIsOpen(true)}>
                         Naruči ovdje!</Button>
                      </div>
-                </div>
+                </motion.div>
             </div>
 
             {/* long sleeve t-shirt item */}
-            <h1 className="text-5xl mt-[100px] text-white">Unisex Majice Dugih Rukava</h1>
+            <motion.h4 className="text-5xl mt-[100px] text-white"
+            initial={{opacity: 0, x:-200}}
+            animate={{opacity: 1, x:0}}
+            transition={{duration: 0.8}}
+            >Unisex Majice Dugih Rukava</motion.h4>
             <div className="text-white w-[70%] h-[50vh] flex h-auto items-center
             xxs:flex-col xxs:w-full
             md:flex-row"> {/* card item parent */}
 
                 <div className="flex justify-center items-center flex-col
                 xxs:w-full md:w-[50%]"> {/* left side image */}
-                <Image src="/images/MOCKUP/Long_sleeve/green.png" alt="long sleeve" unoptimized
+                <Image src="/images/MOCKUP/Long_sleeve/green.webp" alt="long sleeve" unoptimized
                 width={100} height={100} className="w-auto h-auto flex justify-center items-center max-h-[60vh]"/>
                 <p className="bg-gradient-to-r from-amber-200 to-yellow-500 bg-clip-text text-transparent text-center p-4">
                     Napomena: Fotografija je ilustrativna i može se razlikovati</p>
                 </div>
               
                     
-                <div className="mx-auto xxs:w-full md:w-[45%] lg:max-w-[35%]"> {/* right side options */}
+                <motion.div className="mx-auto xxs:w-full md:w-[45%] lg:max-w-[35%]"
+                 initial={{opacity: 0, x:-400}}
+                 animate={{opacity: 1, x:0}}
+                 transition={{duration: 1}}> {/* right side options */}
 
+                 
+<p className="pb-4 text-white">Izaberi stranu natpisa {"(naprijed ili nazad)"}</p>
 
-                <p className="pt-6 flex flex-col">Upiši svoj natpis po želji za print {"(Opcionalno)"} <span className="text-sm text-gray-400">*Max 12 karaktera</span> </p>
-                        <Form.Control size="md" type="text" placeholder="Type here" onChange={(e)=>setLongSleveText(e.target.value)}/>
+                        <Dropdown>
+                  <Dropdown.Toggle variant="success" id="dropdown-basic"
+                  className="flex flex-row justify-start items-center w-full">
+                   {position}
+                  </Dropdown.Toggle>
+
+                  <Dropdown.Menu>
+                     <Dropdown.Item onClick={()=>setPosition("Prednja")} >
+                        Prednja {"(natpis na prednjoj strani)"}
+                     </Dropdown.Item>
+                  <Dropdown.Item onClick={()=>{setPosition("Zadnja")}}>
+                        Zadnja {"(natpis na leđima)"}
+                     </Dropdown.Item>
+                  </Dropdown.Menu>
+            </Dropdown>
+
+                        <p className="pt-6 flex flex-col">Upiši svoj natpis po želji za print {"(Opcionalno)"} <span className="text-sm text-gray-400">*Max 12 karaktera</span> </p>
+                        <Form.Control size="md" type="text"  placeholder="Type here" maxLength="12" onChange={(e)=>setLongSleveText(e.target.value)}/>
                     <div>
                         <p className="pt-6 pb-2">Boja</p>
 
@@ -338,7 +427,7 @@ import Form from 'react-bootstrap/Form';
                                     <Dropdown.Item  onClick={()=>{setSize("L")}}>
                                         L
                                     </Dropdown.Item>
-                                    <Dropdown.Item  onClick={()=>{setSize("L")}}>
+                                    <Dropdown.Item  onClick={()=>{setSize("XL")}}>
                                         XL
                                     </Dropdown.Item>
                                 </Dropdown.Menu>
@@ -348,7 +437,7 @@ import Form from 'react-bootstrap/Form';
                         </div>
 
                         <div>
-                        <h1 className="text-lg pt-10">Cijena</h1>
+                        <p className="text-lg pt-10">Cijena</p>
                         <p className="text-4xl font-bold">12 &euro; <span className="text-sm text-gray-400">+poštarina</span> </p>
                         </div>
                         </div>
@@ -359,6 +448,8 @@ import Form from 'react-bootstrap/Form';
                     items={{ 
                     price:(longShirtPrice+shipping),
                     color: color,
+                    position: position,
+                    text: longSleveText,
                     clothes: "Dugi rukav",
                     text: longSleveText,
                     size: size
@@ -368,13 +459,17 @@ import Form from 'react-bootstrap/Form';
 
                         <Button className={longSleeveOpen ? "hidden" : "flex items-center px-3"} onClick={()=>setIsLongSleeveOpen(true)}>Naruči ovdje!</Button>
                      </div>
-                    </div>
+                    </motion.div>
             </div>
 
            {/* t-shirt item */}
 
-           <h1 className="text-5xl mt-[100px]
-           text-white">Unisex T-Shirt</h1>
+           <motion.h5 className="text-5xl mt-[100px]
+           text-white"
+           initial={{opacity: 0, x:-200}}
+                animate={{opacity: 1, x:0}}
+                transition={{duration: 0.8}}
+                >Unisex T-Shirt</motion.h5>
             <div className="text-white w-[70%] h-[50vh] flex h-auto items-center
             xxs:flex-col xxs:w-full
             md:flex-row"> {/* card item parent */}
@@ -382,17 +477,37 @@ import Form from 'react-bootstrap/Form';
                 <div className="flex justify-center items-center flex-col
                 xxs:w-full md:w-[50%]
                 "> {/* left side image */}
-                <Image src="/images/MOCKUP/T-shirt/RED.png" unoptimized alt="t-shirt"
+                <Image src="/images/MOCKUP/T-shirt/RED.webp" unoptimized alt="t-shirt"
                 width={100} height={100} className="w-auto h-auto flex justify-center items-center max-h-[60vh]"/>
                 <p className="bg-gradient-to-r from-amber-200 to-yellow-500 bg-clip-text text-transparent text-center p-4">
                     Napomena: Fotografija je ilustrativna i može se razlikovati</p>
                 </div>
 
-                  <div className="mx-auto xxs:w-full md:w-[45%] lg:max-w-[35%]"> {/* right side options */}
+                  <motion.div className="mx-auto xxs:w-full md:w-[45%] lg:max-w-[35%]"
+                   initial={{opacity: 0, x:-400}}
+                   animate={{opacity: 1, x:0}}
+                   transition={{duration: 1}}> {/* right side options */}
 
-                    <p className="pt-6 flex flex-col">Upiši svoj natpis po želji za print {"(Opcionalno)"} <span className="text-sm text-gray-400">*Max 12 karaktera</span> </p>
+<p className="pb-4 text-white">Izaberi stranu natpisa {"(naprijed ili nazad)"}</p>
 
-                        <Form.Control size="md" type="text" placeholder="Type here" onChange={(e)=>setTshirtText(e.target.value)}/>
+<Dropdown>
+<Dropdown.Toggle variant="success" id="dropdown-basic"
+className="flex flex-row justify-start items-center w-full">
+{position}
+</Dropdown.Toggle>
+
+<Dropdown.Menu>
+<Dropdown.Item onClick={()=>setPosition("Prednja")} >
+Prednja {"(natpis na prednjoj strani)"}
+</Dropdown.Item>
+<Dropdown.Item onClick={()=>{setPosition("Zadnja")}}>
+Zadnja {"(natpis na leđima)"}
+</Dropdown.Item>
+</Dropdown.Menu>
+</Dropdown>
+
+<p className="pt-6 flex flex-col">Upiši svoj natpis po želji za print {"(Opcionalno)"} <span className="text-sm text-gray-400">*Max 12 karaktera</span> </p>
+<Form.Control size="md" type="text"  placeholder="Type here" maxLength="12" onChange={(e)=>setTshirtText(e.target.value)}/>
 
 
                         <p className="pt-6 pb-2">Boja</p>
@@ -445,7 +560,7 @@ import Form from 'react-bootstrap/Form';
                                     <Dropdown.Item  onClick={()=>{setSize("L")}}>
                                         L
                                     </Dropdown.Item>
-                                    <Dropdown.Item onClick={()=>{setSize("L")}}>
+                                    <Dropdown.Item onClick={()=>{setSize("XL")}}>
                                         XL
                                     </Dropdown.Item>
                                 </Dropdown.Menu>
@@ -456,7 +571,7 @@ import Form from 'react-bootstrap/Form';
                         </div>
 
                         <div>
-                        <h1 className="text-lg pt-10">Cijena</h1>
+                        <p className="text-lg pt-10">Cijena</p>
                         <p className="text-4xl font-bold">8 &euro; <span className="text-sm text-gray-400">+poštarina</span> </p>
                         </div>
                         </div>
@@ -467,6 +582,8 @@ import Form from 'react-bootstrap/Form';
                     items={{ 
                     price:(tshirtPrice+shipping),
                     color: color,
+                    position: position,
+                    text: tshirtText,
                     clothes: "T-Shirt",
                     text: tshirtText,
                     size: size
@@ -477,13 +594,17 @@ import Form from 'react-bootstrap/Form';
                         <Button className={isTshirtOpen ? "hidden" : "flex items-center px-3"} onClick={()=>setIsTshirtOpen(true)}>
                         Naruči ovdje!</Button>
                      </div>
-                    </div>
+                    </motion.div>
             </div>
 
 
             {/* man cap item */}
 
-           <h1 className="text-5xl text-white mt-[100px]">Unisex Kape</h1>
+           <motion.h6 className="text-5xl text-white mt-[100px]"
+           initial={{opacity: 0, x:-200}}
+           animate={{opacity: 1, x:0}}
+           transition={{duration: 0.8}}
+           >Unisex Kape</motion.h6>
             <div className="text-white w-[70%] h-[50vh] flex h-auto items-center pb-5
             xxs:flex-col xxs:w-full
             md:flex-row h-auto"> {/* card item parent */}
@@ -497,7 +618,10 @@ import Form from 'react-bootstrap/Form';
                 </div>
 
                
-      <div className="mx-auto xxs:w-full md:w-[45%] lg:max-w-[35%]"> {/* right side options */}
+      <motion.div className="mx-auto xxs:w-full md:w-[45%] lg:max-w-[35%]"
+       initial={{opacity: 0, x:-400}}
+       animate={{opacity: 1, x:0}}
+       transition={{duration: 1}}> {/* right side options */}
 
                         <p className="pt-6 pb-2">Boja</p>
                         <div className="items-center justify-around">
@@ -542,7 +666,7 @@ import Form from 'react-bootstrap/Form';
                         </div>
 
                         <div>
-                        <h1 className="text-lg pt-10">Cijena</h1>
+                        <p className="text-lg pt-10">Cijena</p>
                         <p className="text-4xl font-bold">6 &euro; <span className="text-sm text-gray-400">+poštarina</span> </p>
                         </div>
                         <div className={isCapOpen ? "xxs:w-full pt-3" : "xxs:w-[50%] pt-3"}>
@@ -562,7 +686,7 @@ import Form from 'react-bootstrap/Form';
                         Naruči ovdje!</Button>
                      </div>
                 </div>
-                    </div>
+                    </motion.div>
                 
             </div>
 
