@@ -72,6 +72,13 @@ import {motion, useInView, useAnimation} from 'framer-motion'
                         animate={{opacity:1, x:0}}
                         transition={{duration: 1.3}}
                        >
+<div className="break-normal">Kupovinom ovih proizvoda društveno ste odgovorni i direktno podržavate zapošljavanje osoba sa invaliditetom.. Svi proizvodi su napravljeni od strane <br /> <span className="text-yellow-400">INTRAG d.o.o za profesionalnu rehabilitaciju i zapošljavanje osoba sa invaliditetom.</span>
+            <p className="py-3 break-normal">Njihove proizvode možete posjetiti na sljedećem linku:            
+             <a href="https://www.facebook.com/Intraggiftshop" target="_blank" 
+             className="text-md ml-2 text-yellow-400 underline xxs:mt-3 hover:font-bold">
+                 INTRAG d.o.o</a>
+                </p>
+            </div>                     
             <h2>Svoj željeni proizvod možete odmah naručiti i platiti putem paypal aplikacije.</h2>
             <p className="py-2">Mogućnost plaćanja pouzećem u Bosni i Hercegovini narudžbom preko maila: <span className="font-bold text-yellow-400">orders@lexyri9.com
             </span>  ili putem facebook stranice <a href="https://www.facebook.com/lexyri9webshop" target="_blank" className="font-bold text-yellow-400 underline">Lexyri9 FB Shop</a> </p>

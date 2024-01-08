@@ -8,8 +8,8 @@ const inter = Inter({ subsets: ['latin'] })
 export const metadata = {
   title: 'ŁEXYRI9 TikTok kreator',
   description: 'Vaš omiljeni tiktoker, Lexyri9! Kupovinom mojih proizvoda ne samo da \n' +
-  'podržavate vrhunski proizvod, već i pružate podršku osobama s invaliditetom. \n' +
-  'Unisex kape, unisex majice, unisex parfemi i mnogo toga',
+  'dobijate vrhunski proizvod, već i pružate podršku osobama sa invaliditetom. \n' +
+  'Unisex kape, majice, parfemi i mnogo toga',
   metadataBase: new URL('http://www.lexyri9.com'),
 }
 
