@@ -87,7 +87,7 @@ export default function AboutMe(){
                              animate={animationControls}
                              transition={{type: "Tween", delay: 0.4}}
                             > {/* picture right side */}
-                   <Image src="/images/leo.webp" alt='lexyri9 image'  width={200} height={200} 
+                   <Image src="/images/leo.webp" alt='lexyri9 image' priority={false}  width={200} height={200} 
                    className='object-contain mx-auto pb-5 float-right
                               xxs:h-auto xxs:w-auto md:h-[45vh]
                               md:w-[80%]

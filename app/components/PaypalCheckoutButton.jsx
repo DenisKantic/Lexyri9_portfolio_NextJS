@@ -72,6 +72,8 @@ const PaypalCheckoutButton = ({product}) => {
             setError(err);
             console.error("Paypal checkout on error", err);
         }}
+
+
     >
 
     </PayPalButtons>

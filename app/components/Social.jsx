@@ -25,10 +25,10 @@ export default function Social(){
     return (
         <div className="w-[80%] mx-auto h-auto mb-5 scroll-smooth">
 
-            <motion.h1 className="text-5xl text-white" ref={refTitle}
+            <motion.h1 className="text3 text-5xl text-white" ref={refTitle}
             initial={{opacity: 0, x:-200}}
             animate={animationControls}
-            transition={{duration: 0.8}}>
+            transition={{duration: 0}}>
                 Nekoliko mojih sadržaja</motion.h1>
 
 
@@ -36,12 +36,12 @@ export default function Social(){
              bg-gradient-to-r from-green-300 via-blue-500 to-purple-600 ">
 
              </div>
-                <motion.div className="flex justify-between items-center mt-10
+                <motion.div className="text5 flex justify-between items-center mt-10
                                 xxs:flex-col sm:flex-row"
                                 ref={refTitle}
                                 initial={{opacity: 0, x:-900}}
                                 animate={{opacity: 1, x:0}}
-                                transition={{duration: 1.5}}
+                                transition={{duration: 0}}
                                >
 
                     <div className="flex flex-col items-center justify-center xxs:w-[80%] sm:w-[45%] md:w-[20%]"

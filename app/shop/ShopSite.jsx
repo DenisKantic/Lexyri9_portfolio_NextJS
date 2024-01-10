@@ -53,10 +53,10 @@ import {motion, useInView, useAnimation} from 'framer-motion'
     return (
         <div className="w-[80%] mx-auto min-h-[100vh] pt-5">
 
-        <motion.h1 className="text-white xxs:pt-5 xxs:text-3xl md:text-5xl md:pt-20"
+        <motion.h1 className="text1 text-white xxs:pt-5 xxs:text-3xl md:text-5xl md:pt-20"
         initial={{opacity: 0, x:-200}}
         animate={{opacity:1, x:0}}
-        transition={{duration: 0.5}}
+        transition={{duration: 0}}
         >
         Moj shop
         </motion.h1>
@@ -66,11 +66,11 @@ import {motion, useInView, useAnimation} from 'framer-motion'
             transition={{duration: 1}}></motion.div>
 
 
-        <motion.div className="text-white xxs:text-sm md:text-xl text-start break-normal mx-start pb-10 flex flex-col justify-start items-start
+        <motion.div className="text2 text-white xxs:text-sm md:text-xl text-start break-normal mx-start pb-10 flex flex-col justify-start items-start
                          xxs:w-full xl:w-[60%]"
                         initial={{opacity: 0, x:-400}}
                         animate={{opacity:1, x:0}}
-                        transition={{duration: 1.3}}
+                        transition={{duration: 0}}
                        >
 <div className="break-normal">Kupovinom ovih proizvoda društveno ste odgovorni i direktno podržavate zapošljavanje osoba sa invaliditetom.. Svi proizvodi su napravljeni od strane <br /> <span className="text-yellow-400">INTRAG d.o.o za profesionalnu rehabilitaciju i zapošljavanje osoba sa invaliditetom.</span>
             <p className="py-3 break-normal">Njihove proizvode možete posjetiti na sljedećem linku:            
@@ -477,7 +477,7 @@ import {motion, useInView, useAnimation} from 'framer-motion'
                 <div className="flex justify-center items-center flex-col
                 xxs:w-full md:w-[50%]
                 "> {/* left side image */}
-                <Image src="/images/MOCKUP/T-shirt/RED.webp" unoptimized alt="t-shirt majice lexyri9 shop"
+                <Image src="/images/MOCKUP/T-shirt/RED.webp" unoptimized alt="t-shirt majice lexyri9 shop" priority={false}
                 width={100} height={100} className="w-auto h-auto flex justify-center items-center max-h-[60vh]"/>
                 <p className="bg-gradient-to-r from-amber-200 to-yellow-500 bg-clip-text text-transparent text-center p-4">
                     Napomena: Fotografija je ilustrativna i može se razlikovati</p>

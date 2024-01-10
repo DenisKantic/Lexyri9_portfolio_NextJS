@@ -37,7 +37,7 @@ export default function Contact(){
             <motion.div className="xxs:w-full md:w-[80%] lg:w-[80%] xl:w-[60%] text-white pt-10"
             initial={{opacity: 0, x:800}}
             animate={animationControls}
-            transition={{duration: 1.3}}>
+            transition={{duration: 0.5}}>
             <p className="text-3xl
             bg-clip-text text-transparent
             bg-gradient-to-r from-green-300 via-blue-500 to-purple-600">Spremni da napravimo magiju zajedno ?</p>

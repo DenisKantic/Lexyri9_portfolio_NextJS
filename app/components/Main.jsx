@@ -57,7 +57,7 @@ export default function Main(){
                                 initial={{opacity: 0, x:1000}}
                                 animate={{opacity: 1, x:0}}
                                 transition={{duration: 0.2}}> {/*right side of the photo*/}
-                    <Image src="/images/logo.webp" width={400} unoptimized height={400} alt="lexiry_logo" 
+                    <Image src="/images/logo.webp" width={400} unoptimized height={400} alt="lexiry_logo"  priority={false}
                         className="xxs:h-[30vh] w-auto object-contain sm:h-auto md:opacity-20 lg:h-[70vh]"/>
                 </motion.div>
 
@@ -131,7 +131,7 @@ export default function Main(){
                                 initial={{opacity: 0, x:1000}}
                     animate={{opacity: 1, x:0}}
                     transition={{duration: 0.2}}> {/*right side of the photo*/}
-                    <Image src="/images/logo.webp" width={400} unoptimized height={400} alt="lexiry_logo" 
+                    <Image src="/images/logo.webp" width={400} unoptimized height={400} alt="lexiry_logo" priority={false}
                     className="xxs:h-[30vh] object-contain md:h-[70vh] md:w-full"
                     />
                 </motion.div>
