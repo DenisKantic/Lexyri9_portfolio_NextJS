@@ -108,7 +108,7 @@ import {motion, useInView, useAnimation} from 'framer-motion'
                 animate={{opacity: 1, x:0}}
                 transition={{duration: 0.8}}
                 > {/* left side image */}
-                <Image src="/images/perfume.png" alt="perfum" unoptimized
+                <Image src="/images/perfume.webp" alt="parfem parfemi lexyri9 shop" unoptimized
                 width={100} height={100} className="w-auto flex justify-center items-center max-h-[50vh]"/>
                 <p className="bg-gradient-to-r from-amber-200 to-yellow-500 bg-clip-text text-transparent text-center p-3">
                     Napomena: Fotografija je ilustrativna i može se razlikovati</p>
@@ -213,7 +213,7 @@ import {motion, useInView, useAnimation} from 'framer-motion'
                 initial={{opacity: 0, x:-200}}
                 animate={{opacity: 1, x:0}}
                 transition={{duration: 0.8}}> {/* left side image */}
-                <Image src="/images/MOCKUP/Hoodie/grey.webp" unoptimized alt="hoddie"
+                <Image src="/images/MOCKUP/Hoodie/grey.webp" unoptimized alt="dukserice lexyri9 shop"
                 width={100} height={100} className="flex w-auto justify-center items-center max-h-[60vh]"/>
                 <p className="bg-gradient-to-r from-amber-200 to-yellow-500 bg-clip-text text-transparent text-center p-4">
                     Napomena: Fotografija je ilustrativna i može se razlikovati</p>
@@ -343,7 +343,7 @@ import {motion, useInView, useAnimation} from 'framer-motion'
 
                 <div className="flex justify-center items-center flex-col
                 xxs:w-full md:w-[50%]"> {/* left side image */}
-                <Image src="/images/MOCKUP/Long_sleeve/green.webp" alt="long sleeve" unoptimized
+                <Image src="/images/MOCKUP/Long_sleeve/green.webp" alt="majice dugih rukava lexyri9 shop" unoptimized
                 width={100} height={100} className="w-auto h-auto flex justify-center items-center max-h-[60vh]"/>
                 <p className="bg-gradient-to-r from-amber-200 to-yellow-500 bg-clip-text text-transparent text-center p-4">
                     Napomena: Fotografija je ilustrativna i može se razlikovati</p>
@@ -477,7 +477,7 @@ import {motion, useInView, useAnimation} from 'framer-motion'
                 <div className="flex justify-center items-center flex-col
                 xxs:w-full md:w-[50%]
                 "> {/* left side image */}
-                <Image src="/images/MOCKUP/T-shirt/RED.webp" unoptimized alt="t-shirt"
+                <Image src="/images/MOCKUP/T-shirt/RED.webp" unoptimized alt="t-shirt majice lexyri9 shop"
                 width={100} height={100} className="w-auto h-auto flex justify-center items-center max-h-[60vh]"/>
                 <p className="bg-gradient-to-r from-amber-200 to-yellow-500 bg-clip-text text-transparent text-center p-4">
                     Napomena: Fotografija je ilustrativna i može se razlikovati</p>
@@ -611,7 +611,7 @@ Zadnja {"(natpis na leđima)"}
 
                 <div className="flex justify-center items-center flex-col
                 xxs:w-full md:w-[50%]"> {/* left side image */}
-                <Image src="/images/MOCKUP/Cap/CAPBLACK.png" unoptimized alt="cap"
+                <Image src="/images/MOCKUP/Cap/CAPBLACK.webp" unoptimized alt="kape lexyri9 shop"
                 width={100} height={100} className="w-auto h-auto flex justify-center items-center max-h-[60vh]"/>
                 <p className="bg-gradient-to-r from-amber-200 to-yellow-500 bg-clip-text text-transparent text-center p-4">
                     Napomena: Fotografija je ilustrativna i može se razlikovati</p>

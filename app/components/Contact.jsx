@@ -52,7 +52,7 @@ export default function Contact(){
                     href="mailto: collaboration@lexyri9.com" target="_blank"> {/*card item */}
                         <div className="xxs:px-2 xxs:py-2 md:px-3 md:py-3 bg-white rounded-full
                         flex flex-row items-center justify-center">
-                            <Image src="/images/gmail.png" alt="instagram lexyri9" unoptimized width={30} height={30}/>
+                            <Image src="/images/gmail.webp" alt="email lexyri9" unoptimized width={30} height={30}/>
                         </div>
                     </a>
 
@@ -61,7 +61,7 @@ export default function Contact(){
                     href="https://www.instagram.com/lexyri9/" target="_blank"> {/*card item */}
                         <div className="xxs:px-2 xxs:py-2 md:px-3 md:py-3 bg-white rounded-full
                         flex flex-row items-center justify-center">
-                            <Image src="/images/insta.png" alt="instagram lexyri9" unoptimized width={30} height={30}/>
+                            <Image src="/images/insta.webp" alt="instagram lexyri9" unoptimized width={30} height={30}/>
                         </div>
                     </a>
 
@@ -69,7 +69,7 @@ export default function Contact(){
                        href="https://www.tiktok.com/@lexyri9?_t=8ijTV2jh5IU&_r=1" target="_blank"> {/*card item */}
                         <div className="xxs:px-2 xxs:py-2 md:px-3 md:py-3 bg-white rounded-full flex 
                         flex-row items-center justify-center">
-                            <Image src="/images/tiktok.png" alt="tiktok lexyri9" unoptimized width={30} height={30}/>
+                            <Image src="/images/tiktok.webp" alt="tiktok lexyri9" unoptimized width={30} height={30}/>
                         </div>
                     </a>
 
@@ -77,7 +77,7 @@ export default function Contact(){
                     href="https://www.youtube.com/channel/UCznHaNy4Q_4DOdVx7EiCANA" target="_blank"> {/*card item */}
                         <div className="xxs:px-2 xxs:py-2 md:px-3 md:py-3 bg-white rounded-full flex 
                         flex-row items-center justify-center">
-                            <Image src="/images/youtube.png" alt="lexyri9" unoptimized width={30} height={30}/>
+                            <Image src="/images/youtube.webp" alt="lexyri9 youtube" unoptimized width={30} height={30}/>
                         </div>
                     </a>
 
