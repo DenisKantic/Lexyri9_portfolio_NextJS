@@ -8,6 +8,8 @@ import Footer from "./components/Footer"
 
 
 export default function Home() {
+
+
   return (
     
    <div className="bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-[#000D2E] via-[#021d62] to-[#000D2E]

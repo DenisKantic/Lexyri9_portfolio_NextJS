@@ -26,11 +26,11 @@ export default function ShopPreview(){
     return (
         <div className="w-[80%] mx-auto xxs:h-auto mb-5 mt-5" ref={refTitle}>
 
-        <motion.h1 className="text-white pt-5 xxs:text-3xl sm:text-5xl" 
+        <motion.h1 className="text3 text-white pt-5 xxs:text-3xl sm:text-5xl" 
         ref={refTitle}
         initial={{opacity: 0, x:-200}}
             animate={animationControls}
-            transition={{duration: 1}}
+            transition={{duration: 0}}
         >Moj web shop</motion.h1>
         <motion.div 
         className="mt-4 h-[3px] bg-gradient-to-r from-green-300 via-blue-500 to-purple-600 w-full"
@@ -41,11 +41,11 @@ export default function ShopPreview(){
 
 
         <motion.div 
-        className="text-white pt-10 text-xl w-[50%]
+        className="text4 text-white pt-10 text-xl w-[50%]
                         xxs:w-full md:w-[90%] lg:w-[80%] text-justify"
                         initial={{opacity: 0, x:-600}}
             animate={animationControls}
-            transition={{duration: 1}}
+            transition={{duration: 0}}
                         >
             <p className="text-white">Kupovinom ovih proizvoda podržavate rad osoba sa invaliditetom i pomažete im da se uključe u društvo. 
             Također doprinosite stvaranju radnih mjesta i poboljšanju kvalitete života osoba s invaliditetom.
@@ -60,12 +60,12 @@ export default function ShopPreview(){
 
         <div className="pt-10 flex justify-between items-center w-full 
                         xxs:flex-col sm:flex-row">
-            <motion.div className="flex justify-center items-center flex-col
+            <motion.div className="text5 flex justify-center items-center flex-col
                             w-[30%] h-auto xxs:w-full md:w-[30%] xxs:mt-5 lg:mt-0 "
                             initial={{opacity: 0, x:-400}}
             animate={animationControls}
-            transition={{duration: 1.5}}> {/* card item */}
-                <Image src="/images/perfume.png" alt="perfume" unoptimized width={100} height={100}
+            transition={{duration: 0}}> {/* card item */}
+                <Image src="/images/perfume.webp" alt="perfume lexyri9" unoptimized width={100} height={100} 
                 className="object-contain xxs:h-auto md:h-[300px] w-auto"
                 />
                 <p className="text-white text-center w-[50%]">Parfemi: Unisex, Men Secret, Woman Secret</p>
@@ -77,7 +77,7 @@ export default function ShopPreview(){
             animate={animationControls}
             transition={{duration: 1.5}}
             > {/* card item */}
-                <Image src="/images/MOCKUP/T-shirt/RED.webp" alt="T-shirt red" unoptimized width={200} height={200}
+                <Image src="/images/MOCKUP/T-shirt/RED.webp" alt="lexyri9 t-shirt" unoptimized width={200} height={200}
                 className="object-center h-auto w-auto"
                 />
                 <p className="text-white text-center w-[50%]">Unisex T-Shirt u svim bojama i veličinama</p>
@@ -88,7 +88,7 @@ export default function ShopPreview(){
             initial={{opacity: 0, x:-800}}
             animate={animationControls}
             transition={{duration: 1.5}}> {/* card item */}
-                <Image src="/images/MOCKUP/Long_sleeve/green.webp" alt="long sleeve" unoptimized width={200} height={200}
+                <Image src="/images/MOCKUP/Long_sleeve/green.webp" alt="duga majica lexyri9" unoptimized width={200} height={200}
                 className="object-center h-auto w-auto"
                 />
               <p className="text-white text-center w-[50%]">Unisex majice dugih rukava u svim bojama i veličinama</p>

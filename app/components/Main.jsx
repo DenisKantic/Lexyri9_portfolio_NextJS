@@ -57,7 +57,7 @@ export default function Main(){
                                 initial={{opacity: 0, x:1000}}
                                 animate={{opacity: 1, x:0}}
                                 transition={{duration: 0.2}}> {/*right side of the photo*/}
-                    <Image src="/images/logo.webp" width={400} unoptimized height={400} alt="lexiry_logo" 
+                    <Image src="/images/logo.webp" width={400} unoptimized height={400} alt="lexiry_logo"  priority={false}
                         className="xxs:h-[30vh] w-auto object-contain sm:h-auto md:opacity-20 lg:h-[70vh]"/>
                 </motion.div>
 
@@ -76,7 +76,7 @@ export default function Main(){
                         md:w-[110px] md:h-[120px]"
                         target="_blank"
                         href="https://www.instagram.com/lexyri9/">
-                            <Image src="/images/insta.png" unoptimized alt="instagram_logo" width={60} height={60} 
+                            <Image src="/images/insta.webp" unoptimized alt="instagram lexyri9" width={60} height={60} 
                             className="mx-auto
                                         xxs:w-[30px] xxs:h-[30px]  xxs:m-0 
                                         md:m-3 md:w-[60px] md:h-[60px]"/>
@@ -93,7 +93,7 @@ export default function Main(){
                         md:w-[110px] md:h-[120px]"
                         target="_blank"
                         href="https://www.tiktok.com/@lexyri9?_t=8ijTV2jh5IU&_r=1">
-                            <Image src="/images/tiktok.png"  width={50} height={50} alt="tiktok_logo" unoptimized
+                            <Image src="/images/tiktok.webp"  width={50} height={50} alt="tiktok lexyri9" unoptimized
                              className="mx-auto
                              xxs:w-[30px] xxs:h-[30px]  xxs:m-0 
                              md:m-3 md:w-[60px] md:h-[60px]"/>
@@ -110,7 +110,7 @@ export default function Main(){
                         md:w-[110px] md:h-[120px]"
                         target="_blank"
                         href="https://www.youtube.com/@lexyri9">
-                            <Image src="/images/youtube.png" unoptimized width={60} alt="youtube_logo"  height={60} 
+                            <Image src="/images/youtube.webp" unoptimized width={60} alt="youtube lexyri9"  height={60} 
                              className="mx-auto
                              xxs:w-[30px] xxs:h-[30px]  xxs:m-0 
                              md:m-3 md:w-[60px] md:h-[60px]"/>
@@ -131,7 +131,7 @@ export default function Main(){
                                 initial={{opacity: 0, x:1000}}
                     animate={{opacity: 1, x:0}}
                     transition={{duration: 0.2}}> {/*right side of the photo*/}
-                    <Image src="/images/logo.webp" width={400} unoptimized height={400} alt="lexiry_logo" 
+                    <Image src="/images/logo.webp" width={400} unoptimized height={400} alt="lexiry_logo" priority={false}
                     className="xxs:h-[30vh] object-contain md:h-[70vh] md:w-full"
                     />
                 </motion.div>
