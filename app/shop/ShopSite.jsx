@@ -337,7 +337,7 @@ import {motion, useInView, useAnimation} from 'framer-motion'
             animate={{opacity: 1, x:0}}
             transition={{duration: 0.8}}
             >Unisex Majice Dugih Rukava</motion.h4>
-            <div className="text-white w-[70%] h-[50vh] flex h-auto items-center
+            <div className="text-white w-[70%] flex h-auto items-center
             xxs:flex-col xxs:w-full
             md:flex-row"> {/* card item parent */}
 
@@ -397,9 +397,6 @@ import {motion, useInView, useAnimation} from 'framer-motion'
                      </Dropdown.Item>
                      <Dropdown.Item  onClick={()=>{setColor("Crna")}}>
                         Crna
-                     </Dropdown.Item>
-                     <Dropdown.Item  onClick={()=>{setColor("Zelena")}}>
-                        Zelena
                      </Dropdown.Item>
                      <Dropdown.Item  onClick={()=>{setColor("Siva")}}>
                         Siva
