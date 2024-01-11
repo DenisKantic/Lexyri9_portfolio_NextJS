@@ -25,4 +25,4 @@ After completing second step, type **npm run dev** to start a project. </br>
 It will start on default port **localhost:3000**. If port 3000 is busy, it wil automaticaly change on another. 
 </br>
 
-## Project is done only in JSX, Typescript is not used and installed in this project. 
+## Project is done only in JSX, Typescript is not used and installed in this project . 
