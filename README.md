@@ -27,5 +27,3 @@ It will start on default port **localhost:3000**. If port 3000 is busy, it wil a
 </br>
 
 ## Project is done only in JSX, Typescript is not used and installed in this project . 
-=======
->>>>>>> aa228ef7ce983923c66909393420395fa393171e
