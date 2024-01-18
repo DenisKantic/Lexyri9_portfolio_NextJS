@@ -43,8 +43,10 @@ export default function Navigation() {
         </div> 
 
         <ul className='xxs:hidden md:flex justify-start items-center text-white text-xl'>
+         <Link href="/" className="cursor-pointer">
             <Image src="/images/logo.webp" alt="lexiry_logo" width={50} height={50} priority={false}
             className="mr-10"/>
+            </Link>
             <Link href="/">
             <li className="hover:cursor-pointer transition-all duration-200 ease-in-out group
                            md:pr-2 lg:pr-10">
@@ -113,7 +115,9 @@ export default function Navigation() {
          <div className="md:hidden xxs:flex xxs:w-full xxs:mx-auto xxs:justify-center">
 
             <div className="flex justify-between items-center w-[90%]">
+            <Link href="/">
             <Image src="/images/logo.webp" alt="lexiry_logo" width={35} height={35} priority={false} />
+            </Link>
             <AiOutlineMenu className='cursor-pointer md:hidden text-white flex ml-3' size={30} onClick={()=> setNav(!nav)}></AiOutlineMenu>
             <Button variant="link"
              href="https://www.paypal.com/paypalme/lexyri"
