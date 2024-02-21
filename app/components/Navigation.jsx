@@ -10,8 +10,6 @@ import Link from "next/link";
 
 
 
-
-
 export default function Navigation() {
 
    const [color,setColor] = useState(false);

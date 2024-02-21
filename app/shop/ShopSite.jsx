@@ -6,6 +6,9 @@ import Checkout from "../components/Checkout";
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import {motion, useInView, useAnimation} from 'framer-motion'
+import 'bootstrap/dist/css/bootstrap.css'
+import Carousel from 'react-bootstrap/Carousel';
+
 
     
     export default function Shop(){
@@ -24,11 +27,14 @@ import {motion, useInView, useAnimation} from 'framer-motion'
         const [isTshirtOpen, setIsTshirtOpen] = useState(false);
         const [perfume, setPerfum] = useState("Unisex");
         const [perfumeOpen, setIsPerfumOpen] = useState(false);
+        const [stickers, setStickers] = useState("Sticker 1");
+        const [stickerOpen, isStickerOpen] = useState(false)
         const hodiePrice = 18;
         const tshirtPrice = 8;
         const longShirtPrice = 12;
         const perfumePrice = 6;
         const capPrice = 6;
+        const stickerPrice = 6;
 
         const refTitle = useRef(null);
         const isTitleInView = useInView(refTitle, {once: true});
@@ -112,7 +118,7 @@ popis           popisom proizvoda koje želite naručiti. Naš tim će odmah obr
                     Parfemi
                     </motion.h2>
 
-            <div className="text-white w-[70%] h-[50vh] flex h-auto items-center
+            <div className="text-white w-full h-[50vh] flex h-auto items-center
             xxs:flex-col xxs:w-full
             md:flex-row"> 
             {/* card item parent */}
@@ -123,8 +129,12 @@ popis           popisom proizvoda koje želite naručiti. Naš tim će odmah obr
                 animate={{opacity: 1, x:0}}
                 transition={{duration: 0.8}}
                 > {/* left side image */}
-                <Image src="/images/perfume.webp" alt="parfem parfemi lexyri9 shop" unoptimized
-                width={100} height={100} className="w-auto flex justify-center items-center max-h-[50vh]"/>
+                <Image 
+                src="/images/perfume.webp" 
+                alt="parfem parfemi lexyri9 shop" 
+                unoptimized
+                width={100} height={100} 
+                className="w-auto flex justify-center items-center max-h-[50vh]"/>
                 <p className="bg-gradient-to-r from-amber-200 to-yellow-500 bg-clip-text text-transparent text-center p-3">
                     Napomena: Fotografija je ilustrativna i može se razlikovati</p>
                 </motion.div>
@@ -205,6 +215,151 @@ popis           popisom proizvoda koje želite naručiti. Naš tim će odmah obr
                     </div>
                  </motion.div>
             </div>
+
+            {/* ********************************88 START *************************/}
+
+            <motion.h2 className="text-5xl text-white md:mb-[-50px] mt-5"
+                initial={{opacity: 0, x:-200}}
+                animate={{opacity: 1, x:0}}
+                transition={{duration: 0.8}}>
+                    Naljepnice
+                    </motion.h2>
+
+            <div className="text-white w-full h-[50vh] flex h-auto items-center mt-10 overflow-hidden
+            xxs:flex-col xxs:w-full
+            md:flex-row"> 
+            {/* card item parent */}
+
+                <motion.div className="flex justify-center items-start flex-col mt-10 
+                xxs:w-full xxs:pt-10 md:pt-2 md:w-[50%]"
+                initial={{opacity: 0, x:-200}}
+                animate={{opacity: 1, x:0}}
+                transition={{duration: 0.8}}
+                > {/* left side image */}
+                <div
+                className="w-full flex justify-start items-start h-[50vh]">
+                   <Carousel className="w-full h-[50vh]">
+                     <Carousel.Item className="w-full h-full">
+                        <Image 
+                        src="/images/sticker1.jpg"
+                        height={100}
+                        width={100}
+                        className="w-full h-[50vh] relative object-cover"
+                        alt="sticker1"
+                        />
+                        <p className="text-center text-xl pt-2">Sticker 1</p>
+                     </Carousel.Item>
+                     
+                     <Carousel.Item className="w-full h-full overflow-hidden">
+                        <Image 
+                        src="/images/sticker2.jpg"
+                        height={100}
+                        width={100}
+                        className="w-full h-[50vh] relative object-cover"
+                        alt="sticker1"
+                        />
+                        <p className="text-center text-xl pt-2">Sticker 2</p>
+                     </Carousel.Item>
+
+                     <Carousel.Item className="w-full h-full overflow-hidden">
+                        <Image 
+                        src="/images/sticker3.jpg"
+                        height={100}
+                        width={100}
+                        className="w-full h-[50vh] relative object-cover"
+                        alt="sticker1"
+                        />
+                        <p className="text-center text-xl pt-2">Sticker 3</p>
+                     </Carousel.Item>
+
+                     <Carousel.Item className="w-full h-full overflow-hidden">
+                        <Image 
+                        src="/images/sticker4.jpg"
+                        height={100}
+                        width={100}
+                        className="w-full h-[50vh] relative object-contain "
+                        alt="sticker1"
+                        />
+                        <p className="text-center text-xl pt-2">Sticker 4</p>
+                     </Carousel.Item>
+
+                     <Carousel.Item className="w-full h-full overflow-hidden">
+                        <Image 
+                        src="/images/sticker5.jpg"
+                        height={100}
+                        width={100}
+                        className="w-full h-[50vh] relative object-contain"
+                        alt="sticker1"
+                        />
+                     </Carousel.Item>
+
+                 </Carousel>
+                </div>
+                </motion.div>
+
+               
+                <motion.div className="mx-auto xxs:w-full md:text-sm lg:text-lg md:w-[40%] overflow-hidden"
+                 initial={{opacity: 0, x:-400}}
+                 animate={{opacity: 1, x:0}}
+                 transition={{duration: 1}}> {/* right side options */}
+
+                    <div className="text-justify break-normal">
+                        <p className="text-white text-md pb-2">Opis: </p>
+                        <div>
+                        <span className="bg-gradient-to-r from-cyan-500 to-blue-500 bg-clip-text text-transparent">
+                        test
+                        </span>
+
+                        <p className="pt-6 pb-2">Naljepnice</p>
+                    </div>
+
+                        <Dropdown>
+                  <Dropdown.Toggle variant="success" id="dropdown-basic"
+                  className="flex flex-row justify-start items-center w-full">
+                   {stickers}
+                  </Dropdown.Toggle>
+
+                  <Dropdown.Menu>
+                     <Dropdown.Item  onClick={()=>setStickers("Sticker 1")} >
+                        Sticker 1
+                     </Dropdown.Item>
+                  <Dropdown.Item  onClick={()=>{setStickers("Sticker 2")}}>
+                        Sticker 2 
+                     </Dropdown.Item>
+                     <Dropdown.Item  onClick={()=>{setStickers("Sticker 3")}}>
+                        Sticker 3 
+                     </Dropdown.Item>
+                     <Dropdown.Item  onClick={()=>{setStickers("Sticker 4")}}>
+                        Sticker 4
+                     </Dropdown.Item>
+                  </Dropdown.Menu>
+            </Dropdown>
+
+                        <div>
+                        <p className="text-lg pt-5">Cijena</p>
+                        <p className="text-4xl font-bold">6 &euro;</p>
+                        <p className="font-bold bg-gradient-to-r from-amber-200 to-yellow-500 bg-clip-text text-transparent">Promotivna cijena!!!</p>
+                        </div>
+                        <div className={stickerOpen ? "xxs:w-full pt-3" : "xxs:w-[50%] pt-3"}>
+                       
+                       <div className={stickerOpen ? "w-full" : "hidden"}>
+                        <Checkout 
+                    items={{ 
+                    price:(stickerPrice),
+                    perfume: stickers,
+                    text: ""
+                }} /> 
+                  <button className="py-2 bg-white text-black w-full font-bold" onClick={()=>isStickerOpen(false)}>ODUSTANI</button>
+                  </div>
+                    
+                        <Button className={stickerOpen ? "hidden" : "flex items-center px-3"} onClick={()=>isStickerOpen(true)}>
+                        Naruči ovdje!</Button>
+                     </div>
+                    </div>
+                 </motion.div>
+            </div>
+                
+                {/************************************************* END *************************** */}
 
             <motion.h3 className="text-5xl pt-20 pb-5 text-white"
             initial={{opacity: 0, x:-200}}
@@ -345,6 +500,12 @@ popis           popisom proizvoda koje želite naručiti. Naš tim će odmah obr
                      </div>
                 </motion.div>
             </div>
+
+
+            {/* ______________________________________________________________________________________ */}
+
+            
+            
 
             {/* long sleeve t-shirt item */}
             <motion.h4 className="text-5xl mt-[100px] text-white"
