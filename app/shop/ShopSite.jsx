@@ -28,7 +28,6 @@ import {motion, useInView, useAnimation} from 'framer-motion'
         const tshirtPrice = 8;
         const longShirtPrice = 12;
         const perfumePrice = 6;
-        const shipping = 6;
         const capPrice = 6;
 
         const refTitle = useRef(null);
@@ -67,30 +66,46 @@ import {motion, useInView, useAnimation} from 'framer-motion'
 
 
         <motion.div className="text2 text-white xxs:text-sm md:text-xl text-start break-normal mx-start pb-10 flex flex-col justify-start items-start
-                         xxs:w-full xl:w-[60%]"
+                         xxs:w-full"
                         initial={{opacity: 0, x:-400}}
                         animate={{opacity:1, x:0}}
                         transition={{duration: 0}}
                        >
-<div className="break-normal">Kupovinom ovih proizvoda društveno ste odgovorni i direktno podržavate zapošljavanje osoba sa invaliditetom.. Svi proizvodi su napravljeni od strane <br /> <span className="text-yellow-400">INTRAG d.o.o za profesionalnu rehabilitaciju i zapošljavanje osoba sa invaliditetom.</span>
-            <p className="py-3 break-normal">Njihove proizvode možete posjetiti na sljedećem linku:            
-             <a href="https://www.facebook.com/Intraggiftshop" target="_blank" 
-             className="text-md ml-2 text-yellow-400 underline xxs:mt-3 hover:font-bold">
-                 INTRAG d.o.o</a>
-                </p>
-            </div>                     
-            <h2>Svoj željeni proizvod možete odmah naručiti i platiti putem paypal aplikacije.</h2>
-            <p className="py-2">Mogućnost plaćanja pouzećem u Bosni i Hercegovini narudžbom preko maila: <span className="font-bold text-yellow-400">orders@lexyri9.com
-            </span>  ili putem facebook stranice <a href="https://www.facebook.com/lexyri9webshop" target="_blank" className="font-bold text-yellow-400 underline">Lexyri9 FB Shop</a> </p>
-            <p className="py-2">U slučaju većeg broja količine narudžbe, obratite se na mail, kako bi dobili najbolju cijenu.</p>
-            <p className="font-bold">Dostava na čitavom području Europe!</p>
-            <p className="font-bold">Rok isporuke cca 10 dana!</p>
+<div className="break-normal">Kupovinom ovih proizvoda društveno ste odgovorni i direktno podržavate zapošljavanje osoba
+sa invaliditetom.. Svi proizvodi su napravljeni od strane <span className="text-yellow-400 font-bold">INTRAG d.o.o za profesionalnu rehabilitaciju i zapošljavanje osoba sa invaliditetom.</span>
+            </div>  <br />                    
+            <h2>Dragi kupci,
+            Želimo vam olakšati proces naručivanja naših proizvoda. Svoje omiljene proizvode
+            možete naručiti na tri jednostavna načina:</h2>
+            <br />
+           <p className="text-red-700 font-bold xxs:text-xl sm:text-2xl">1. Paypal narudžba:</p>
+           <br />
 
-            <p className="pt-3">U slučaju problema prilikom kupovine putem paypal opcije, obratite se na mail: <br /> <span className="text-yellow-400 font-bold">support@lexyri9.com</span></p>
+           <p className="text-justify break-normal">Želimo vas obavijestiti da ukoliko plaćate automatski PayPal aplikacijom će vam
+                nakon odabranih proizvoda i uplate za iste stići potvrda narudžbe na vašu e-mail
+                adresu, zajedno s informacijama o ukupnoj cijeni narudžbe i troškovima dostave.
+                Cijena dostave zavisi od težine vaše narudžbe i države iz koje poručujete. Ukoliko
+                vam ukupna cijena sa poštarinom ne bude odgovarala povrat novca se automatski
+                izvršava na vaš PayPal račun sa kojeg ste izvršili uplatu kada odbijete narudžbu.
+            </p>
+            <br />
+
+            <p className="text-red-700 font-bold xxs:text-xl sm:text-2xl">2. Narudžba putem e-mail:</p>
+            <br />
+            <p className="text-justify break-normal">Samo pošaljite e-mail na <span className="text-yellow-400 font-bold">orders@lexyri9.com</span>, navedite koje proizvode želite
+            naručiti {"( proizvod, veličina, boja i natpis )"} i ostavite nam vaše kontakt informacije.</p>
+
+            <br />
+            <p className="text-red-700 font-bold xxs:text-xl sm:text-2xl">3. Narudžba putem Facebook stranice:</p>
+            <br />
+            <p className="text-justify break-normal">Posjetite našu Facebook stranicu <a className="text-yellow-400 font-bold" href="https://www.facebook.com/lexyri9webshop" target="_blank">Lexyri9 FB Shop</a> i pošaljite nam poruku s
+popis           popisom proizvoda koje želite naručiti. Naš tim će odmah obraditi vašu narudžbu.</p>
+
+            <p className="pt-3">U slučaju tehničkih problema prilikom kupovine putem paypal opcije, obratite se na mail: <br /> <span className="text-yellow-400 font-bold">support@lexyri9.com</span></p>
         </motion.div>
 
                 
-            <motion.h2 className="text-5xl text-white md:mb-[-50px]"
+            <motion.h2 className="text-5xl text-white md:mb-[-50px] mt-5"
                 initial={{opacity: 0, x:-200}}
                 animate={{opacity: 1, x:0}}
                 transition={{duration: 0.8}}>
@@ -169,7 +184,7 @@ import {motion, useInView, useAnimation} from 'framer-motion'
 
                         <div>
                         <p className="text-lg pt-5">Cijena</p>
-                        <p className="text-4xl font-bold">6 &euro;  <span className="text-sm text-gray-400">+ poštarina</span> </p>
+                        <p className="text-4xl font-bold">6 &euro;</p>
                         <p className="font-bold bg-gradient-to-r from-amber-200 to-yellow-500 bg-clip-text text-transparent">Promotivna cijena!!!</p>
                         </div>
                         <div className={perfumeOpen ? "xxs:w-full pt-3" : "xxs:w-[50%] pt-3"}>
@@ -177,7 +192,7 @@ import {motion, useInView, useAnimation} from 'framer-motion'
                        <div className={perfumeOpen ? "w-full" : "hidden"}>
                         <Checkout 
                     items={{ 
-                    price:(perfumePrice+shipping),
+                    price:(perfumePrice),
                     perfume: perfume,
                     text: ""
                 }} /> 
@@ -242,7 +257,7 @@ import {motion, useInView, useAnimation} from 'framer-motion'
             </Dropdown>
 
                         <p className="pt-6 flex flex-col">Upiši svoj natpis po želji za print {"(Opcionalno)"} <span className="text-sm text-gray-400">*Max 12 karaktera</span> </p>
-                        <Form.Control size="md" type="text"  placeholder="Type here" maxLength="12" onChange={(e)=>setHodieText(e.target.value)}/>
+                        <Form.Control size="md" type="text"  placeholder="Upiši ovdje" maxLength="12" onChange={(e)=>setHodieText(e.target.value)}/>
                         
                         <p className="pt-4">Boja</p>
                         <div className="items-center justify-around">   
@@ -306,7 +321,7 @@ import {motion, useInView, useAnimation} from 'framer-motion'
 
                         <div>
                         <p className="text-lg pt-10">Cijena</p>
-                        <p className="text-4xl font-bold text-white">18 &euro; <span className="text-sm text-gray-400">+ poštarina</span></p>
+                        <p className="text-4xl font-bold text-white">18 &euro;</p>
                         </div>
                     </div>
                     <div className={open ? "xxs:w-full pt-3" : "xxs:w-[50%] pt-3"}>
@@ -314,7 +329,7 @@ import {motion, useInView, useAnimation} from 'framer-motion'
                        <div className={open ? "w-full" : "hidden"}>
                         <Checkout 
                     items={{ 
-                    price:(hodiePrice+shipping),
+                    price:(hodiePrice),
                     color: color,
                     position: position,
                     clothes: "Dukserica",
@@ -375,7 +390,7 @@ import {motion, useInView, useAnimation} from 'framer-motion'
             </Dropdown>
 
                         <p className="pt-6 flex flex-col">Upiši svoj natpis po želji za print {"(Opcionalno)"} <span className="text-sm text-gray-400">*Max 12 karaktera</span> </p>
-                        <Form.Control size="md" type="text"  placeholder="Type here" maxLength="12" onChange={(e)=>setLongSleveText(e.target.value)}/>
+                        <Form.Control size="md" type="text"  placeholder="Upiši ovdje" maxLength="12" onChange={(e)=>setLongSleveText(e.target.value)}/>
                     <div>
                         <p className="pt-6 pb-2">Boja</p>
 
@@ -435,7 +450,7 @@ import {motion, useInView, useAnimation} from 'framer-motion'
 
                         <div>
                         <p className="text-lg pt-10">Cijena</p>
-                        <p className="text-4xl font-bold">12 &euro; <span className="text-sm text-gray-400">+poštarina</span> </p>
+                        <p className="text-4xl font-bold">12 &euro; </p>
                         </div>
                         </div>
                         <div className={longSleeveOpen ? "xxs:w-full pt-3" : "xxs:w-[50%] pt-3"}>
@@ -443,7 +458,7 @@ import {motion, useInView, useAnimation} from 'framer-motion'
                        <div className={longSleeveOpen ? "w-full" : "hidden"}>
                         <Checkout 
                     items={{ 
-                    price:(longShirtPrice+shipping),
+                    price:(longShirtPrice),
                     color: color,
                     position: position,
                     text: longSleveText,
@@ -504,7 +519,7 @@ Zadnja {"(natpis na leđima)"}
 </Dropdown>
 
 <p className="pt-6 flex flex-col">Upiši svoj natpis po želji za print {"(Opcionalno)"} <span className="text-sm text-gray-400">*Max 12 karaktera</span> </p>
-<Form.Control size="md" type="text"  placeholder="Type here" maxLength="12" onChange={(e)=>setTshirtText(e.target.value)}/>
+<Form.Control size="md" type="text"  placeholder="Upiši ovdje" maxLength="12" onChange={(e)=>setTshirtText(e.target.value)}/>
 
 
                         <p className="pt-6 pb-2">Boja</p>
@@ -569,7 +584,7 @@ Zadnja {"(natpis na leđima)"}
 
                         <div>
                         <p className="text-lg pt-10">Cijena</p>
-                        <p className="text-4xl font-bold">8 &euro; <span className="text-sm text-gray-400">+poštarina</span> </p>
+                        <p className="text-4xl font-bold">8 &euro; </p>
                         </div>
                         </div>
                         <div className={isTshirtOpen ? "xxs:w-full pt-3" : "xxs:w-[50%] pt-3"}>
@@ -577,7 +592,7 @@ Zadnja {"(natpis na leđima)"}
                        <div className={isTshirtOpen ? "w-full" : "hidden"}>
                         <Checkout 
                     items={{ 
-                    price:(tshirtPrice+shipping),
+                    price:(tshirtPrice),
                     color: color,
                     position: position,
                     text: tshirtText,
@@ -664,14 +679,14 @@ Zadnja {"(natpis na leđima)"}
 
                         <div>
                         <p className="text-lg pt-10">Cijena</p>
-                        <p className="text-4xl font-bold">6 &euro; <span className="text-sm text-gray-400">+poštarina</span> </p>
+                        <p className="text-4xl font-bold">6 &euro; </p>
                         </div>
                         <div className={isCapOpen ? "xxs:w-full pt-3" : "xxs:w-[50%] pt-3"}>
                        
                        <div className={isCapOpen ? "w-full" : "hidden"}>
                         <Checkout 
                     items={{ 
-                    price:(capPrice+shipping),
+                    price:(capPrice),
                     color: color,
                     clothes: "Kapa",
                     text: ""
