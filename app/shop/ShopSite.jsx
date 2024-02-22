@@ -34,7 +34,7 @@ import Carousel from 'react-bootstrap/Carousel';
         const longShirtPrice = 12;
         const perfumePrice = 6;
         const capPrice = 6;
-        const stickerPrice = 6;
+        const stickerPrice = 5;
 
         const refTitle = useRef(null);
         const isTitleInView = useInView(refTitle, {once: true});
@@ -65,13 +65,13 @@ import Carousel from 'react-bootstrap/Carousel';
         >
         Moj shop
         </motion.h1>
-        <motion.div className="mt-4 h-[3px] bg-gradient-to-r from-green-300 via-blue-500 to-purple-600 w-full mb-5"
+        <motion.div className="text1 mt-4 h-[3px] bg-gradient-to-r from-green-300 via-blue-500 to-purple-600 w-full mb-5"
             initial={{opacity: 0, x:-200}}
             animate={{opacity:1, x:0}}
-            transition={{duration: 1}}></motion.div>
+            transition={{duration: 0}}></motion.div>
 
 
-        <motion.div className="text2 text-white xxs:text-sm md:text-xl text-start break-normal mx-start pb-10 flex flex-col justify-start items-start
+        <motion.div className="text1 text-white xxs:text-sm md:text-xl text-start break-normal mx-start pb-10 flex flex-col justify-start items-start
                          xxs:w-full"
                         initial={{opacity: 0, x:-400}}
                         animate={{opacity:1, x:0}}
@@ -111,10 +111,10 @@ popis           popisom proizvoda koje želite naručiti. Naš tim će odmah obr
         </motion.div>
 
                 
-            <motion.h2 className="text-5xl text-white md:mb-[-50px] mt-5"
+            <motion.h2 className="text1 text-5xl text-white md:mb-[-50px] mt-5"
                 initial={{opacity: 0, x:-200}}
                 animate={{opacity: 1, x:0}}
-                transition={{duration: 0.8}}>
+                transition={{duration: 0}}>
                     Parfemi
                     </motion.h2>
 
@@ -123,11 +123,11 @@ popis           popisom proizvoda koje želite naručiti. Naš tim će odmah obr
             md:flex-row"> 
             {/* card item parent */}
 
-                <motion.div className="flex justify-center items-center flex-col
+                <motion.div className="text1  flex justify-center items-center flex-col
                 xxs:w-full xxs:pt-10 md:pt-2 md:w-[50%]"
                 initial={{opacity: 0, x:-200}}
                 animate={{opacity: 1, x:0}}
-                transition={{duration: 0.8}}
+                transition={{duration: 0}}
                 > {/* left side image */}
                 <Image 
                 src="/images/perfume.webp" 
@@ -231,13 +231,13 @@ popis           popisom proizvoda koje želite naručiti. Naš tim će odmah obr
             {/* card item parent */}
 
                 <motion.div className="flex justify-center items-start flex-col mt-10 
-                xxs:w-full xxs:pt-10 md:pt-2 md:w-[50%]"
+                xxs:w-full xxs:pt-2 xxs:pb-10 md:pt-2 md:pb-0 md:w-[50%]"
                 initial={{opacity: 0, x:-200}}
                 animate={{opacity: 1, x:0}}
                 transition={{duration: 0.8}}
                 > {/* left side image */}
                 <div
-                className="w-full flex justify-start items-start h-[50vh]">
+                className="w-full flex justify-start items-start h-[60vh]">
                    <Carousel className="w-full h-[50vh]">
                      <Carousel.Item className="w-full h-full">
                         <Image 
@@ -247,7 +247,7 @@ popis           popisom proizvoda koje želite naručiti. Naš tim će odmah obr
                         className="w-full h-[50vh] relative object-cover"
                         alt="sticker1"
                         />
-                        <p className="text-center text-xl pt-2">Sticker 1</p>
+                        <p className="text-center text-xl pt-5">Sticker 1</p>
                      </Carousel.Item>
                      
                      <Carousel.Item className="w-full h-full overflow-hidden">
@@ -258,7 +258,7 @@ popis           popisom proizvoda koje želite naručiti. Naš tim će odmah obr
                         className="w-full h-[50vh] relative object-cover"
                         alt="sticker1"
                         />
-                        <p className="text-center text-xl pt-2">Sticker 2</p>
+                        <p className="text-center text-xl pt-5">Sticker 2</p>
                      </Carousel.Item>
 
                      <Carousel.Item className="w-full h-full overflow-hidden">
@@ -269,7 +269,7 @@ popis           popisom proizvoda koje želite naručiti. Naš tim će odmah obr
                         className="w-full h-[50vh] relative object-cover"
                         alt="sticker1"
                         />
-                        <p className="text-center text-xl pt-2">Sticker 3</p>
+                        <p className="text-center text-xl pt-5">Sticker 3</p>
                      </Carousel.Item>
 
                      <Carousel.Item className="w-full h-full overflow-hidden">
@@ -280,7 +280,7 @@ popis           popisom proizvoda koje želite naručiti. Naš tim će odmah obr
                         className="w-full h-[50vh] relative object-contain "
                         alt="sticker1"
                         />
-                        <p className="text-center text-xl pt-2">Sticker 4</p>
+                        <p className="text-center text-xl pt-5">Sticker 4</p>
                      </Carousel.Item>
 
                      <Carousel.Item className="w-full h-full overflow-hidden">
@@ -304,10 +304,16 @@ popis           popisom proizvoda koje želite naručiti. Naš tim će odmah obr
                  transition={{duration: 1}}> {/* right side options */}
 
                     <div className="text-justify break-normal">
-                        <p className="text-white text-md pb-2">Opis: </p>
-                        <div>
-                        <span className="bg-gradient-to-r from-cyan-500 to-blue-500 bg-clip-text text-transparent">
-                        test
+                        <div className="xxs:mt-10 md:mt-5">
+                        <span className="break-words text-justify md:text-md lg:text-lg">
+                        Personalizirajte svoj automobil s našim visokokvalitetnim naljepnicama!.
+                        Imamo opcije sa tekstom po vašoj želji, logom ili slikom po vašem izboru,
+                        te smiješne naljepnice sa slikom ili tekstom koje će sigurno izmamiti osmijeh.
+                        <br /> <br />
+                        Naše naljepnice su dimenzija 10cm x 5 cm, izdržljive su i neće se skinuti
+                        tijekom pranja ili izloženosti visokim utjecajima. Lako se mogu lijepiti
+                        na staklo ili sam automobil. Osvježite izgled vašeg vozila i istaknite svoj stil
+                        uz naše jedinstvene naljepnice!
                         </span>
 
                         <p className="pt-6 pb-2">Naljepnice</p>
@@ -337,8 +343,7 @@ popis           popisom proizvoda koje želite naručiti. Naš tim će odmah obr
 
                         <div>
                         <p className="text-lg pt-5">Cijena</p>
-                        <p className="text-4xl font-bold">6 &euro;</p>
-                        <p className="font-bold bg-gradient-to-r from-amber-200 to-yellow-500 bg-clip-text text-transparent">Promotivna cijena!!!</p>
+                        <p className="text-4xl font-bold">5 &euro;</p>
                         </div>
                         <div className={stickerOpen ? "xxs:w-full pt-3" : "xxs:w-[50%] pt-3"}>
                        

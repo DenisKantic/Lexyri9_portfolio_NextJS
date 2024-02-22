@@ -26,22 +26,22 @@ export default function ShopPreview(){
     return (
         <div className="w-[80%] mx-auto xxs:h-auto mb-5 mt-5" ref={refTitle}>
 
-        <motion.h1 className="text3 text-white pt-5 xxs:text-3xl sm:text-5xl" 
+        <motion.h1 className="text1 text-white pt-5 xxs:text-3xl sm:text-5xl" 
         ref={refTitle}
         initial={{opacity: 0, x:-200}}
             animate={animationControls}
             transition={{duration: 0}}
         >Moj web shop</motion.h1>
         <motion.div 
-        className="mt-4 h-[3px] bg-gradient-to-r from-green-300 via-blue-500 to-purple-600 w-full"
+        className="text1 mt-4 h-[3px] bg-gradient-to-r from-green-300 via-blue-500 to-purple-600 w-full"
         initial={{opacity: 0, x:-400}}
             animate={animationControls}
-            transition={{duration: 0.8}}
+            transition={{duration: 0}}
         ></motion.div>
 
 
         <motion.div 
-        className="text4 text-white pt-10 text-xl w-[50%]
+        className="text1 text-white pt-10 text-xl w-[50%]
                         xxs:w-full md:w-[90%] lg:w-[80%] text-justify"
                         initial={{opacity: 0, x:-600}}
             animate={animationControls}
@@ -60,7 +60,7 @@ export default function ShopPreview(){
 
         <div className="pt-10 flex justify-between items-center w-full 
                         xxs:flex-col sm:flex-row">
-            <motion.div className="text5 flex justify-center items-center flex-col
+            <motion.div className="text1 flex justify-center items-center flex-col
                             w-[30%] h-auto xxs:w-full md:w-[30%] xxs:mt-5 lg:mt-0 "
                             initial={{opacity: 0, x:-400}}
             animate={animationControls}
