@@ -78,7 +78,7 @@ import Carousel from 'react-bootstrap/Carousel';
                         transition={{duration: 0}}
                        >
 <div className="break-normal">Kupovinom ovih proizvoda društveno ste odgovorni i direktno podržavate zapošljavanje osoba
-sa invaliditetom.. Svi proizvodi su napravljeni od strane <span className="text-yellow-400 font-bold">INTRAG d.o.o za profesionalnu rehabilitaciju i zapošljavanje osoba sa invaliditetom.</span>
+sa invaliditetom.. Svi proizvodi su napravljeni od strane <a href="https://www.facebook.com/profile.php?id=100006284568744" target="_blank" className="text-yellow-400 font-bold">INTRAG d.o.o za profesionalnu rehabilitaciju i zapošljavanje osoba sa invaliditetom.</a>
             </div>  <br />                    
             <h2>Dragi kupci,
             Želimo vam olakšati proces naručivanja naših proizvoda. Svoje omiljene proizvode
@@ -98,7 +98,7 @@ sa invaliditetom.. Svi proizvodi su napravljeni od strane <span className="text-
 
             <p className="text-red-700 font-bold xxs:text-xl sm:text-2xl">2. Narudžba putem e-mail:</p>
             <br />
-            <p className="text-justify break-normal">Samo pošaljite e-mail na <span className="text-yellow-400 font-bold">orders@lexyri9.com</span>, navedite koje proizvode želite
+            <p className="text-justify break-normal">Samo pošaljite e-mail na <a href="mailto: orders@lexyri9.com" target="_blank" className="text-yellow-400 font-bold">orders@lexyri9.com</a>, navedite koje proizvode želite
             naručiti {"( proizvod, veličina, boja i natpis )"} i ostavite nam vaše kontakt informacije.</p>
 
             <br />
@@ -107,7 +107,7 @@ sa invaliditetom.. Svi proizvodi su napravljeni od strane <span className="text-
             <p className="text-justify break-normal">Posjetite našu Facebook stranicu <a className="text-yellow-400 font-bold" href="https://www.facebook.com/lexyri9webshop" target="_blank">Lexyri9 FB Shop</a> i pošaljite nam poruku s
 popis           popisom proizvoda koje želite naručiti. Naš tim će odmah obraditi vašu narudžbu.</p>
 
-            <p className="pt-3">U slučaju tehničkih problema prilikom kupovine putem paypal opcije, obratite se na mail: <br /> <span className="text-yellow-400 font-bold">support@lexyri9.com</span></p>
+            <p className="pt-3">U slučaju tehničkih problema prilikom kupovine putem paypal opcije, obratite se na mail: <br /> <a href="mailto: support@lexyri9.com" target="_blank" className="text-yellow-400 font-bold">support@lexyri9.com</a></p>
         </motion.div>
 
                 
@@ -581,6 +581,9 @@ popis           popisom proizvoda koje želite naručiti. Naš tim će odmah obr
                      </Dropdown.Item>
                      <Dropdown.Item  onClick={()=>{setColor("Siva")}}>
                         Siva
+                     </Dropdown.Item>
+                     <Dropdown.Item  onClick={()=>{setColor("Zelena")}}>
+                        Zelena
                      </Dropdown.Item>
                   </Dropdown.Menu>
             </Dropdown>
